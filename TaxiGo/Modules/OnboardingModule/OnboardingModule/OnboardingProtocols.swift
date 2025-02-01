@@ -13,33 +13,30 @@ typealias Kits = UIViewAble
 //MARK: ViewToPrensenterOnboardingProtocol
 protocol ViewToPrensenterOnboardingProtocol{
     var view : PresenterToViewOnboardingProtocol? {get}
- 
-
-  
-   
-        
+    func viewDidLoad()
+    func onTappedStartButton()
 }
 
 //MARK: PresenterToViewOnboardingProtocol
 protocol PresenterToViewOnboardingProtocol: AnyObject,Kits{
-   
+    func setOnboardingContract(contract : OnboardingContract)
  
   
 }
 
 //MARK: PresenterToInteractorOnboardingProtocol
-protocol PresenterToInteractorOnboardingProtocol{
+/*protocol PresenterToInteractorOnboardingProtocol{
     
-}
+}*/
 
 //MARK: InteractorToPresenterOnboardingProtocol
-protocol InteractorToPresenterOnboardingProtocol{
+/*protocol InteractorToPresenterOnboardingProtocol{
   
-}
+}*/
 
 //MARK: PresenterToRouterOnboardingProtocol
 protocol PresenterToRouterOnboardingProtocol {
-   
+   func toPhoneNumberConfirm()
 }
 
 public protocol OnboardingModuleProtocol {

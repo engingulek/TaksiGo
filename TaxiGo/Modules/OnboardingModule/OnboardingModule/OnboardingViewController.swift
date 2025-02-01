@@ -8,13 +8,22 @@
 import Foundation
 import SnapKit
 import UIKit
-class OnboardingViewController : UIViewController {
-    
+class OnboardingViewController : UIViewController{
+    lazy var presenter : ViewToPrensenterOnboardingProtocol = OnboardingPresenter(
+        view: self, router: OnboardingRouter())
     private lazy var onboardingView = OnboardingView(self)
     override func viewDidLoad() {
         super.viewDidLoad()
         view = onboardingView
-        view.backgroundColor = .white
+        onboardingView.presenter = presenter
+        presenter.viewDidLoad()
+    }
+}
+
+
+extension OnboardingViewController : PresenterToViewOnboardingProtocol {
+    func setOnboardingContract(contract: OnboardingContract) {
+        onboardingView.configureData(contract: contract)
     }
 }
 

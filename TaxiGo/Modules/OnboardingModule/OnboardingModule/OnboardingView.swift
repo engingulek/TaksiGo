@@ -12,25 +12,26 @@ import BaseViewKit
 import FactoryKit
 
 class OnboardingView : BaseView<OnboardingViewController> {
+    var presenter :ViewToPrensenterOnboardingProtocol?
     private lazy var onboardingImage : UIImageView = UIImageView()
     private lazy var bannerLabel = LabelFactory.createLabel(ofType: .bannerLabel)
     private lazy var subbannerLabel = LabelFactory.createLabel(ofType: .subbannerLabel)
     private lazy var startButton = ButtonFactory.createButton(ofType: .basic(action: startButtonAction))
     
     private lazy var startButtonAction  : UIAction = UIAction { _ in
-          print("sent")
-      }
+        self.presenter?.onTappedStartButton()
+    }
     
     
     override func setupView() {
         super.setupView()
         configureView()
-     
+        
         
     }
     
     private func configureView() {
-        onboardingImage.image = UIImage(resource: .onboarding)
+        
         
         addSubview(onboardingImage)
         onboardingImage.snp.makeConstraints { make in
@@ -45,7 +46,7 @@ class OnboardingView : BaseView<OnboardingViewController> {
             make.top.equalTo(onboardingImage.snp.bottom).offset(20)
             
         }
-        bannerLabel.text = NSLocalizedString("banner",comment: "banner text")
+        
         
         
         addSubview(subbannerLabel)
@@ -56,7 +57,7 @@ class OnboardingView : BaseView<OnboardingViewController> {
             
         }
         
-        subbannerLabel.text = NSLocalizedString("subbanner", comment: "subbanner test")
+        
         
         addSubview(startButton)
         startButton.snp.makeConstraints { make in
@@ -66,9 +67,15 @@ class OnboardingView : BaseView<OnboardingViewController> {
             make.bottom.equalTo(safeAreaLayoutGuide.snp.bottom).offset(-10)
         }
         
-        startButton.setTitle(NSLocalizedString("startButtonTitle",
-                                               comment: "start button title"),
-                             for: .normal)
         
+        
+    }
+    
+    func configureData(contract:OnboardingContract) {
+        onboardingImage.image = UIImage(resource: contract.imageTitle)
+        bannerLabel.text = contract.bannerTitle
+        subbannerLabel.text = contract.subbannerTitle
+        startButton.setTitle(contract.buttonTitle,
+                             for: .normal)
     }
 }

@@ -21,6 +21,10 @@
 		7D1C41FE2D4E64A4006EFF27 /* ViewControllerAbleKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7D1C41FC2D4E64A4006EFF27 /* ViewControllerAbleKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7D1C421C2D4E6832006EFF27 /* FactoryKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D1C421B2D4E6832006EFF27 /* FactoryKit.framework */; };
 		7D1C421D2D4E6832006EFF27 /* FactoryKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7D1C421B2D4E6832006EFF27 /* FactoryKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7D1C425D2D4E920C006EFF27 /* OnboardingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1C425C2D4E920C006EFF27 /* OnboardingPresenter.swift */; };
+		7D1C425F2D4E933C006EFF27 /* OnboardingContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1C425E2D4E933C006EFF27 /* OnboardingContract.swift */; };
+		7D1C427F2D4E962D006EFF27 /* CoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D1C427E2D4E962D006EFF27 /* CoreKit.framework */; };
+		7D1C42802D4E962D006EFF27 /* CoreKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7D1C427E2D4E962D006EFF27 /* CoreKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -32,6 +36,7 @@
 			files = (
 				7D1C421D2D4E6832006EFF27 /* FactoryKit.framework in Embed Frameworks */,
 				7D1C41FE2D4E64A4006EFF27 /* ViewControllerAbleKit.framework in Embed Frameworks */,
+				7D1C42802D4E962D006EFF27 /* CoreKit.framework in Embed Frameworks */,
 				7D1C41D82D4E5E6B006EFF27 /* BaseViewKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -51,6 +56,9 @@
 		7D1C41FC2D4E64A4006EFF27 /* ViewControllerAbleKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ViewControllerAbleKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D1C421B2D4E6832006EFF27 /* FactoryKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FactoryKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D1C423C2D4E6CD2006EFF27 /* LocalizationKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LocalizationKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D1C425C2D4E920C006EFF27 /* OnboardingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPresenter.swift; sourceTree = "<group>"; };
+		7D1C425E2D4E933C006EFF27 /* OnboardingContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContract.swift; sourceTree = "<group>"; };
+		7D1C427E2D4E962D006EFF27 /* CoreKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CoreKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +68,7 @@
 			files = (
 				7D1C421C2D4E6832006EFF27 /* FactoryKit.framework in Frameworks */,
 				7D1C41382D4E536A006EFF27 /* SnapKit in Frameworks */,
+				7D1C427F2D4E962D006EFF27 /* CoreKit.framework in Frameworks */,
 				7D1C413A2D4E536A006EFF27 /* SnapKit-Dynamic in Frameworks */,
 				7D1C41FD2D4E64A4006EFF27 /* ViewControllerAbleKit.framework in Frameworks */,
 				7D1C41D72D4E5E6B006EFF27 /* BaseViewKit.framework in Frameworks */,
@@ -95,6 +104,8 @@
 				7D1C416A2D4E5628006EFF27 /* OnboardingRouter.swift */,
 				7D1C41DC2D4E5EFF006EFF27 /* OnboardingView.swift */,
 				7D1C41DE2D4E622B006EFF27 /* Assets.xcassets */,
+				7D1C425C2D4E920C006EFF27 /* OnboardingPresenter.swift */,
+				7D1C425E2D4E933C006EFF27 /* OnboardingContract.swift */,
 			);
 			path = OnboardingModule;
 			sourceTree = "<group>";
@@ -102,6 +113,7 @@
 		7D1C41D52D4E5E6B006EFF27 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7D1C427E2D4E962D006EFF27 /* CoreKit.framework */,
 				7D1C423C2D4E6CD2006EFF27 /* LocalizationKit.framework */,
 				7D1C421B2D4E6832006EFF27 /* FactoryKit.framework */,
 				7D1C41FC2D4E64A4006EFF27 /* ViewControllerAbleKit.framework */,
@@ -201,6 +213,8 @@
 			files = (
 				7D1C41692D4E5511006EFF27 /* OnboardingProtocols.swift in Sources */,
 				7D1C41DD2D4E5EFF006EFF27 /* OnboardingView.swift in Sources */,
+				7D1C425F2D4E933C006EFF27 /* OnboardingContract.swift in Sources */,
+				7D1C425D2D4E920C006EFF27 /* OnboardingPresenter.swift in Sources */,
 				7D1C416B2D4E5628006EFF27 /* OnboardingRouter.swift in Sources */,
 				7D1C41672D4E5434006EFF27 /* OnboardingViewController.swift in Sources */,
 			);
