@@ -20,6 +20,21 @@ extension UIViewAble where Self : UIViewController  {
     
 }
 
+
+//MARK: - SegueAble
+public protocol SegueAble {
+    func pushViewControllerAble (_ vc:UIViewController,animated:Bool)
+    
+}
+
+extension SegueAble  where Self : UIViewController{
+    public func pushViewControllerAble (_ vc:UIViewController,animated:Bool) {
+        navigationController?.pushViewController(vc, animated: animated)
+    }
+    
+   
+}
+
 //TODO: This will be module
 extension UIColor {
    public convenience init?(hex: String) {

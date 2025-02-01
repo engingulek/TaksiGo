@@ -32,6 +32,6 @@ extension OnboardingPresenter : ViewToPrensenterOnboardingProtocol {
     }
     
     func onTappedStartButton() {
-        router.toPhoneNumberConfirm()
+        router.toPhoneNumberConfirm(view: view)
     }
 }

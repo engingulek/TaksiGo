@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 import ViewControllerAbleKit
-typealias Kits = UIViewAble
+typealias Kits = UIViewAble & SegueAble
 
 //MARK: ViewToPrensenterOnboardingProtocol
 protocol ViewToPrensenterOnboardingProtocol{
@@ -36,7 +36,7 @@ protocol PresenterToViewOnboardingProtocol: AnyObject,Kits{
 
 //MARK: PresenterToRouterOnboardingProtocol
 protocol PresenterToRouterOnboardingProtocol {
-   func toPhoneNumberConfirm()
+    func toPhoneNumberConfirm(view:PresenterToViewOnboardingProtocol?)
 }
 
 public protocol OnboardingModuleProtocol {

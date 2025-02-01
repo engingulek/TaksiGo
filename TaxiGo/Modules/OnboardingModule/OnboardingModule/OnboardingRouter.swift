@@ -22,7 +22,9 @@ public class OnboardingRouter : OnboardingModuleProtocol {
 }
 
 extension OnboardingRouter : PresenterToRouterOnboardingProtocol {
-    func toPhoneNumberConfirm() {
-        print("To Phone Access")
+    func toPhoneNumberConfirm(view:PresenterToViewOnboardingProtocol?) {
+        let testViewController = UIViewController()
+        testViewController.view.backgroundColor = .red
+        view?.pushViewControllerAble(testViewController, animated: true)
     }
 }

@@ -18,7 +18,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
         let onboardingModule:OnboardingModuleProtocol = DependencyRegister.shared.resolve(OnboardingModuleProtocol.self)
-        window?.rootViewController =  onboardingModule.createModule()
+        window?.rootViewController =  UINavigationController(rootViewController: onboardingModule.createModule())
         window?.makeKeyAndVisible()
     }
 
