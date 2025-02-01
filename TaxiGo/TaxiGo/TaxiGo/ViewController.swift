@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  TaksiGo
+//  TaxiGo
 //
 //  Created by Engin Gülek on 1.02.2025.
 //
