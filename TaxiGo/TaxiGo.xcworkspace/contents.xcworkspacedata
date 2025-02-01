@@ -5,6 +5,15 @@
       location = "container:"
       name = "Kits">
       <FileRef
+         location = "group:TaxiGo/../Kits/FactoryKit/FactoryKit.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:TaxiGo/../Kits/ViewControllerAbleKit/ViewControllerAbleKit.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:TaxiGo/../Kits/BaseViewKit/BaseViewKit.xcodeproj">
+      </FileRef>
+      <FileRef
          location = "group:TaxiGo/../Kits/DependencyKit/DependencyKit.xcodeproj">
       </FileRef>
    </Group>

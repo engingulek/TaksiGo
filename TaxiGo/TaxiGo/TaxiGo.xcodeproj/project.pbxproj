@@ -15,6 +15,7 @@
 		7D1C41992D4E5C56006EFF27 /* DependencyKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7D1C41962D4E5C56006EFF27 /* DependencyKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7D1C419A2D4E5C56006EFF27 /* OnboardingModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D1C41972D4E5C56006EFF27 /* OnboardingModule.framework */; };
 		7D1C419B2D4E5C56006EFF27 /* OnboardingModule.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7D1C41972D4E5C56006EFF27 /* OnboardingModule.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7D1C42562D4E77D6006EFF27 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7D1C42582D4E77D6006EFF27 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -41,6 +42,9 @@
 		7D1C40AF2D4E4EF6006EFF27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7D1C41962D4E5C56006EFF27 /* DependencyKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DependencyKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D1C41972D4E5C56006EFF27 /* OnboardingModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = OnboardingModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D1C42432D4E70D9006EFF27 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		7D1C42572D4E77D6006EFF27 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		7D1C42592D4E77D8006EFF27 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +85,7 @@
 				7D1C40AA2D4E4EF6006EFF27 /* Assets.xcassets */,
 				7D1C40AC2D4E4EF6006EFF27 /* LaunchScreen.storyboard */,
 				7D1C40AF2D4E4EF6006EFF27 /* Info.plist */,
+				7D1C42582D4E77D6006EFF27 /* Localizable.strings */,
 			);
 			path = TaxiGo;
 			sourceTree = "<group>";
@@ -139,6 +144,7 @@
 			knownRegions = (
 				en,
 				Base,
+				tr,
 			);
 			mainGroup = 7D1C40952D4E4EF4006EFF27;
 			packageReferences = (
@@ -158,6 +164,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D1C40AE2D4E4EF6006EFF27 /* LaunchScreen.storyboard in Resources */,
+				7D1C42562D4E77D6006EFF27 /* Localizable.strings in Resources */,
 				7D1C40AB2D4E4EF6006EFF27 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -181,8 +188,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				7D1C40AD2D4E4EF6006EFF27 /* Base */,
+				7D1C42432D4E70D9006EFF27 /* tr */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		7D1C42582D4E77D6006EFF27 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7D1C42572D4E77D6006EFF27 /* tr */,
+				7D1C42592D4E77D8006EFF27 /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -193,6 +210,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -256,6 +274,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";

@@ -13,7 +13,31 @@
 		7D1C41672D4E5434006EFF27 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1C41662D4E5434006EFF27 /* OnboardingViewController.swift */; };
 		7D1C41692D4E5511006EFF27 /* OnboardingProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1C41682D4E5511006EFF27 /* OnboardingProtocols.swift */; };
 		7D1C416B2D4E5628006EFF27 /* OnboardingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1C416A2D4E5628006EFF27 /* OnboardingRouter.swift */; };
+		7D1C41D72D4E5E6B006EFF27 /* BaseViewKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D1C41D62D4E5E6B006EFF27 /* BaseViewKit.framework */; };
+		7D1C41D82D4E5E6B006EFF27 /* BaseViewKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7D1C41D62D4E5E6B006EFF27 /* BaseViewKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7D1C41DD2D4E5EFF006EFF27 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1C41DC2D4E5EFF006EFF27 /* OnboardingView.swift */; };
+		7D1C41DF2D4E622B006EFF27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D1C41DE2D4E622B006EFF27 /* Assets.xcassets */; };
+		7D1C41FD2D4E64A4006EFF27 /* ViewControllerAbleKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D1C41FC2D4E64A4006EFF27 /* ViewControllerAbleKit.framework */; };
+		7D1C41FE2D4E64A4006EFF27 /* ViewControllerAbleKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7D1C41FC2D4E64A4006EFF27 /* ViewControllerAbleKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7D1C421C2D4E6832006EFF27 /* FactoryKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D1C421B2D4E6832006EFF27 /* FactoryKit.framework */; };
+		7D1C421D2D4E6832006EFF27 /* FactoryKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7D1C421B2D4E6832006EFF27 /* FactoryKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		7D1C41D92D4E5E6B006EFF27 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				7D1C421D2D4E6832006EFF27 /* FactoryKit.framework in Embed Frameworks */,
+				7D1C41FE2D4E64A4006EFF27 /* ViewControllerAbleKit.framework in Embed Frameworks */,
+				7D1C41D82D4E5E6B006EFF27 /* BaseViewKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		7D1C41212D4E5231006EFF27 /* OnboardingModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OnboardingModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -21,6 +45,12 @@
 		7D1C41662D4E5434006EFF27 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		7D1C41682D4E5511006EFF27 /* OnboardingProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingProtocols.swift; sourceTree = "<group>"; };
 		7D1C416A2D4E5628006EFF27 /* OnboardingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingRouter.swift; sourceTree = "<group>"; };
+		7D1C41D62D4E5E6B006EFF27 /* BaseViewKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = BaseViewKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D1C41DC2D4E5EFF006EFF27 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		7D1C41DE2D4E622B006EFF27 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7D1C41FC2D4E64A4006EFF27 /* ViewControllerAbleKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ViewControllerAbleKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D1C421B2D4E6832006EFF27 /* FactoryKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FactoryKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D1C423C2D4E6CD2006EFF27 /* LocalizationKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LocalizationKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,8 +58,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D1C421C2D4E6832006EFF27 /* FactoryKit.framework in Frameworks */,
 				7D1C41382D4E536A006EFF27 /* SnapKit in Frameworks */,
 				7D1C413A2D4E536A006EFF27 /* SnapKit-Dynamic in Frameworks */,
+				7D1C41FD2D4E64A4006EFF27 /* ViewControllerAbleKit.framework in Frameworks */,
+				7D1C41D72D4E5E6B006EFF27 /* BaseViewKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,6 +74,7 @@
 			children = (
 				7D1C41232D4E5231006EFF27 /* OnboardingModule */,
 				7D1C41222D4E5231006EFF27 /* Products */,
+				7D1C41D52D4E5E6B006EFF27 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,8 +93,21 @@
 				7D1C41662D4E5434006EFF27 /* OnboardingViewController.swift */,
 				7D1C41682D4E5511006EFF27 /* OnboardingProtocols.swift */,
 				7D1C416A2D4E5628006EFF27 /* OnboardingRouter.swift */,
+				7D1C41DC2D4E5EFF006EFF27 /* OnboardingView.swift */,
+				7D1C41DE2D4E622B006EFF27 /* Assets.xcassets */,
 			);
 			path = OnboardingModule;
+			sourceTree = "<group>";
+		};
+		7D1C41D52D4E5E6B006EFF27 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7D1C423C2D4E6CD2006EFF27 /* LocalizationKit.framework */,
+				7D1C421B2D4E6832006EFF27 /* FactoryKit.framework */,
+				7D1C41FC2D4E64A4006EFF27 /* ViewControllerAbleKit.framework */,
+				7D1C41D62D4E5E6B006EFF27 /* BaseViewKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -85,6 +132,7 @@
 				7D1C411D2D4E5231006EFF27 /* Sources */,
 				7D1C411E2D4E5231006EFF27 /* Frameworks */,
 				7D1C411F2D4E5231006EFF27 /* Resources */,
+				7D1C41D92D4E5E6B006EFF27 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -116,11 +164,11 @@
 			};
 			buildConfigurationList = 7D1C411B2D4E5231006EFF27 /* Build configuration list for PBXProject "OnboardingModule" */;
 			compatibilityVersion = "Xcode 14.0";
-			developmentRegion = en;
+			developmentRegion = tr;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
-				Base,
+				tr,
 			);
 			mainGroup = 7D1C41172D4E5231006EFF27;
 			packageReferences = (
@@ -140,6 +188,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D1C41DF2D4E622B006EFF27 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,6 +200,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D1C41692D4E5511006EFF27 /* OnboardingProtocols.swift in Sources */,
+				7D1C41DD2D4E5EFF006EFF27 /* OnboardingView.swift in Sources */,
 				7D1C416B2D4E5628006EFF27 /* OnboardingRouter.swift in Sources */,
 				7D1C41672D4E5434006EFF27 /* OnboardingViewController.swift in Sources */,
 			);

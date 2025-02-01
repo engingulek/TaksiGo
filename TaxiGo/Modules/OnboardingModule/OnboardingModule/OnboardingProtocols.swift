@@ -7,6 +7,9 @@
 
 import Foundation
 import UIKit
+import ViewControllerAbleKit
+typealias Kits = UIViewAble
+
 //MARK: ViewToPrensenterOnboardingProtocol
 protocol ViewToPrensenterOnboardingProtocol{
     var view : PresenterToViewOnboardingProtocol? {get}
@@ -18,7 +21,7 @@ protocol ViewToPrensenterOnboardingProtocol{
 }
 
 //MARK: PresenterToViewOnboardingProtocol
-protocol PresenterToViewOnboardingProtocol: AnyObject{
+protocol PresenterToViewOnboardingProtocol: AnyObject,Kits{
    
  
   

@@ -9,10 +9,12 @@ import Foundation
 import SnapKit
 import UIKit
 class OnboardingViewController : UIViewController {
-
+    
+    private lazy var onboardingView = OnboardingView(self)
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .blue
+        view = onboardingView
+        view.backgroundColor = .white
     }
 }
 
