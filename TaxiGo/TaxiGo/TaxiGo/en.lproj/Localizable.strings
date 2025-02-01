@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  TaxiGo
+
+  Created by Engin Gülek on 1.02.2025.
+  
+*/
+"banner" = "Call a Taxi, Get There Fast!";
+"subbanner" = "Book a safe and comfortable ride in minutes with our app. Call your taxi now!";
+"startButtonTitle" = "Start";

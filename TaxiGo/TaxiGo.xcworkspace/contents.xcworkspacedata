@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <Group
+      location = "container:"
+      name = "Kits">
+      <FileRef
+         location = "group:TaxiGo/../Kits/CoreKit/CoreKit.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:TaxiGo/../Kits/FactoryKit/FactoryKit.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:TaxiGo/../Kits/ViewControllerAbleKit/ViewControllerAbleKit.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:TaxiGo/../Kits/BaseViewKit/BaseViewKit.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:TaxiGo/../Kits/DependencyKit/DependencyKit.xcodeproj">
+      </FileRef>
+   </Group>
+   <Group
+      location = "container:"
+      name = "Apps">
+      <FileRef
+         location = "group:TaxiGo/../Apps/OnboardingApp/OnboardingApp.xcodeproj">
+      </FileRef>
+   </Group>
+   <Group
+      location = "container:"
+      name = "Modules">
+      <FileRef
+         location = "group:Modules/OnboardingModule/OnboardingModule.xcodeproj">
+      </FileRef>
+   </Group>
+   <FileRef
+      location = "group:TaxiGo/TaxiGo.xcodeproj">
+   </FileRef>
+</Workspace>
