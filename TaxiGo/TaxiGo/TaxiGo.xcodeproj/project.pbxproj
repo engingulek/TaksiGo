@@ -45,6 +45,7 @@
 		7D1C42432D4E70D9006EFF27 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		7D1C42572D4E77D6006EFF27 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		7D1C42592D4E77D8006EFF27 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		7D1C42862D4E9E5A006EFF27 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +190,7 @@
 			children = (
 				7D1C40AD2D4E4EF6006EFF27 /* Base */,
 				7D1C42432D4E70D9006EFF27 /* tr */,
+				7D1C42862D4E9E5A006EFF27 /* en */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
