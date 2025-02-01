@@ -6,7 +6,8 @@
 //
 
 import UIKit
-
+import DependencyKit
+import OnboardingModule
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
@@ -16,7 +17,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
-        window?.rootViewController =  ViewController()
+        let onboardingModule:OnboardingModuleProtocol = DependencyRegister.shared.resolve(OnboardingModuleProtocol.self)
+        window?.rootViewController =  onboardingModule.createModule()
         window?.makeKeyAndVisible()
     }
 

@@ -3,6 +3,20 @@
    version = "1.0">
    <Group
       location = "container:"
+      name = "Kits">
+      <FileRef
+         location = "group:TaxiGo/../Kits/DependencyKit/DependencyKit.xcodeproj">
+      </FileRef>
+   </Group>
+   <Group
+      location = "container:"
+      name = "Apps">
+      <FileRef
+         location = "group:TaxiGo/../Apps/OnboardingApp/OnboardingApp.xcodeproj">
+      </FileRef>
+   </Group>
+   <Group
+      location = "container:"
       name = "Modules">
       <FileRef
          location = "group:Modules/OnboardingModule/OnboardingModule.xcodeproj">

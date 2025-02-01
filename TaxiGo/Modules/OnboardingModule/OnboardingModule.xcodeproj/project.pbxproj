@@ -8,11 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		7D1C41252D4E5231006EFF27 /* OnboardingModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D1C41242D4E5231006EFF27 /* OnboardingModule.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7D1C41382D4E536A006EFF27 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 7D1C41372D4E536A006EFF27 /* SnapKit */; };
+		7D1C413A2D4E536A006EFF27 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 7D1C41392D4E536A006EFF27 /* SnapKit-Dynamic */; };
+		7D1C41672D4E5434006EFF27 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1C41662D4E5434006EFF27 /* OnboardingViewController.swift */; };
+		7D1C41692D4E5511006EFF27 /* OnboardingProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1C41682D4E5511006EFF27 /* OnboardingProtocols.swift */; };
+		7D1C416B2D4E5628006EFF27 /* OnboardingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1C416A2D4E5628006EFF27 /* OnboardingRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7D1C41212D4E5231006EFF27 /* OnboardingModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OnboardingModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D1C41242D4E5231006EFF27 /* OnboardingModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OnboardingModule.h; sourceTree = "<group>"; };
+		7D1C41662D4E5434006EFF27 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		7D1C41682D4E5511006EFF27 /* OnboardingProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingProtocols.swift; sourceTree = "<group>"; };
+		7D1C416A2D4E5628006EFF27 /* OnboardingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -20,6 +28,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D1C41382D4E536A006EFF27 /* SnapKit in Frameworks */,
+				7D1C413A2D4E536A006EFF27 /* SnapKit-Dynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +56,9 @@
 			isa = PBXGroup;
 			children = (
 				7D1C41242D4E5231006EFF27 /* OnboardingModule.h */,
+				7D1C41662D4E5434006EFF27 /* OnboardingViewController.swift */,
+				7D1C41682D4E5511006EFF27 /* OnboardingProtocols.swift */,
+				7D1C416A2D4E5628006EFF27 /* OnboardingRouter.swift */,
 			);
 			path = OnboardingModule;
 			sourceTree = "<group>";
@@ -78,6 +91,10 @@
 			dependencies = (
 			);
 			name = OnboardingModule;
+			packageProductDependencies = (
+				7D1C41372D4E536A006EFF27 /* SnapKit */,
+				7D1C41392D4E536A006EFF27 /* SnapKit-Dynamic */,
+			);
 			productName = OnboardingModule;
 			productReference = 7D1C41212D4E5231006EFF27 /* OnboardingModule.framework */;
 			productType = "com.apple.product-type.framework";
@@ -93,6 +110,7 @@
 				TargetAttributes = {
 					7D1C41202D4E5231006EFF27 = {
 						CreatedOnToolsVersion = 15.0;
+						LastSwiftMigration = 1500;
 					};
 				};
 			};
@@ -105,6 +123,9 @@
 				Base,
 			);
 			mainGroup = 7D1C41172D4E5231006EFF27;
+			packageReferences = (
+				7D1C41362D4E536A006EFF27 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 7D1C41222D4E5231006EFF27 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -129,6 +150,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D1C41692D4E5511006EFF27 /* OnboardingProtocols.swift in Sources */,
+				7D1C416B2D4E5628006EFF27 /* OnboardingRouter.swift in Sources */,
+				7D1C41672D4E5434006EFF27 /* OnboardingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +287,7 @@
 		7D1C41292D4E5231006EFF27 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -286,6 +311,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -294,6 +320,7 @@
 		7D1C412A2D4E5231006EFF27 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -344,6 +371,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7D1C41362D4E536A006EFF27 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7D1C41372D4E536A006EFF27 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7D1C41362D4E536A006EFF27 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		7D1C41392D4E536A006EFF27 /* SnapKit-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7D1C41362D4E536A006EFF27 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = "SnapKit-Dynamic";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7D1C41182D4E5231006EFF27 /* Project object */;
 }

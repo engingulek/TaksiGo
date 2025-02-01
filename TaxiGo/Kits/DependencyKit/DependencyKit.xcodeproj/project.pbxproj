@@ -7,25 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7D1C40A22D4E4EF4006EFF27 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1C40A12D4E4EF4006EFF27 /* AppDelegate.swift */; };
-		7D1C40A42D4E4EF4006EFF27 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1C40A32D4E4EF4006EFF27 /* SceneDelegate.swift */; };
-		7D1C40AB2D4E4EF6006EFF27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D1C40AA2D4E4EF6006EFF27 /* Assets.xcassets */; };
-		7D1C40AE2D4E4EF6006EFF27 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D1C40AC2D4E4EF6006EFF27 /* LaunchScreen.storyboard */; };
-		7D1C41982D4E5C56006EFF27 /* DependencyKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D1C41962D4E5C56006EFF27 /* DependencyKit.framework */; };
-		7D1C41992D4E5C56006EFF27 /* DependencyKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7D1C41962D4E5C56006EFF27 /* DependencyKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		7D1C419A2D4E5C56006EFF27 /* OnboardingModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D1C41972D4E5C56006EFF27 /* OnboardingModule.framework */; };
-		7D1C419B2D4E5C56006EFF27 /* OnboardingModule.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7D1C41972D4E5C56006EFF27 /* OnboardingModule.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7D1C417A2D4E5921006EFF27 /* DependencyKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D1C41792D4E5921006EFF27 /* DependencyKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7D1C41872D4E5933006EFF27 /* DependencyRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1C41862D4E5933006EFF27 /* DependencyRegister.swift */; };
+		7D1C418A2D4E5944006EFF27 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 7D1C41892D4E5944006EFF27 /* Swinject */; };
+		7D1C418C2D4E5944006EFF27 /* Swinject-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 7D1C418B2D4E5944006EFF27 /* Swinject-Dynamic */; };
+		7D1C418F2D4E59B0006EFF27 /* OnboardingModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D1C418E2D4E59B0006EFF27 /* OnboardingModule.framework */; };
+		7D1C41902D4E59B0006EFF27 /* OnboardingModule.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7D1C418E2D4E59B0006EFF27 /* OnboardingModule.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		7D1C419C2D4E5C56006EFF27 /* Embed Frameworks */ = {
+		7D1C41912D4E59B0006EFF27 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				7D1C41992D4E5C56006EFF27 /* DependencyKit.framework in Embed Frameworks */,
-				7D1C419B2D4E5C56006EFF27 /* OnboardingModule.framework in Embed Frameworks */,
+				7D1C41902D4E59B0006EFF27 /* OnboardingModule.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -33,106 +30,113 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		7D1C409E2D4E4EF4006EFF27 /* TaxiGo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaxiGo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		7D1C40A12D4E4EF4006EFF27 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7D1C40A32D4E4EF4006EFF27 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7D1C40AA2D4E4EF6006EFF27 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		7D1C40AD2D4E4EF6006EFF27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		7D1C40AF2D4E4EF6006EFF27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7D1C41962D4E5C56006EFF27 /* DependencyKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DependencyKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7D1C41972D4E5C56006EFF27 /* OnboardingModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = OnboardingModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D1C41762D4E5921006EFF27 /* DependencyKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DependencyKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D1C41792D4E5921006EFF27 /* DependencyKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DependencyKit.h; sourceTree = "<group>"; };
+		7D1C41862D4E5933006EFF27 /* DependencyRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyRegister.swift; sourceTree = "<group>"; };
+		7D1C418E2D4E59B0006EFF27 /* OnboardingModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = OnboardingModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		7D1C409B2D4E4EF4006EFF27 /* Frameworks */ = {
+		7D1C41732D4E5921006EFF27 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7D1C41982D4E5C56006EFF27 /* DependencyKit.framework in Frameworks */,
-				7D1C419A2D4E5C56006EFF27 /* OnboardingModule.framework in Frameworks */,
+				7D1C418F2D4E59B0006EFF27 /* OnboardingModule.framework in Frameworks */,
+				7D1C418A2D4E5944006EFF27 /* Swinject in Frameworks */,
+				7D1C418C2D4E5944006EFF27 /* Swinject-Dynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		7D1C40952D4E4EF4006EFF27 = {
+		7D1C416C2D4E5921006EFF27 = {
 			isa = PBXGroup;
 			children = (
-				7D1C40A02D4E4EF4006EFF27 /* TaxiGo */,
-				7D1C409F2D4E4EF4006EFF27 /* Products */,
-				7D1C41952D4E5C56006EFF27 /* Frameworks */,
+				7D1C41782D4E5921006EFF27 /* DependencyKit */,
+				7D1C41772D4E5921006EFF27 /* Products */,
+				7D1C418D2D4E59B0006EFF27 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		7D1C409F2D4E4EF4006EFF27 /* Products */ = {
+		7D1C41772D4E5921006EFF27 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7D1C409E2D4E4EF4006EFF27 /* TaxiGo.app */,
+				7D1C41762D4E5921006EFF27 /* DependencyKit.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		7D1C40A02D4E4EF4006EFF27 /* TaxiGo */ = {
+		7D1C41782D4E5921006EFF27 /* DependencyKit */ = {
 			isa = PBXGroup;
 			children = (
-				7D1C40A12D4E4EF4006EFF27 /* AppDelegate.swift */,
-				7D1C40A32D4E4EF4006EFF27 /* SceneDelegate.swift */,
-				7D1C40AA2D4E4EF6006EFF27 /* Assets.xcassets */,
-				7D1C40AC2D4E4EF6006EFF27 /* LaunchScreen.storyboard */,
-				7D1C40AF2D4E4EF6006EFF27 /* Info.plist */,
+				7D1C41792D4E5921006EFF27 /* DependencyKit.h */,
+				7D1C41862D4E5933006EFF27 /* DependencyRegister.swift */,
 			);
-			path = TaxiGo;
+			path = DependencyKit;
 			sourceTree = "<group>";
 		};
-		7D1C41952D4E5C56006EFF27 /* Frameworks */ = {
+		7D1C418D2D4E59B0006EFF27 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				7D1C41962D4E5C56006EFF27 /* DependencyKit.framework */,
-				7D1C41972D4E5C56006EFF27 /* OnboardingModule.framework */,
+				7D1C418E2D4E59B0006EFF27 /* OnboardingModule.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		7D1C41712D4E5921006EFF27 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D1C417A2D4E5921006EFF27 /* DependencyKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
-		7D1C409D2D4E4EF4006EFF27 /* TaxiGo */ = {
+		7D1C41752D4E5921006EFF27 /* DependencyKit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7D1C40B22D4E4EF6006EFF27 /* Build configuration list for PBXNativeTarget "TaxiGo" */;
+			buildConfigurationList = 7D1C417D2D4E5921006EFF27 /* Build configuration list for PBXNativeTarget "DependencyKit" */;
 			buildPhases = (
-				7D1C409A2D4E4EF4006EFF27 /* Sources */,
-				7D1C409B2D4E4EF4006EFF27 /* Frameworks */,
-				7D1C409C2D4E4EF4006EFF27 /* Resources */,
-				7D1C419C2D4E5C56006EFF27 /* Embed Frameworks */,
+				7D1C41712D4E5921006EFF27 /* Headers */,
+				7D1C41722D4E5921006EFF27 /* Sources */,
+				7D1C41732D4E5921006EFF27 /* Frameworks */,
+				7D1C41742D4E5921006EFF27 /* Resources */,
+				7D1C41912D4E59B0006EFF27 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = TaxiGo;
+			name = DependencyKit;
 			packageProductDependencies = (
+				7D1C41892D4E5944006EFF27 /* Swinject */,
+				7D1C418B2D4E5944006EFF27 /* Swinject-Dynamic */,
 			);
-			productName = TaxiGo;
-			productReference = 7D1C409E2D4E4EF4006EFF27 /* TaxiGo.app */;
-			productType = "com.apple.product-type.application";
+			productName = DependencyKit;
+			productReference = 7D1C41762D4E5921006EFF27 /* DependencyKit.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		7D1C40962D4E4EF4006EFF27 /* Project object */ = {
+		7D1C416D2D4E5921006EFF27 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
-					7D1C409D2D4E4EF4006EFF27 = {
+					7D1C41752D4E5921006EFF27 = {
 						CreatedOnToolsVersion = 15.0;
+						LastSwiftMigration = 1500;
 					};
 				};
 			};
-			buildConfigurationList = 7D1C40992D4E4EF4006EFF27 /* Build configuration list for PBXProject "TaxiGo" */;
+			buildConfigurationList = 7D1C41702D4E5921006EFF27 /* Build configuration list for PBXProject "DependencyKit" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -140,55 +144,42 @@
 				en,
 				Base,
 			);
-			mainGroup = 7D1C40952D4E4EF4006EFF27;
+			mainGroup = 7D1C416C2D4E5921006EFF27;
 			packageReferences = (
+				7D1C41882D4E5944006EFF27 /* XCRemoteSwiftPackageReference "Swinject" */,
 			);
-			productRefGroup = 7D1C409F2D4E4EF4006EFF27 /* Products */;
+			productRefGroup = 7D1C41772D4E5921006EFF27 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7D1C409D2D4E4EF4006EFF27 /* TaxiGo */,
+				7D1C41752D4E5921006EFF27 /* DependencyKit */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		7D1C409C2D4E4EF4006EFF27 /* Resources */ = {
+		7D1C41742D4E5921006EFF27 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7D1C40AE2D4E4EF6006EFF27 /* LaunchScreen.storyboard in Resources */,
-				7D1C40AB2D4E4EF6006EFF27 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		7D1C409A2D4E4EF4006EFF27 /* Sources */ = {
+		7D1C41722D4E5921006EFF27 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7D1C40A22D4E4EF4006EFF27 /* AppDelegate.swift in Sources */,
-				7D1C40A42D4E4EF4006EFF27 /* SceneDelegate.swift in Sources */,
+				7D1C41872D4E5933006EFF27 /* DependencyRegister.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXVariantGroup section */
-		7D1C40AC2D4E4EF6006EFF27 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7D1C40AD2D4E4EF6006EFF27 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
-		7D1C40B02D4E4EF6006EFF27 /* Debug */ = {
+		7D1C417B2D4E5921006EFF27 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -222,6 +213,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -248,10 +240,12 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		7D1C40B12D4E4EF6006EFF27 /* Release */ = {
+		7D1C417C2D4E5921006EFF27 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -285,6 +279,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -304,57 +299,70 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
-		7D1C40B32D4E4EF6006EFF27 /* Debug */ = {
+		7D1C417E2D4E5921006EFF27 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 45DX68AP4J;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = TaxiGo/Info.plist;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = engingulek.TaxiGo;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = engingulek.DependencyKit;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		7D1C40B42D4E4EF6006EFF27 /* Release */ = {
+		7D1C417F2D4E5921006EFF27 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 45DX68AP4J;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = TaxiGo/Info.plist;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = engingulek.TaxiGo;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = engingulek.DependencyKit;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -364,25 +372,49 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		7D1C40992D4E4EF4006EFF27 /* Build configuration list for PBXProject "TaxiGo" */ = {
+		7D1C41702D4E5921006EFF27 /* Build configuration list for PBXProject "DependencyKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7D1C40B02D4E4EF6006EFF27 /* Debug */,
-				7D1C40B12D4E4EF6006EFF27 /* Release */,
+				7D1C417B2D4E5921006EFF27 /* Debug */,
+				7D1C417C2D4E5921006EFF27 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7D1C40B22D4E4EF6006EFF27 /* Build configuration list for PBXNativeTarget "TaxiGo" */ = {
+		7D1C417D2D4E5921006EFF27 /* Build configuration list for PBXNativeTarget "DependencyKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7D1C40B32D4E4EF6006EFF27 /* Debug */,
-				7D1C40B42D4E4EF6006EFF27 /* Release */,
+				7D1C417E2D4E5921006EFF27 /* Debug */,
+				7D1C417F2D4E5921006EFF27 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7D1C41882D4E5944006EFF27 /* XCRemoteSwiftPackageReference "Swinject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/Swinject.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.9.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7D1C41892D4E5944006EFF27 /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7D1C41882D4E5944006EFF27 /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
+		};
+		7D1C418B2D4E5944006EFF27 /* Swinject-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7D1C41882D4E5944006EFF27 /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = "Swinject-Dynamic";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
-	rootObject = 7D1C40962D4E4EF4006EFF27 /* Project object */;
+	rootObject = 7D1C416D2D4E5921006EFF27 /* Project object */;
 }
