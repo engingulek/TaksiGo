@@ -25,7 +25,7 @@ protocol ViewToPrensenterEnterPhoneProtocol{
 //MARK: PresenterToViewEnterPhoneProtocol
 protocol PresenterToViewEnterPhoneProtocol: AnyObject,Kits{
     func setEnterPhoneTitleContract(titleContract:TitleContract)
-    func setCountryAndFlagList(list:[CountryNumber])
+    func setCountryList(list:[CountryNumber])
     func updateCountryPhone(countryPhone:CountryNumber)
     func phoneNumberState(error:(errorState:Bool,text:String,buttonBackColor:String))
  
@@ -48,7 +48,7 @@ protocol PresenterToRouterEnterPhoneProtocol {
 }
 
 
-
+//MARK: EnterPhoneModuleProtocol
 public protocol EnterPhoneModuleProtocol {
     func createModule() -> UIViewController
 }

@@ -25,7 +25,7 @@
 		7D67E3A12D4F8BB10026A77D /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 7D67E3A02D4F8BB10026A77D /* SnapKit-Dynamic */; };
 		7D67E3A32D4F8F470026A77D /* EnterPhoneContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D67E3A22D4F8F470026A77D /* EnterPhoneContracts.swift */; };
 		7D67E3A52D4F976E0026A77D /* EnterPhoneInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D67E3A42D4F976E0026A77D /* EnterPhoneInteractor.swift */; };
-		7D67E3A72D4F98B80026A77D /* CountryNumberAndFlag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D67E3A62D4F98B80026A77D /* CountryNumberAndFlag.swift */; };
+		7D67E3A72D4F98B80026A77D /* CountryNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D67E3A62D4F98B80026A77D /* CountryNumber.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -59,7 +59,7 @@
 		7D67E39B2D4F8B460026A77D /* EnterPhoneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterPhoneView.swift; sourceTree = "<group>"; };
 		7D67E3A22D4F8F470026A77D /* EnterPhoneContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterPhoneContracts.swift; sourceTree = "<group>"; };
 		7D67E3A42D4F976E0026A77D /* EnterPhoneInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterPhoneInteractor.swift; sourceTree = "<group>"; };
-		7D67E3A62D4F98B80026A77D /* CountryNumberAndFlag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryNumberAndFlag.swift; sourceTree = "<group>"; };
+		7D67E3A62D4F98B80026A77D /* CountryNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryNumber.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +107,7 @@
 				7D67E39B2D4F8B460026A77D /* EnterPhoneView.swift */,
 				7D67E3A22D4F8F470026A77D /* EnterPhoneContracts.swift */,
 				7D67E3A42D4F976E0026A77D /* EnterPhoneInteractor.swift */,
-				7D67E3A62D4F98B80026A77D /* CountryNumberAndFlag.swift */,
+				7D67E3A62D4F98B80026A77D /* CountryNumber.swift */,
 			);
 			path = EnterPhoneModule;
 			sourceTree = "<group>";
@@ -218,7 +218,7 @@
 				7D67E37D2D4F827A0026A77D /* EnterPhoneRouter.swift in Sources */,
 				7D67E3A52D4F976E0026A77D /* EnterPhoneInteractor.swift in Sources */,
 				7D67E39C2D4F8B460026A77D /* EnterPhoneView.swift in Sources */,
-				7D67E3A72D4F98B80026A77D /* CountryNumberAndFlag.swift in Sources */,
+				7D67E3A72D4F98B80026A77D /* CountryNumber.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

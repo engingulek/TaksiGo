@@ -29,7 +29,7 @@ extension EnterPhoneViewController : PresenterToViewEnterPhoneProtocol {
         enterPhoneView.configureTitleContract(titleContract: titleContract)
     }
     
-    func setCountryAndFlagList(list: [CountryNumber]) {
+    func setCountryList(list: [CountryNumber]) {
         enterPhoneView.setCountryAndFlagList(list: list)
     }
     
@@ -38,7 +38,11 @@ extension EnterPhoneViewController : PresenterToViewEnterPhoneProtocol {
         enterPhoneView.updateCountryPhone(countryPhone: countryPhone)
     }
     
-    func phoneNumberState(error: (errorState: Bool, text: String, buttonBackColor: String)) {
+    func phoneNumberState(
+        error: (
+            errorState: Bool,
+            text: String,
+            buttonBackColor: String)) {
         enterPhoneView.setError(error: error)
     }
 }

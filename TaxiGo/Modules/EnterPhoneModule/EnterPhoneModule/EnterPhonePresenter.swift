@@ -37,6 +37,7 @@ extension EnterPhonePresenter : ViewToPrensenterEnterPhoneProtocol {
     func viewDidLoad() {
         view?.setBackColorAble(color: ColorTheme.primaryBackColor.rawValue)
         view?.changeColorNavigaiton()
+        
         let titleContract = TitleContract(
             enterPhoneTitle: TextTheme.enterPhoneNumber.localized,
             countryTitle: TextTheme.countryTitle.localized,
@@ -100,8 +101,7 @@ extension EnterPhonePresenter : ViewToPrensenterEnterPhoneProtocol {
 
 extension EnterPhonePresenter : InteractorToPresenterEnterPhoneProtocol {
     func sendCountryAndFlagList(list: [CountryNumber]) {
-        
-        view?.setCountryAndFlagList(list: list)
+        view?.setCountryList(list: list)
     }
     
 }

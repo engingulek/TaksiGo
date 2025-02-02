@@ -19,6 +19,7 @@ class EnterPhoneView : BaseView<EnterPhoneViewController> {
     private lazy var countryTitle = LabelFactory.createLabel(ofType: .smallTitleLabel)
     private lazy var phoneTitle = LabelFactory.createLabel(ofType: .smallTitleLabel)
     private lazy var errorLabel = LabelFactory.createLabel(ofType: .smallErrorLabel)
+    private lazy var phoneTextFieldUIView = UIView()
     private lazy var phoneTextField : UITextField = UITextField()
     private lazy var menuButton = UIButton(type: .system)
     private lazy var countryNumberList : [CountryNumber] = []
@@ -27,8 +28,6 @@ class EnterPhoneView : BaseView<EnterPhoneViewController> {
     private lazy var contiuneButtonAction  : UIAction = UIAction { _ in
        print("test")
     }
-    
-    
     
     override func setupView() {
         super.setupView()
@@ -47,7 +46,6 @@ class EnterPhoneView : BaseView<EnterPhoneViewController> {
             }))
         }
         let menu = UIMenu(title: "", children: menuElementList)
-        
         
         sender.showsMenuAsPrimaryAction = true
         sender.menu = menu
@@ -82,30 +80,42 @@ class EnterPhoneView : BaseView<EnterPhoneViewController> {
         menuButton.titleLabel?.font = .systemFont(ofSize: 20)
         menuButton.titleLabel?.textAlignment = .left
         
-        addSubview(phoneTextField)
-        phoneTextField.snp.makeConstraints { make in
+        addSubview(phoneTextFieldUIView)
+        phoneTextFieldUIView.snp.makeConstraints { make in
             make.leading.equalTo(menuButton.snp.trailing).offset(20)
-            make.width.equalTo(180)
+            make.width.equalTo(200)
             
             make.top.equalTo(menuButton.snp.top)
             make.bottom.equalTo(menuButton.snp.bottom)
         }
-        phoneTextField.layer.borderColor = UIColor.lightGray.cgColor
-        phoneTextField.layer.borderWidth = 1
+        
+        phoneTextFieldUIView.layer.borderColor = UIColor.lightGray.cgColor
+        phoneTextFieldUIView.layer.borderWidth = 1
+        phoneTextFieldUIView.layer.cornerRadius = 10
+        
+        phoneTextFieldUIView.addSubview(phoneTextField)
+        phoneTextField.snp.makeConstraints { make in
+            make.top.equalToSuperview()
+            make.bottom.equalToSuperview()
+            make.leading.equalToSuperview().offset(15)
+            make.trailing.equalToSuperview().offset(-15)
+            
+        }
+
         phoneTextField.keyboardType = .numberPad
         
         addSubview(phoneTitle)
         phoneTitle.snp.makeConstraints { make in
             make.top.equalTo(countryTitle.snp.top)
-            make.leading.equalTo(phoneTextField.snp.leading)
+            make.leading.equalTo(phoneTextFieldUIView.snp.leading)
         }
         
         
         addSubview(errorLabel)
         errorLabel.snp.makeConstraints { make in
-            make.top.equalTo(phoneTextField.snp.bottom).offset(5)
-            make.leading.equalTo(phoneTextField.snp.leading)
-            make.trailing.equalTo(phoneTextField.snp.trailing)
+            make.top.equalTo(phoneTextFieldUIView.snp.bottom).offset(5)
+            make.leading.equalTo(phoneTextFieldUIView.snp.leading)
+            make.trailing.equalTo(phoneTextFieldUIView.snp.trailing)
         }
         
         addSubview(contiuneButton)
@@ -113,24 +123,21 @@ class EnterPhoneView : BaseView<EnterPhoneViewController> {
             make.leading.equalToSuperview().offset(15)
             make.trailing.equalToSuperview().offset(-15)
             make.height.equalTo(50)
-            make.top.equalTo(phoneTextField.snp.bottom).offset(40)
+            make.top.equalTo(phoneTextFieldUIView.snp.bottom).offset(40)
         }
     }
-    
     
     func configureTitleContract(titleContract:TitleContract) {
         enterPhoneTitle.text = titleContract.enterPhoneTitle
         countryTitle.text = titleContract.countryTitle
         phoneTitle.text = titleContract.phoneNumberTitle
         contiuneButton.setTitle(titleContract.contiuneButtonTitke, for: .normal)
-        
     }
-    
 
     func setCountryAndFlagList(list:[CountryNumber]){
         countryNumberList = list
     }
-    
+
     func updateCountryPhone(countryPhone:CountryNumber){
         menuButton.setTitle("\(countryPhone.name)(\(countryPhone.phohoneCode))", for: .normal)
     }
@@ -139,7 +146,5 @@ class EnterPhoneView : BaseView<EnterPhoneViewController> {
         errorLabel.text = error.text
         contiuneButton.backgroundColor = UIColor(hex: error.buttonBackColor)
         contiuneButton.isEnabled = !error.errorState
-        
-     
     }
 }
