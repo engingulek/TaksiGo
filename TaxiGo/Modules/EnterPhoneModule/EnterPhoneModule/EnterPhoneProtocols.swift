@@ -19,13 +19,15 @@ protocol ViewToPrensenterEnterPhoneProtocol{
     func onTappedContiuneButton()
     func selectedCounryNumber(country:CountryNumber)
     func phoneNumberTextFieldChanged(text:String?)
+   
+    
     
 }
 
 //MARK: PresenterToViewEnterPhoneProtocol
 protocol PresenterToViewEnterPhoneProtocol: AnyObject,Kits{
-    func setEnterPhoneTitleContract(titleContract:TitleContract)
-    func setCountryList(list:[CountryNumber])
+    func setEnterPhoneTitleContract(titleContract:Contract)
+   
     func updateCountryPhone(countryPhone:CountryNumber)
     func phoneNumberState(error:(errorState:Bool,text:String,buttonBackColor:String))
  
@@ -34,12 +36,12 @@ protocol PresenterToViewEnterPhoneProtocol: AnyObject,Kits{
 
 //MARK: PresenterToInteractorEnterPhoneProtocol
 protocol PresenterToInteractorEnterPhoneProtocol{
-    func fetchCountryAndFlagList()
+   
 }
 
 //MARK: InteractorToPresenterEnterPhoneProtocol
 protocol InteractorToPresenterEnterPhoneProtocol{
-    func sendCountryAndFlagList(list:[CountryNumber])
+   
 }
 
 //MARK: PresenterToRouterEnterPhoneProtocol

@@ -24,9 +24,21 @@
 		7D67E39F2D4F8BB10026A77D /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 7D67E39E2D4F8BB10026A77D /* SnapKit */; };
 		7D67E3A12D4F8BB10026A77D /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 7D67E3A02D4F8BB10026A77D /* SnapKit-Dynamic */; };
 		7D67E3A32D4F8F470026A77D /* EnterPhoneContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D67E3A22D4F8F470026A77D /* EnterPhoneContracts.swift */; };
-		7D67E3A52D4F976E0026A77D /* EnterPhoneInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D67E3A42D4F976E0026A77D /* EnterPhoneInteractor.swift */; };
 		7D67E3A72D4F98B80026A77D /* CountryNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D67E3A62D4F98B80026A77D /* CountryNumber.swift */; };
+		7D67E3B72D50162D0026A77D /* EnterPhoneModuleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D67E3B62D50162D0026A77D /* EnterPhoneModuleTests.swift */; };
+		7D67E3B82D50162D0026A77D /* EnterPhoneModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D67E3682D4F81D40026A77D /* EnterPhoneModule.framework */; };
+		7D67E3BF2D5016C50026A77D /* MockEnterPhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D67E3BE2D5016C50026A77D /* MockEnterPhoneViewController.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7D67E3B92D50162D0026A77D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7D67E35F2D4F81D40026A77D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7D67E3672D4F81D40026A77D;
+			remoteInfo = EnterPhoneModule;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		7D67E3982D4F88760026A77D /* Embed Frameworks */ = {
@@ -58,8 +70,10 @@
 		7D67E3992D4F893F0026A77D /* EnterPhonePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterPhonePresenter.swift; sourceTree = "<group>"; };
 		7D67E39B2D4F8B460026A77D /* EnterPhoneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterPhoneView.swift; sourceTree = "<group>"; };
 		7D67E3A22D4F8F470026A77D /* EnterPhoneContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterPhoneContracts.swift; sourceTree = "<group>"; };
-		7D67E3A42D4F976E0026A77D /* EnterPhoneInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterPhoneInteractor.swift; sourceTree = "<group>"; };
 		7D67E3A62D4F98B80026A77D /* CountryNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryNumber.swift; sourceTree = "<group>"; };
+		7D67E3B42D50162D0026A77D /* EnterPhoneModuleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EnterPhoneModuleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D67E3B62D50162D0026A77D /* EnterPhoneModuleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterPhoneModuleTests.swift; sourceTree = "<group>"; };
+		7D67E3BE2D5016C50026A77D /* MockEnterPhoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockEnterPhoneViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +90,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7D67E3B12D50162D0026A77D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D67E3B82D50162D0026A77D /* EnterPhoneModule.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -83,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				7D67E36A2D4F81D40026A77D /* EnterPhoneModule */,
+				7D67E3B52D50162D0026A77D /* EnterPhoneModuleTests */,
 				7D67E3692D4F81D40026A77D /* Products */,
 				7D67E38B2D4F88760026A77D /* Frameworks */,
 			);
@@ -92,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				7D67E3682D4F81D40026A77D /* EnterPhoneModule.framework */,
+				7D67E3B42D50162D0026A77D /* EnterPhoneModuleTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -106,7 +130,6 @@
 				7D67E3992D4F893F0026A77D /* EnterPhonePresenter.swift */,
 				7D67E39B2D4F8B460026A77D /* EnterPhoneView.swift */,
 				7D67E3A22D4F8F470026A77D /* EnterPhoneContracts.swift */,
-				7D67E3A42D4F976E0026A77D /* EnterPhoneInteractor.swift */,
 				7D67E3A62D4F98B80026A77D /* CountryNumber.swift */,
 			);
 			path = EnterPhoneModule;
@@ -121,6 +144,15 @@
 				7D67E38F2D4F88760026A77D /* ViewControllerAbleKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7D67E3B52D50162D0026A77D /* EnterPhoneModuleTests */ = {
+			isa = PBXGroup;
+			children = (
+				7D67E3B62D50162D0026A77D /* EnterPhoneModuleTests.swift */,
+				7D67E3BE2D5016C50026A77D /* MockEnterPhoneViewController.swift */,
+			);
+			path = EnterPhoneModuleTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,6 +192,24 @@
 			productReference = 7D67E3682D4F81D40026A77D /* EnterPhoneModule.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		7D67E3B32D50162D0026A77D /* EnterPhoneModuleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7D67E3BB2D50162D0026A77D /* Build configuration list for PBXNativeTarget "EnterPhoneModuleTests" */;
+			buildPhases = (
+				7D67E3B02D50162D0026A77D /* Sources */,
+				7D67E3B12D50162D0026A77D /* Frameworks */,
+				7D67E3B22D50162D0026A77D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7D67E3BA2D50162D0026A77D /* PBXTargetDependency */,
+			);
+			name = EnterPhoneModuleTests;
+			productName = EnterPhoneModuleTests;
+			productReference = 7D67E3B42D50162D0026A77D /* EnterPhoneModuleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -167,11 +217,15 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					7D67E3672D4F81D40026A77D = {
 						CreatedOnToolsVersion = 15.0;
 						LastSwiftMigration = 1500;
+					};
+					7D67E3B32D50162D0026A77D = {
+						CreatedOnToolsVersion = 15.0;
 					};
 				};
 			};
@@ -192,12 +246,20 @@
 			projectRoot = "";
 			targets = (
 				7D67E3672D4F81D40026A77D /* EnterPhoneModule */,
+				7D67E3B32D50162D0026A77D /* EnterPhoneModuleTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		7D67E3662D4F81D40026A77D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D67E3B22D50162D0026A77D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -216,13 +278,29 @@
 				7D67E37B2D4F821B0026A77D /* EnterPhoneProtocols.swift in Sources */,
 				7D67E3A32D4F8F470026A77D /* EnterPhoneContracts.swift in Sources */,
 				7D67E37D2D4F827A0026A77D /* EnterPhoneRouter.swift in Sources */,
-				7D67E3A52D4F976E0026A77D /* EnterPhoneInteractor.swift in Sources */,
 				7D67E39C2D4F8B460026A77D /* EnterPhoneView.swift in Sources */,
 				7D67E3A72D4F98B80026A77D /* CountryNumber.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7D67E3B02D50162D0026A77D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D67E3BF2D5016C50026A77D /* MockEnterPhoneViewController.swift in Sources */,
+				7D67E3B72D50162D0026A77D /* EnterPhoneModuleTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7D67E3BA2D50162D0026A77D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7D67E3672D4F81D40026A77D /* EnterPhoneModule */;
+			targetProxy = 7D67E3B92D50162D0026A77D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		7D67E36D2D4F81D40026A77D /* Debug */ = {
@@ -415,6 +493,38 @@
 			};
 			name = Release;
 		};
+		7D67E3BC2D50162D0026A77D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 45DX68AP4J;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = engingulek.EnterPhoneModuleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7D67E3BD2D50162D0026A77D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 45DX68AP4J;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = engingulek.EnterPhoneModuleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -432,6 +542,15 @@
 			buildConfigurations = (
 				7D67E3702D4F81D40026A77D /* Debug */,
 				7D67E3712D4F81D40026A77D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7D67E3BB2D50162D0026A77D /* Build configuration list for PBXNativeTarget "EnterPhoneModuleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D67E3BC2D50162D0026A77D /* Debug */,
+				7D67E3BD2D50162D0026A77D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

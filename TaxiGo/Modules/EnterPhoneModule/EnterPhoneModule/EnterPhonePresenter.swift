@@ -10,7 +10,7 @@ import CoreKit
 final class EnterPhonePresenter {
     weak var view: PresenterToViewEnterPhoneProtocol?
     private var router : PresenterToRouterEnterPhoneProtocol
-    private var interactor : PresenterToInteractorEnterPhoneProtocol
+    
     //TODO: This will been gotten from location
     private var selectedCountryNumber = CountryNumber(  id: 1,
                                                         phohoneCode: "+90",
@@ -19,13 +19,14 @@ final class EnterPhonePresenter {
                                                         
                                                         phoneFormat: #"^5\d{9}$"#)
     
+    
     init(view: PresenterToViewEnterPhoneProtocol?,
-         router: PresenterToRouterEnterPhoneProtocol,
-         interactor : PresenterToInteractorEnterPhoneProtocol
+         router: PresenterToRouterEnterPhoneProtocol
+         
     ) {
         self.view = view
         self.router = router
-        self.interactor = interactor
+        
     }
 }
 
@@ -33,22 +34,38 @@ final class EnterPhonePresenter {
 //MARK: EnterPhonePresenter : ViewToPrensenterEnterPhoneProtocol
 extension EnterPhonePresenter : ViewToPrensenterEnterPhoneProtocol {
     
+   
     
     func viewDidLoad() {
         view?.setBackColorAble(color: ColorTheme.primaryBackColor.rawValue)
         view?.changeColorNavigaiton()
         
-        let titleContract = TitleContract(
+        let titleContract = Contract(
             enterPhoneTitle: TextTheme.enterPhoneNumber.localized,
             countryTitle: TextTheme.countryTitle.localized,
             phoneNumberTitle: TextTheme.phoneNumber.localized,
             phoneTextFieldPlaceholder: TextTheme.phoneNumber.localized,
-            contiuneButtonTitke: TextTheme.countiuneButtonTitle.localized
+            contiuneButtonTitke: TextTheme.countiuneButtonTitle.localized,
+            numberList: [    .init(
+                id: 1,
+                phohoneCode: "+90",
+                length: 10,
+                name: "Türkiye",
+                
+                phoneFormat: #"^5\d{9}$"#
+            ), .init(
+                    id: 2,
+                    phohoneCode: "+44",
+                    length: 10,
+                    name: "UK",
+                    
+                    phoneFormat:  #"^7\d{9}$"#
+                )]
         )
         
         view?.setEnterPhoneTitleContract(titleContract: titleContract)
         view?.updateCountryPhone(countryPhone: selectedCountryNumber)
-        interactor.fetchCountryAndFlagList()
+        
         
         view?.phoneNumberState(error: (
             errorState: true,
@@ -76,7 +93,7 @@ extension EnterPhonePresenter : ViewToPrensenterEnterPhoneProtocol {
                 errorState: true,
                 text: TextTheme.numberTooLong.localized,
                 buttonBackColor: ColorTheme.redAlpha05.rawValue))
-           
+            
         } else if text.count == phoneNumberLength {
             let isValidNumber = text.isValisPhoneNumber(number: text, regex: selectedCountryNumber.phoneFormat)
             let containsLetters = text.rangeOfCharacter(from: characterSet) != nil
@@ -85,7 +102,7 @@ extension EnterPhonePresenter : ViewToPrensenterEnterPhoneProtocol {
                     errorState: true,
                     text: TextTheme.checkNumber.localized,
                     buttonBackColor: ColorTheme.redAlpha05.rawValue))
-             
+                
             } else {
                 view?.phoneNumberState(error: (
                     errorState: false,
@@ -94,14 +111,6 @@ extension EnterPhonePresenter : ViewToPrensenterEnterPhoneProtocol {
             }
         }
     }
-    
-    
-    
 }
 
-extension EnterPhonePresenter : InteractorToPresenterEnterPhoneProtocol {
-    func sendCountryAndFlagList(list: [CountryNumber]) {
-        view?.setCountryList(list: list)
-    }
-    
-}
+

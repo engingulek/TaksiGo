@@ -11,28 +11,23 @@ import UIKit
 class EnterPhoneViewController : UIViewController {
     lazy var presenter : ViewToPrensenterEnterPhoneProtocol = EnterPhonePresenter(
         view: self,
-        router: EnterPhoneRouter(), interactor: EnterPhoneInteractor())
+        router: EnterPhoneRouter())
     private lazy var enterPhoneView = EnterPhoneView(self)
     override func viewDidLoad() {
         super.viewDidLoad()
         view = enterPhoneView
-        enterPhoneView.presenter = presenter
         presenter.viewDidLoad()
-        
+        enterPhoneView.presenter = presenter
+       
     }
 }
 
 extension EnterPhoneViewController : PresenterToViewEnterPhoneProtocol {
   
 
-    func setEnterPhoneTitleContract(titleContract: TitleContract) {
+    func setEnterPhoneTitleContract(titleContract: Contract) {
         enterPhoneView.configureTitleContract(titleContract: titleContract)
     }
-    
-    func setCountryList(list: [CountryNumber]) {
-        enterPhoneView.setCountryAndFlagList(list: list)
-    }
-    
     
     func updateCountryPhone(countryPhone: CountryNumber) {
         enterPhoneView.updateCountryPhone(countryPhone: countryPhone)

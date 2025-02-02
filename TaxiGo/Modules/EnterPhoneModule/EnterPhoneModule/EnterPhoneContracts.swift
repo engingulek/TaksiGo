@@ -8,12 +8,13 @@
 import Foundation
 
 
-struct TitleContract {
+struct Contract {
     let enterPhoneTitle:String
     let countryTitle:String
     let phoneNumberTitle:String
     let phoneTextFieldPlaceholder:String
     let contiuneButtonTitke:String
+    let numberList:[CountryNumber]
     
     
 }

@@ -26,17 +26,22 @@ class EnterPhoneView : BaseView<EnterPhoneViewController> {
     private lazy var contiuneButton = ButtonFactory.createButton(ofType: .basic(action: contiuneButtonAction))
     
     private lazy var contiuneButtonAction  : UIAction = UIAction { _ in
-       print("test")
+        self.presenter?.onTappedContiuneButton()
     }
     
     override func setupView() {
         super.setupView()
         configureView()
-        
+      
+     
         menuButton.addTarget(self, action: #selector(showMenu(_:)), for: .touchUpInside)
         phoneTextField.addTarget(self, action: #selector(phoneTextFieldEditChanged(_:)), for: .editingChanged)
       
     }
+    
+   /* func getList(list : [CountryNumber]) {
+        countryNumberList = list
+    }*/
     
     @objc func showMenu(_ sender: UIButton) {
         var menuElementList : [UIMenuElement] = []
@@ -127,16 +132,15 @@ class EnterPhoneView : BaseView<EnterPhoneViewController> {
         }
     }
     
-    func configureTitleContract(titleContract:TitleContract) {
+    func configureTitleContract(titleContract:Contract) {
         enterPhoneTitle.text = titleContract.enterPhoneTitle
         countryTitle.text = titleContract.countryTitle
         phoneTitle.text = titleContract.phoneNumberTitle
         contiuneButton.setTitle(titleContract.contiuneButtonTitke, for: .normal)
+        countryNumberList = titleContract.numberList
     }
 
-    func setCountryAndFlagList(list:[CountryNumber]){
-        countryNumberList = list
-    }
+  
 
     func updateCountryPhone(countryPhone:CountryNumber){
         menuButton.setTitle("\(countryPhone.name)(\(countryPhone.phohoneCode))", for: .normal)
