@@ -23,6 +23,7 @@ class EnterPhoneViewController : UIViewController {
 }
 
 extension EnterPhoneViewController : PresenterToViewEnterPhoneProtocol {
+  
 
     func setEnterPhoneTitleContract(titleContract: TitleContract) {
         enterPhoneView.configureTitleContract(titleContract: titleContract)
@@ -35,6 +36,10 @@ extension EnterPhoneViewController : PresenterToViewEnterPhoneProtocol {
     
     func updateCountryPhone(countryPhone: CountryNumber) {
         enterPhoneView.updateCountryPhone(countryPhone: countryPhone)
+    }
+    
+    func phoneNumberState(error: (errorState: Bool, text: String, buttonBackColor: String)) {
+        enterPhoneView.setError(error: error)
     }
 }
 

@@ -10,4 +10,8 @@ import Foundation
 public enum ColorTheme : String {
     /// is white
     case primaryBackColor = "#FFFFFF"
+    
+    case redAlpha05 = "#F44A4A"
+    
+    case red = "#FF0000"
 }

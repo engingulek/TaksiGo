@@ -18,6 +18,7 @@ protocol ViewToPrensenterEnterPhoneProtocol{
     func viewDidLoad()
     func onTappedContiuneButton()
     func selectedCounryNumber(country:CountryNumber)
+    func phoneNumberTextFieldChanged(text:String?)
     
 }
 
@@ -26,6 +27,7 @@ protocol PresenterToViewEnterPhoneProtocol: AnyObject,Kits{
     func setEnterPhoneTitleContract(titleContract:TitleContract)
     func setCountryAndFlagList(list:[CountryNumber])
     func updateCountryPhone(countryPhone:CountryNumber)
+    func phoneNumberState(error:(errorState:Bool,text:String,buttonBackColor:String))
  
   
 }

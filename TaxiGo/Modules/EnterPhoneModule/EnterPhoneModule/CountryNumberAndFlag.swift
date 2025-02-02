@@ -10,7 +10,10 @@ import Foundation
 struct CountryNumber {
     let id:Int
     let phohoneCode:String
+    let length:Int
     let name:String
+    
     let phoneFormat:String
-    let flagUrl:String
+    
+   
 }

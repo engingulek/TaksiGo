@@ -12,3 +12,6 @@
 "enterPhoneNumber" = "Telefon Numaranı Gir";
 "countryTitle" = "Ülke";
 "phoneNumber" = "Telefon Numarası";
+"numberTooLong" = "Numara çok uzun";
+"controlNumber" = "Numarayı Kontrol Edin";
+"countiuneButtonTitle" = "Devam";

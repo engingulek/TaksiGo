@@ -14,6 +14,10 @@ public enum TextTheme :String {
     case enterPhoneNumber
     case countryTitle
     case phoneNumber
+    case numberTooLong
+    case checkNumber
+    case defaultEmpty
+    case countiuneButtonTitle
     
     
    public var localized: String {
@@ -31,6 +35,14 @@ public enum TextTheme :String {
                return NSLocalizedString("countryTitle", comment: "enter phone number text")
            case .phoneNumber:
                return NSLocalizedString("phoneNumber", comment: "phoneNumber text")
+           case .numberTooLong:
+               return NSLocalizedString("numberTooLong", comment: "numberTooLong text")
+           case .checkNumber:
+               return NSLocalizedString("controlNumber", comment: "controlNumber text")
+           case .countiuneButtonTitle:
+               return NSLocalizedString("countiuneButtonTitle", comment: "countiuneButtonTitle text")
+           case .defaultEmpty:
+               return ""
            }
        }
 }

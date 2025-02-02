@@ -12,6 +12,9 @@ struct TitleContract {
     let enterPhoneTitle:String
     let countryTitle:String
     let phoneNumberTitle:String
+    let phoneTextFieldPlaceholder:String
+    let contiuneButtonTitke:String
+    
     
 }
 

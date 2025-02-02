@@ -11,3 +11,6 @@
 "enterPhoneNumber" = "Enter Your Phone Number";
 "countryTitle" = "Country";
 "phoneNumber" = "Phone Number";
+"numberTooLong" = "The number is too long";
+"controlNumber" = "Check the number";
+"countiuneButtonTitle" = "Countiune";

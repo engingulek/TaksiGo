@@ -15,19 +15,20 @@ class EnterPhoneInteractor : PresenterToInteractorEnterPhoneProtocol {
             .init(
                 id: 1,
                 phohoneCode: "+90",
+                length: 10,
                 name: "Türkiye",
-                phoneFormat: "", flagUrl: ""),
+             
+                phoneFormat: #"^5\d{9}$"#
+                ),
             
                 .init(
                     id: 2,
-                    phohoneCode: "+49",
-                    name: "Germany",
-                    phoneFormat: "",flagUrl:""),
-            .init(
-                id: 3,
-                phohoneCode: "+7",
-                name: "Russia",
-                phoneFormat: "", flagUrl: ""),
+                    phohoneCode: "+44",
+                    length: 10,
+                    name: "UK",
+                 
+                    phoneFormat:  #"^7\d{9}$"#
+                    )
         ]
         presenter?.sendCountryAndFlagList(list: list)
     }
