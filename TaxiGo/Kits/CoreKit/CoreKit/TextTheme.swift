@@ -11,6 +11,9 @@ public enum TextTheme :String {
     case bannerTitle
     case subbannerTitle
     case onboardingButtonTitle
+    case enterPhoneNumber
+    case countryTitle
+    case phoneNumber
     
     
    public var localized: String {
@@ -22,6 +25,12 @@ public enum TextTheme :String {
            case .onboardingButtonTitle:
                return NSLocalizedString("startButtonTitle",
                                         comment: "start button title")
+           case .enterPhoneNumber:
+               return NSLocalizedString("enterPhoneNumber", comment: "enter phone number text")
+           case .countryTitle:
+               return NSLocalizedString("countryTitle", comment: "enter phone number text")
+           case .phoneNumber:
+               return NSLocalizedString("phoneNumber", comment: "phoneNumber text")
            }
        }
 }

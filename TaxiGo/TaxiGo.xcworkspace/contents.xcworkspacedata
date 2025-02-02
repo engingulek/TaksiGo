@@ -31,6 +31,9 @@
       location = "container:"
       name = "Modules">
       <FileRef
+         location = "group:TaxiGo/../Modules/EnterPhoneModule/EnterPhoneModule.xcodeproj">
+      </FileRef>
+      <FileRef
          location = "group:Modules/OnboardingModule/OnboardingModule.xcodeproj">
       </FileRef>
    </Group>

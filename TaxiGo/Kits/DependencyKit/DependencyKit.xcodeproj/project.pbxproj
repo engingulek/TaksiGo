@@ -11,29 +11,14 @@
 		7D1C41872D4E5933006EFF27 /* DependencyRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1C41862D4E5933006EFF27 /* DependencyRegister.swift */; };
 		7D1C418A2D4E5944006EFF27 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 7D1C41892D4E5944006EFF27 /* Swinject */; };
 		7D1C418C2D4E5944006EFF27 /* Swinject-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 7D1C418B2D4E5944006EFF27 /* Swinject-Dynamic */; };
-		7D1C418F2D4E59B0006EFF27 /* OnboardingModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D1C418E2D4E59B0006EFF27 /* OnboardingModule.framework */; };
-		7D1C41902D4E59B0006EFF27 /* OnboardingModule.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7D1C418E2D4E59B0006EFF27 /* OnboardingModule.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		7D1C41912D4E59B0006EFF27 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				7D1C41902D4E59B0006EFF27 /* OnboardingModule.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		7D1C41762D4E5921006EFF27 /* DependencyKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DependencyKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D1C41792D4E5921006EFF27 /* DependencyKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DependencyKit.h; sourceTree = "<group>"; };
 		7D1C41862D4E5933006EFF27 /* DependencyRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyRegister.swift; sourceTree = "<group>"; };
 		7D1C418E2D4E59B0006EFF27 /* OnboardingModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = OnboardingModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D67E37E2D4F836D0026A77D /* EnterPhoneModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = EnterPhoneModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,7 +26,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7D1C418F2D4E59B0006EFF27 /* OnboardingModule.framework in Frameworks */,
 				7D1C418A2D4E5944006EFF27 /* Swinject in Frameworks */,
 				7D1C418C2D4E5944006EFF27 /* Swinject-Dynamic in Frameworks */,
 			);
@@ -79,6 +63,7 @@
 		7D1C418D2D4E59B0006EFF27 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7D67E37E2D4F836D0026A77D /* EnterPhoneModule.framework */,
 				7D1C418E2D4E59B0006EFF27 /* OnboardingModule.framework */,
 			);
 			name = Frameworks;
@@ -106,7 +91,6 @@
 				7D1C41722D4E5921006EFF27 /* Sources */,
 				7D1C41732D4E5921006EFF27 /* Frameworks */,
 				7D1C41742D4E5921006EFF27 /* Resources */,
-				7D1C41912D4E59B0006EFF27 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

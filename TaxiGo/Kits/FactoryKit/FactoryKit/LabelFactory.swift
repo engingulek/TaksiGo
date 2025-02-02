@@ -11,6 +11,8 @@ public enum LabelType {
     /// is boldSystemFont:30
     case bannerLabel
     case subbannerLabel
+    case largeTitleLabel(Bool)
+    case smallTitleLabel
     
 }
 
@@ -28,6 +30,13 @@ public struct LabelFactory {
             label.font = .systemFont(ofSize: 20)
             label.numberOfLines = 3
             label.textAlignment = .center
+            label.textColor = .black
+        case .largeTitleLabel(let boldState):
+          
+            label.font = boldState ? .boldSystemFont(ofSize: 20) : .systemFont(ofSize: 20)
+            label.textColor = .black
+        case .smallTitleLabel:
+            label.font = .systemFont(ofSize: 15)
             label.textColor = .black
         }
         return label

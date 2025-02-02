@@ -9,3 +9,6 @@
 "banner" = "Taksi Çağır, Hızla Var!";
 "subbanner" = "Uygulamamızla dakikalar içinde güvenli ve konforlu bir yolculuk yapın. Hemen taksinizi çağırın";
 "startButtonTitle" = "Başla";
+"enterPhoneNumber" = "Telefon Numaranı Gir";
+"countryTitle" = "Ülke";
+"phoneNumber" = "Telefon Numarası";
