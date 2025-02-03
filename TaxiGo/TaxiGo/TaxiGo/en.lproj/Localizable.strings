@@ -8,3 +8,13 @@
 "banner" = "Call a Taxi, Get There Fast!";
 "subbanner" = "Book a safe and comfortable ride in minutes with our app. Call your taxi now!";
 "startButtonTitle" = "Start";
+"enterPhoneNumber" = "Enter Your Phone Number";
+"countryTitle" = "Country";
+"phoneNumber" = "Phone Number";
+"numberTooLong" = "The number is too long";
+"controlNumber" = "Check the number";
+"countiuneButtonTitle" = "Countiune";
+"confirmTitle" =  "Enter your activation code";
+"entered" = "Entered";
+"confirmButton" = "Confirm";
+"codeError" = "Code Incorrect";

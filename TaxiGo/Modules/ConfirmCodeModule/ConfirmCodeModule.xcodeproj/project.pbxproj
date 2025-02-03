@@ -1,0 +1,589 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7D58483A2D50C29D008A530D /* ConfirmCodeModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D5848392D50C29D008A530D /* ConfirmCodeModule.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7D5848472D50C2C5008A530D /* ConfirmCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5848462D50C2C5008A530D /* ConfirmCodeViewController.swift */; };
+		7D5848492D50C2D3008A530D /* ConfirmCodeProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5848482D50C2D3008A530D /* ConfirmCodeProtocols.swift */; };
+		7D58484B2D50C2E0008A530D /* ConfirmCodeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D58484A2D50C2E0008A530D /* ConfirmCodeRouter.swift */; };
+		7D5848582D50D2CE008A530D /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 7D5848572D50D2CE008A530D /* SnapKit */; };
+		7D58485A2D50D2CE008A530D /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 7D5848592D50D2CE008A530D /* SnapKit-Dynamic */; };
+		7D58485D2D50D382008A530D /* BaseViewKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D58485C2D50D381008A530D /* BaseViewKit.framework */; };
+		7D58485E2D50D382008A530D /* BaseViewKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7D58485C2D50D381008A530D /* BaseViewKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7D5848612D50D38A008A530D /* ViewControllerAbleKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D5848602D50D38A008A530D /* ViewControllerAbleKit.framework */; };
+		7D5848622D50D38A008A530D /* ViewControllerAbleKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7D5848602D50D38A008A530D /* ViewControllerAbleKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7D5848642D50D396008A530D /* FactoryKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D5848632D50D396008A530D /* FactoryKit.framework */; };
+		7D5848652D50D396008A530D /* FactoryKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7D5848632D50D396008A530D /* FactoryKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7D5848672D50D39C008A530D /* CoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D5848662D50D39C008A530D /* CoreKit.framework */; };
+		7D5848682D50D39C008A530D /* CoreKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7D5848662D50D39C008A530D /* CoreKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7D58486A2D50D43A008A530D /* ConfirmCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5848692D50D43A008A530D /* ConfirmCodeView.swift */; };
+		7D58486C2D50D7DA008A530D /* ConfirmCodePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D58486B2D50D7DA008A530D /* ConfirmCodePresenter.swift */; };
+		7D58486E2D50D8A3008A530D /* Contract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D58486D2D50D8A3008A530D /* Contract.swift */; };
+		7D5848762D512E30008A530D /* ConfirmCodeModuleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5848752D512E30008A530D /* ConfirmCodeModuleTests.swift */; };
+		7D5848772D512E30008A530D /* ConfirmCodeModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D5848362D50C29D008A530D /* ConfirmCodeModule.framework */; };
+		7D58487E2D512E49008A530D /* MockConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D58487D2D512E49008A530D /* MockConfirmViewController.swift */; };
+		7D5848802D512F52008A530D /* ConfirmInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D58487F2D512F52008A530D /* ConfirmInteractor.swift */; };
+		7D5848822D5131CE008A530D /* MockConfirmInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5848812D5131CE008A530D /* MockConfirmInteractor.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7D5848782D512E30008A530D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7D58482D2D50C29D008A530D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7D5848352D50C29D008A530D;
+			remoteInfo = ConfirmCodeModule;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		7D58485F2D50D382008A530D /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				7D5848652D50D396008A530D /* FactoryKit.framework in Embed Frameworks */,
+				7D5848622D50D38A008A530D /* ViewControllerAbleKit.framework in Embed Frameworks */,
+				7D5848682D50D39C008A530D /* CoreKit.framework in Embed Frameworks */,
+				7D58485E2D50D382008A530D /* BaseViewKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		7D5848362D50C29D008A530D /* ConfirmCodeModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ConfirmCodeModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D5848392D50C29D008A530D /* ConfirmCodeModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConfirmCodeModule.h; sourceTree = "<group>"; };
+		7D5848462D50C2C5008A530D /* ConfirmCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmCodeViewController.swift; sourceTree = "<group>"; };
+		7D5848482D50C2D3008A530D /* ConfirmCodeProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmCodeProtocols.swift; sourceTree = "<group>"; };
+		7D58484A2D50C2E0008A530D /* ConfirmCodeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmCodeRouter.swift; sourceTree = "<group>"; };
+		7D58485C2D50D381008A530D /* BaseViewKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = BaseViewKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D5848602D50D38A008A530D /* ViewControllerAbleKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ViewControllerAbleKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D5848632D50D396008A530D /* FactoryKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FactoryKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D5848662D50D39C008A530D /* CoreKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CoreKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D5848692D50D43A008A530D /* ConfirmCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmCodeView.swift; sourceTree = "<group>"; };
+		7D58486B2D50D7DA008A530D /* ConfirmCodePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmCodePresenter.swift; sourceTree = "<group>"; };
+		7D58486D2D50D8A3008A530D /* Contract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contract.swift; sourceTree = "<group>"; };
+		7D5848732D512E30008A530D /* ConfirmCodeModuleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConfirmCodeModuleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D5848752D512E30008A530D /* ConfirmCodeModuleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmCodeModuleTests.swift; sourceTree = "<group>"; };
+		7D58487D2D512E49008A530D /* MockConfirmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockConfirmViewController.swift; sourceTree = "<group>"; };
+		7D58487F2D512F52008A530D /* ConfirmInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmInteractor.swift; sourceTree = "<group>"; };
+		7D5848812D5131CE008A530D /* MockConfirmInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockConfirmInteractor.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7D5848332D50C29D008A530D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D5848642D50D396008A530D /* FactoryKit.framework in Frameworks */,
+				7D5848582D50D2CE008A530D /* SnapKit in Frameworks */,
+				7D5848672D50D39C008A530D /* CoreKit.framework in Frameworks */,
+				7D58485A2D50D2CE008A530D /* SnapKit-Dynamic in Frameworks */,
+				7D5848612D50D38A008A530D /* ViewControllerAbleKit.framework in Frameworks */,
+				7D58485D2D50D382008A530D /* BaseViewKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D5848702D512E30008A530D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D5848772D512E30008A530D /* ConfirmCodeModule.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7D58482C2D50C29D008A530D = {
+			isa = PBXGroup;
+			children = (
+				7D5848382D50C29D008A530D /* ConfirmCodeModule */,
+				7D5848742D512E30008A530D /* ConfirmCodeModuleTests */,
+				7D5848372D50C29D008A530D /* Products */,
+				7D58485B2D50D381008A530D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		7D5848372D50C29D008A530D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7D5848362D50C29D008A530D /* ConfirmCodeModule.framework */,
+				7D5848732D512E30008A530D /* ConfirmCodeModuleTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7D5848382D50C29D008A530D /* ConfirmCodeModule */ = {
+			isa = PBXGroup;
+			children = (
+				7D5848392D50C29D008A530D /* ConfirmCodeModule.h */,
+				7D5848462D50C2C5008A530D /* ConfirmCodeViewController.swift */,
+				7D5848482D50C2D3008A530D /* ConfirmCodeProtocols.swift */,
+				7D58484A2D50C2E0008A530D /* ConfirmCodeRouter.swift */,
+				7D5848692D50D43A008A530D /* ConfirmCodeView.swift */,
+				7D58486B2D50D7DA008A530D /* ConfirmCodePresenter.swift */,
+				7D58486D2D50D8A3008A530D /* Contract.swift */,
+				7D58487F2D512F52008A530D /* ConfirmInteractor.swift */,
+			);
+			path = ConfirmCodeModule;
+			sourceTree = "<group>";
+		};
+		7D58485B2D50D381008A530D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7D5848662D50D39C008A530D /* CoreKit.framework */,
+				7D5848632D50D396008A530D /* FactoryKit.framework */,
+				7D5848602D50D38A008A530D /* ViewControllerAbleKit.framework */,
+				7D58485C2D50D381008A530D /* BaseViewKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7D5848742D512E30008A530D /* ConfirmCodeModuleTests */ = {
+			isa = PBXGroup;
+			children = (
+				7D5848752D512E30008A530D /* ConfirmCodeModuleTests.swift */,
+				7D58487D2D512E49008A530D /* MockConfirmViewController.swift */,
+				7D5848812D5131CE008A530D /* MockConfirmInteractor.swift */,
+			);
+			path = ConfirmCodeModuleTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		7D5848312D50C29D008A530D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D58483A2D50C29D008A530D /* ConfirmCodeModule.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		7D5848352D50C29D008A530D /* ConfirmCodeModule */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7D58483D2D50C29D008A530D /* Build configuration list for PBXNativeTarget "ConfirmCodeModule" */;
+			buildPhases = (
+				7D5848312D50C29D008A530D /* Headers */,
+				7D5848322D50C29D008A530D /* Sources */,
+				7D5848332D50C29D008A530D /* Frameworks */,
+				7D5848342D50C29D008A530D /* Resources */,
+				7D58485F2D50D382008A530D /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ConfirmCodeModule;
+			packageProductDependencies = (
+				7D5848572D50D2CE008A530D /* SnapKit */,
+				7D5848592D50D2CE008A530D /* SnapKit-Dynamic */,
+			);
+			productName = ConfirmCodeModule;
+			productReference = 7D5848362D50C29D008A530D /* ConfirmCodeModule.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		7D5848722D512E30008A530D /* ConfirmCodeModuleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7D58487A2D512E30008A530D /* Build configuration list for PBXNativeTarget "ConfirmCodeModuleTests" */;
+			buildPhases = (
+				7D58486F2D512E30008A530D /* Sources */,
+				7D5848702D512E30008A530D /* Frameworks */,
+				7D5848712D512E30008A530D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7D5848792D512E30008A530D /* PBXTargetDependency */,
+			);
+			name = ConfirmCodeModuleTests;
+			productName = ConfirmCodeModuleTests;
+			productReference = 7D5848732D512E30008A530D /* ConfirmCodeModuleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7D58482D2D50C29D008A530D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					7D5848352D50C29D008A530D = {
+						CreatedOnToolsVersion = 15.0;
+						LastSwiftMigration = 1500;
+					};
+					7D5848722D512E30008A530D = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = 7D5848302D50C29D008A530D /* Build configuration list for PBXProject "ConfirmCodeModule" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7D58482C2D50C29D008A530D;
+			packageReferences = (
+				7D5848562D50D2CE008A530D /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
+			productRefGroup = 7D5848372D50C29D008A530D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7D5848352D50C29D008A530D /* ConfirmCodeModule */,
+				7D5848722D512E30008A530D /* ConfirmCodeModuleTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7D5848342D50C29D008A530D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D5848712D512E30008A530D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7D5848322D50C29D008A530D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D58486A2D50D43A008A530D /* ConfirmCodeView.swift in Sources */,
+				7D5848492D50C2D3008A530D /* ConfirmCodeProtocols.swift in Sources */,
+				7D58484B2D50C2E0008A530D /* ConfirmCodeRouter.swift in Sources */,
+				7D5848802D512F52008A530D /* ConfirmInteractor.swift in Sources */,
+				7D58486E2D50D8A3008A530D /* Contract.swift in Sources */,
+				7D58486C2D50D7DA008A530D /* ConfirmCodePresenter.swift in Sources */,
+				7D5848472D50C2C5008A530D /* ConfirmCodeViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D58486F2D512E30008A530D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D5848822D5131CE008A530D /* MockConfirmInteractor.swift in Sources */,
+				7D5848762D512E30008A530D /* ConfirmCodeModuleTests.swift in Sources */,
+				7D58487E2D512E49008A530D /* MockConfirmViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7D5848792D512E30008A530D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7D5848352D50C29D008A530D /* ConfirmCodeModule */;
+			targetProxy = 7D5848782D512E30008A530D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		7D58483B2D50C29D008A530D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		7D58483C2D50C29D008A530D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		7D58483E2D50C29D008A530D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 45DX68AP4J;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = engingulek.ConfirmCodeModule;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7D58483F2D50C29D008A530D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 45DX68AP4J;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = engingulek.ConfirmCodeModule;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		7D58487B2D512E30008A530D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 45DX68AP4J;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = engingulek.ConfirmCodeModuleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7D58487C2D512E30008A530D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 45DX68AP4J;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = engingulek.ConfirmCodeModuleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7D5848302D50C29D008A530D /* Build configuration list for PBXProject "ConfirmCodeModule" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D58483B2D50C29D008A530D /* Debug */,
+				7D58483C2D50C29D008A530D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7D58483D2D50C29D008A530D /* Build configuration list for PBXNativeTarget "ConfirmCodeModule" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D58483E2D50C29D008A530D /* Debug */,
+				7D58483F2D50C29D008A530D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7D58487A2D512E30008A530D /* Build configuration list for PBXNativeTarget "ConfirmCodeModuleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D58487B2D512E30008A530D /* Debug */,
+				7D58487C2D512E30008A530D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7D5848562D50D2CE008A530D /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7D5848572D50D2CE008A530D /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7D5848562D50D2CE008A530D /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		7D5848592D50D2CE008A530D /* SnapKit-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7D5848562D50D2CE008A530D /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = "SnapKit-Dynamic";
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 7D58482D2D50C29D008A530D /* Project object */;
+}

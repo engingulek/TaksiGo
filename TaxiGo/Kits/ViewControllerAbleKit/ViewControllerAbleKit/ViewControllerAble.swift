@@ -31,8 +31,17 @@ extension SegueAble  where Self : UIViewController{
     public func pushViewControllerAble (_ vc:UIViewController,animated:Bool) {
         navigationController?.pushViewController(vc, animated: animated)
     }
-    
-   
+}
+
+
+public protocol NavigationDesing {
+    func changeColorNavigaiton()
+}
+
+extension NavigationDesing where Self : UIViewController {
+    public func changeColorNavigaiton(){
+        navigationController?.navigationBar.tintColor = .black
+    }
 }
 
 //TODO: This will be module

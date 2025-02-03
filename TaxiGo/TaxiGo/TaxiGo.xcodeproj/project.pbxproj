@@ -16,6 +16,10 @@
 		7D1C419A2D4E5C56006EFF27 /* OnboardingModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D1C41972D4E5C56006EFF27 /* OnboardingModule.framework */; };
 		7D1C419B2D4E5C56006EFF27 /* OnboardingModule.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7D1C41972D4E5C56006EFF27 /* OnboardingModule.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7D1C42562D4E77D6006EFF27 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7D1C42582D4E77D6006EFF27 /* Localizable.strings */; };
+		7D58484D2D50C45E008A530D /* ConfirmCodeModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D58484C2D50C45E008A530D /* ConfirmCodeModule.framework */; };
+		7D58484E2D50C45E008A530D /* ConfirmCodeModule.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7D58484C2D50C45E008A530D /* ConfirmCodeModule.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7D67E3892D4F86430026A77D /* EnterPhoneModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D67E3882D4F86430026A77D /* EnterPhoneModule.framework */; };
+		7D67E38A2D4F86430026A77D /* EnterPhoneModule.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7D67E3882D4F86430026A77D /* EnterPhoneModule.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,7 +29,9 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				7D67E38A2D4F86430026A77D /* EnterPhoneModule.framework in Embed Frameworks */,
 				7D1C41992D4E5C56006EFF27 /* DependencyKit.framework in Embed Frameworks */,
+				7D58484E2D50C45E008A530D /* ConfirmCodeModule.framework in Embed Frameworks */,
 				7D1C419B2D4E5C56006EFF27 /* OnboardingModule.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -46,6 +52,8 @@
 		7D1C42572D4E77D6006EFF27 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		7D1C42592D4E77D8006EFF27 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		7D1C42862D4E9E5A006EFF27 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		7D58484C2D50C45E008A530D /* ConfirmCodeModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ConfirmCodeModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D67E3882D4F86430026A77D /* EnterPhoneModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = EnterPhoneModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +61,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D67E3892D4F86430026A77D /* EnterPhoneModule.framework in Frameworks */,
 				7D1C41982D4E5C56006EFF27 /* DependencyKit.framework in Frameworks */,
+				7D58484D2D50C45E008A530D /* ConfirmCodeModule.framework in Frameworks */,
 				7D1C419A2D4E5C56006EFF27 /* OnboardingModule.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -94,6 +104,8 @@
 		7D1C41952D4E5C56006EFF27 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7D58484C2D50C45E008A530D /* ConfirmCodeModule.framework */,
+				7D67E3882D4F86430026A77D /* EnterPhoneModule.framework */,
 				7D1C41962D4E5C56006EFF27 /* DependencyKit.framework */,
 				7D1C41972D4E5C56006EFF27 /* OnboardingModule.framework */,
 			);

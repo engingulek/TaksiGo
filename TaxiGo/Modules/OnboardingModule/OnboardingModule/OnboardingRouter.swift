@@ -7,7 +7,8 @@
 
 import Foundation
 import UIKit
-
+import EnterPhoneModule
+import DependencyKit
 public class OnboardingRouter : OnboardingModuleProtocol {
     public init() {}
     public func createModule() -> UIViewController {
@@ -23,8 +24,8 @@ public class OnboardingRouter : OnboardingModuleProtocol {
 
 extension OnboardingRouter : PresenterToRouterOnboardingProtocol {
     func toPhoneNumberConfirm(view:PresenterToViewOnboardingProtocol?) {
-        let testViewController = UIViewController()
-        testViewController.view.backgroundColor = .red
-        view?.pushViewControllerAble(testViewController, animated: true)
+        let enterPhoneModule : EnterPhoneModuleProtocol = DependencyRegister.shared.resolve(EnterPhoneModuleProtocol.self)
+        let viewController = enterPhoneModule.createModule()
+        view?.pushViewControllerAble(viewController, animated: true)
     }
 }
