@@ -12,8 +12,11 @@ public class ConfirmCodeRouter : ConfirmModuleProtocol {
     public func createModule(phoneNumber:String) -> UIViewController {
         let viewController = ConfirmCodeViewController()
         let router = ConfirmCodeRouter()
-        let presenter : ViewToPrensenterConfirmCodeProtocol = ConfirmCodePresenter(view: viewController, router: router)
+        let interactor = ConfirmInteractor()
+        let presenter : ViewToPrensenterConfirmCodeProtocol & InteractorToPresenterConfirmCodeProtocol =
+        ConfirmCodePresenter(view: viewController, router: router,interactor: interactor)
         viewController.presenter = presenter
+        interactor.presenter = presenter
         presenter.getPhoneNumber(phoneNumber)
         return viewController
     }

@@ -28,12 +28,12 @@ protocol PresenterToViewConfirmCodeProtocol: AnyObject,Kits{
 
 //MARK: PresenterToInteractorConfirmCodeProtocol
 protocol PresenterToInteractorConfirmCodeProtocol{
-   
+   func fetchConfirmCode()
 }
 
 //MARK: InteractorToPresenterConfirmCodeProtocol
 protocol InteractorToPresenterConfirmCodeProtocol{
-   
+    func sendConfirmCode(code:String)
 }
 
 //MARK: PresenterToRouterConfirmCodeProtocol

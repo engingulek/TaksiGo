@@ -10,10 +10,16 @@ import CoreKit
 final class ConfirmCodePresenter {
     weak var view : PresenterToViewConfirmCodeProtocol?
     private var router : PresenterToRouterConfirmCodeProtocol
+    private let interactor : PresenterToInteractorConfirmCodeProtocol
     private var phoneNumber :String = ""
-    init(view: PresenterToViewConfirmCodeProtocol?, router: PresenterToRouterConfirmCodeProtocol) {
+    private var confirmCode : String?
+    init(view: PresenterToViewConfirmCodeProtocol?, 
+         router: PresenterToRouterConfirmCodeProtocol,
+         interactor : PresenterToInteractorConfirmCodeProtocol
+    ) {
         self.view = view
         self.router = router
+        self.interactor = interactor
     }
 }
 
@@ -28,10 +34,14 @@ extension ConfirmCodePresenter : ViewToPrensenterConfirmCodeProtocol {
             confirmButtonTitle: TextTheme.confirmButton.localized)
         view?.setTitleContract(contract: titleContract)
         
+        interactor.fetchConfirmCode()
+        
         view?.setCodeErrorState(error: (
             errorState: true,
             text: TextTheme.defaultEmpty.localized,
             borderColor: ColorTheme.black.rawValue))
+        
+       
     }
     
     func getPhoneNumber(_ number: String) {
@@ -40,8 +50,9 @@ extension ConfirmCodePresenter : ViewToPrensenterConfirmCodeProtocol {
     }
     
     func onTappedConfirmCode(code: String) {
-        let defaultCode = "21443"
-        if code != defaultCode {
+        guard let confirmCode = confirmCode else {return}
+        
+        if code != confirmCode {
             view?.setCodeErrorState(error: (
                 errorState: true,
                 text: TextTheme.codeError.localized,
@@ -54,5 +65,12 @@ extension ConfirmCodePresenter : ViewToPrensenterConfirmCodeProtocol {
                 borderColor: ColorTheme.black.rawValue))
             router.toHomeModule(view: view)
         }
+    }
+}
+
+
+extension ConfirmCodePresenter : InteractorToPresenterConfirmCodeProtocol {
+    func sendConfirmCode(code: String) {
+        confirmCode = code
     }
 }

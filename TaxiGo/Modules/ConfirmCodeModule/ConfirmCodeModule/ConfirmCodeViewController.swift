@@ -9,7 +9,8 @@ import Foundation
 import UIKit
 import SnapKit
 class ConfirmCodeViewController : UIViewController, UITextFieldDelegate {
-    lazy var presenter : ViewToPrensenterConfirmCodeProtocol = ConfirmCodePresenter(view: self, router: ConfirmCodeRouter())
+    lazy var presenter : ViewToPrensenterConfirmCodeProtocol = 
+    ConfirmCodePresenter(view: self, router: ConfirmCodeRouter(),interactor: ConfirmInteractor())
     private lazy var confirmCodeView = ConfirmCodeView(self)
     
     override func viewDidLoad() {

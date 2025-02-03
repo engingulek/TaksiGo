@@ -24,7 +24,22 @@
 		7D58486A2D50D43A008A530D /* ConfirmCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5848692D50D43A008A530D /* ConfirmCodeView.swift */; };
 		7D58486C2D50D7DA008A530D /* ConfirmCodePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D58486B2D50D7DA008A530D /* ConfirmCodePresenter.swift */; };
 		7D58486E2D50D8A3008A530D /* Contract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D58486D2D50D8A3008A530D /* Contract.swift */; };
+		7D5848762D512E30008A530D /* ConfirmCodeModuleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5848752D512E30008A530D /* ConfirmCodeModuleTests.swift */; };
+		7D5848772D512E30008A530D /* ConfirmCodeModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D5848362D50C29D008A530D /* ConfirmCodeModule.framework */; };
+		7D58487E2D512E49008A530D /* MockConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D58487D2D512E49008A530D /* MockConfirmViewController.swift */; };
+		7D5848802D512F52008A530D /* ConfirmInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D58487F2D512F52008A530D /* ConfirmInteractor.swift */; };
+		7D5848822D5131CE008A530D /* MockConfirmInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5848812D5131CE008A530D /* MockConfirmInteractor.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7D5848782D512E30008A530D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7D58482D2D50C29D008A530D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7D5848352D50C29D008A530D;
+			remoteInfo = ConfirmCodeModule;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		7D58485F2D50D382008A530D /* Embed Frameworks */ = {
@@ -56,6 +71,11 @@
 		7D5848692D50D43A008A530D /* ConfirmCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmCodeView.swift; sourceTree = "<group>"; };
 		7D58486B2D50D7DA008A530D /* ConfirmCodePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmCodePresenter.swift; sourceTree = "<group>"; };
 		7D58486D2D50D8A3008A530D /* Contract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contract.swift; sourceTree = "<group>"; };
+		7D5848732D512E30008A530D /* ConfirmCodeModuleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConfirmCodeModuleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D5848752D512E30008A530D /* ConfirmCodeModuleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmCodeModuleTests.swift; sourceTree = "<group>"; };
+		7D58487D2D512E49008A530D /* MockConfirmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockConfirmViewController.swift; sourceTree = "<group>"; };
+		7D58487F2D512F52008A530D /* ConfirmInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmInteractor.swift; sourceTree = "<group>"; };
+		7D5848812D5131CE008A530D /* MockConfirmInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockConfirmInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +92,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7D5848702D512E30008A530D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D5848772D512E30008A530D /* ConfirmCodeModule.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -79,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				7D5848382D50C29D008A530D /* ConfirmCodeModule */,
+				7D5848742D512E30008A530D /* ConfirmCodeModuleTests */,
 				7D5848372D50C29D008A530D /* Products */,
 				7D58485B2D50D381008A530D /* Frameworks */,
 			);
@@ -88,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				7D5848362D50C29D008A530D /* ConfirmCodeModule.framework */,
+				7D5848732D512E30008A530D /* ConfirmCodeModuleTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -102,6 +132,7 @@
 				7D5848692D50D43A008A530D /* ConfirmCodeView.swift */,
 				7D58486B2D50D7DA008A530D /* ConfirmCodePresenter.swift */,
 				7D58486D2D50D8A3008A530D /* Contract.swift */,
+				7D58487F2D512F52008A530D /* ConfirmInteractor.swift */,
 			);
 			path = ConfirmCodeModule;
 			sourceTree = "<group>";
@@ -115,6 +146,16 @@
 				7D58485C2D50D381008A530D /* BaseViewKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7D5848742D512E30008A530D /* ConfirmCodeModuleTests */ = {
+			isa = PBXGroup;
+			children = (
+				7D5848752D512E30008A530D /* ConfirmCodeModuleTests.swift */,
+				7D58487D2D512E49008A530D /* MockConfirmViewController.swift */,
+				7D5848812D5131CE008A530D /* MockConfirmInteractor.swift */,
+			);
+			path = ConfirmCodeModuleTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,6 +195,24 @@
 			productReference = 7D5848362D50C29D008A530D /* ConfirmCodeModule.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		7D5848722D512E30008A530D /* ConfirmCodeModuleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7D58487A2D512E30008A530D /* Build configuration list for PBXNativeTarget "ConfirmCodeModuleTests" */;
+			buildPhases = (
+				7D58486F2D512E30008A530D /* Sources */,
+				7D5848702D512E30008A530D /* Frameworks */,
+				7D5848712D512E30008A530D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7D5848792D512E30008A530D /* PBXTargetDependency */,
+			);
+			name = ConfirmCodeModuleTests;
+			productName = ConfirmCodeModuleTests;
+			productReference = 7D5848732D512E30008A530D /* ConfirmCodeModuleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -161,11 +220,15 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					7D5848352D50C29D008A530D = {
 						CreatedOnToolsVersion = 15.0;
 						LastSwiftMigration = 1500;
+					};
+					7D5848722D512E30008A530D = {
+						CreatedOnToolsVersion = 15.0;
 					};
 				};
 			};
@@ -186,12 +249,20 @@
 			projectRoot = "";
 			targets = (
 				7D5848352D50C29D008A530D /* ConfirmCodeModule */,
+				7D5848722D512E30008A530D /* ConfirmCodeModuleTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		7D5848342D50C29D008A530D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D5848712D512E30008A530D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -208,13 +279,32 @@
 				7D58486A2D50D43A008A530D /* ConfirmCodeView.swift in Sources */,
 				7D5848492D50C2D3008A530D /* ConfirmCodeProtocols.swift in Sources */,
 				7D58484B2D50C2E0008A530D /* ConfirmCodeRouter.swift in Sources */,
+				7D5848802D512F52008A530D /* ConfirmInteractor.swift in Sources */,
 				7D58486E2D50D8A3008A530D /* Contract.swift in Sources */,
 				7D58486C2D50D7DA008A530D /* ConfirmCodePresenter.swift in Sources */,
 				7D5848472D50C2C5008A530D /* ConfirmCodeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7D58486F2D512E30008A530D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D5848822D5131CE008A530D /* MockConfirmInteractor.swift in Sources */,
+				7D5848762D512E30008A530D /* ConfirmCodeModuleTests.swift in Sources */,
+				7D58487E2D512E49008A530D /* MockConfirmViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7D5848792D512E30008A530D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7D5848352D50C29D008A530D /* ConfirmCodeModule */;
+			targetProxy = 7D5848782D512E30008A530D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		7D58483B2D50C29D008A530D /* Debug */ = {
@@ -407,6 +497,38 @@
 			};
 			name = Release;
 		};
+		7D58487B2D512E30008A530D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 45DX68AP4J;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = engingulek.ConfirmCodeModuleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7D58487C2D512E30008A530D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 45DX68AP4J;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = engingulek.ConfirmCodeModuleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -424,6 +546,15 @@
 			buildConfigurations = (
 				7D58483E2D50C29D008A530D /* Debug */,
 				7D58483F2D50C29D008A530D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7D58487A2D512E30008A530D /* Build configuration list for PBXNativeTarget "ConfirmCodeModuleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D58487B2D512E30008A530D /* Debug */,
+				7D58487C2D512E30008A530D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
