@@ -13,7 +13,9 @@ public enum LabelType {
     case subbannerLabel
     case largeTitleLabel(Bool)
     case smallTitleLabel
+    case mediumTitleLabel(Bool)
     case smallErrorLabel
+    case mediumErrorLabel(Bool)
     
 }
 
@@ -44,6 +46,12 @@ public struct LabelFactory {
             label.font = .systemFont(ofSize: 15)
             label.textColor = .red
             
+        case .mediumTitleLabel(let boldState):
+            label.font = boldState ? .boldSystemFont(ofSize: 20) : .systemFont(ofSize: 20)
+            label.textColor = .black
+        case .mediumErrorLabel(let boldState):
+            label.font = boldState ? .boldSystemFont(ofSize: 20) : .systemFont(ofSize: 20)
+            label.textColor = .red
         }
         return label
     }

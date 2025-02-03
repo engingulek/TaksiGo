@@ -9,6 +9,7 @@ import UIKit
 import DependencyKit
 import OnboardingModule
 import EnterPhoneModule
+import ConfirmCodeModule
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
@@ -32,6 +33,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         container.register(EnterPhoneModuleProtocol.self) { _ in
             EnterPhoneRouter()
+        }
+        
+        
+        container.register(ConfirmModuleProtocol.self) { _ in
+            ConfirmCodeRouter()
         }
     }
 

@@ -15,3 +15,7 @@
 "numberTooLong" = "Numara çok uzun";
 "controlNumber" = "Numarayı Kontrol Edin";
 "countiuneButtonTitle" = "Devam";
+"confirmTitle" =  "Aktivasyon kodunuzu girin";
+"entered" = "Girilen";
+"confirmButton" = "Doğrula";
+"codeError" = "Kod Yanlış";

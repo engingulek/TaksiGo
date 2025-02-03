@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D5848502D50C4BD008A530D /* ConfirmCodeModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D58484F2D50C4BD008A530D /* ConfirmCodeModule.framework */; };
+		7D5848512D50C4BD008A530D /* ConfirmCodeModule.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7D58484F2D50C4BD008A530D /* ConfirmCodeModule.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7D5848542D50C50D008A530D /* DependencyKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D5848532D50C50D008A530D /* DependencyKit.framework */; };
+		7D5848552D50C50D008A530D /* DependencyKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7D5848532D50C50D008A530D /* DependencyKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7D67E36C2D4F81D40026A77D /* EnterPhoneModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D67E36B2D4F81D40026A77D /* EnterPhoneModule.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7D67E3792D4F820C0026A77D /* EnterPhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D67E3782D4F820C0026A77D /* EnterPhoneViewController.swift */; };
 		7D67E37B2D4F821B0026A77D /* EnterPhoneProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D67E37A2D4F821B0026A77D /* EnterPhoneProtocols.swift */; };
@@ -41,6 +45,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		7D5848522D50C4BD008A530D /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				7D5848552D50C50D008A530D /* DependencyKit.framework in Embed Frameworks */,
+				7D5848512D50C4BD008A530D /* ConfirmCodeModule.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7D67E3982D4F88760026A77D /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -58,6 +74,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7D58484F2D50C4BD008A530D /* ConfirmCodeModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ConfirmCodeModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D5848532D50C50D008A530D /* DependencyKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DependencyKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D67E3682D4F81D40026A77D /* EnterPhoneModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EnterPhoneModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D67E36B2D4F81D40026A77D /* EnterPhoneModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EnterPhoneModule.h; sourceTree = "<group>"; };
 		7D67E3782D4F820C0026A77D /* EnterPhoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterPhoneViewController.swift; sourceTree = "<group>"; };
@@ -94,7 +112,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D5848502D50C4BD008A530D /* ConfirmCodeModule.framework in Frameworks */,
 				7D67E3B82D50162D0026A77D /* EnterPhoneModule.framework in Frameworks */,
+				7D5848542D50C50D008A530D /* DependencyKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,6 +158,8 @@
 		7D67E38B2D4F88760026A77D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7D5848532D50C50D008A530D /* DependencyKit.framework */,
+				7D58484F2D50C4BD008A530D /* ConfirmCodeModule.framework */,
 				7D67E38C2D4F88760026A77D /* BaseViewKit.framework */,
 				7D67E38D2D4F88760026A77D /* CoreKit.framework */,
 				7D67E38E2D4F88760026A77D /* FactoryKit.framework */,
@@ -199,6 +221,7 @@
 				7D67E3B02D50162D0026A77D /* Sources */,
 				7D67E3B12D50162D0026A77D /* Frameworks */,
 				7D67E3B22D50162D0026A77D /* Resources */,
+				7D5848522D50C4BD008A530D /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

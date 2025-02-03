@@ -46,7 +46,7 @@ protocol InteractorToPresenterEnterPhoneProtocol{
 
 //MARK: PresenterToRouterEnterPhoneProtocol
 protocol PresenterToRouterEnterPhoneProtocol {
-    func toConfirmCode()
+    func toConfirmCode(view:PresenterToViewEnterPhoneProtocol?,phoneNumber:String)
 }
 
 

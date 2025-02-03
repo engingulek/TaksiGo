@@ -7,8 +7,8 @@
 
 import Foundation
 import UIKit
-
-
+import ConfirmCodeModule
+import DependencyKit
 
 public class EnterPhoneRouter : EnterPhoneModuleProtocol {
 
@@ -29,8 +29,11 @@ public class EnterPhoneRouter : EnterPhoneModuleProtocol {
 
 
 extension EnterPhoneRouter : PresenterToRouterEnterPhoneProtocol {
-    func toConfirmCode() {
-        print("Selected ToConfirmCode")
+    func toConfirmCode(view:PresenterToViewEnterPhoneProtocol?,phoneNumber:String) {
+        let confirmCodeModule : ConfirmModuleProtocol =
+        DependencyRegister.shared.resolve(ConfirmModuleProtocol.self)
+        let viewController = confirmCodeModule.createModule(phoneNumber: phoneNumber)
+        view?.pushViewControllerAble(viewController, animated: true)
     }
     
     

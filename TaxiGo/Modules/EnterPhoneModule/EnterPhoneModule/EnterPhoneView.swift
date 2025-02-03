@@ -39,10 +39,6 @@ class EnterPhoneView : BaseView<EnterPhoneViewController> {
       
     }
     
-   /* func getList(list : [CountryNumber]) {
-        countryNumberList = list
-    }*/
-    
     @objc func showMenu(_ sender: UIButton) {
         var menuElementList : [UIMenuElement] = []
         countryNumberList.forEach { country in

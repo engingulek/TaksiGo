@@ -18,6 +18,10 @@ public enum TextTheme :String {
     case checkNumber
     case defaultEmpty
     case countiuneButtonTitle
+    case confirmTitle
+    case entered
+    case confirmButton
+    case codeError
     
     
    public var localized: String {
@@ -43,6 +47,14 @@ public enum TextTheme :String {
                return NSLocalizedString("countiuneButtonTitle", comment: "countiuneButtonTitle text")
            case .defaultEmpty:
                return ""
+           case .confirmTitle:
+               return NSLocalizedString("confirmTitle", comment: "confirmTitle text")
+           case .entered:
+               return NSLocalizedString("entered", comment: "entered text")
+           case .confirmButton:
+               return NSLocalizedString("confirmButton", comment: "confirmButton text")
+           case .codeError:
+               return NSLocalizedString("codeError", comment: "codeError text")
            }
        }
 }

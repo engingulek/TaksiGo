@@ -10,6 +10,7 @@ import CoreKit
 final class EnterPhonePresenter {
     weak var view: PresenterToViewEnterPhoneProtocol?
     private var router : PresenterToRouterEnterPhoneProtocol
+    private var enteredPhoneNumber : String = ""
     
     //TODO: This will been gotten from location
     private var selectedCountryNumber = CountryNumber(  id: 1,
@@ -74,7 +75,7 @@ extension EnterPhonePresenter : ViewToPrensenterEnterPhoneProtocol {
     }
     
     func onTappedContiuneButton() {
-        router.toConfirmCode()
+        router.toConfirmCode(view: view,phoneNumber: enteredPhoneNumber)
     }
     
     
@@ -108,6 +109,9 @@ extension EnterPhonePresenter : ViewToPrensenterEnterPhoneProtocol {
                     errorState: false,
                     text: TextTheme.defaultEmpty.localized,
                     buttonBackColor: ColorTheme.red.rawValue))
+                let code = selectedCountryNumber.phohoneCode
+                let phoneNumber = text
+                enteredPhoneNumber = "\(code) \(phoneNumber)"
             }
         }
     }
