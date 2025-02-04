@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 public enum ButtonType {
     case basic(action:UIAction)
+  
     
 }
 
@@ -16,6 +17,7 @@ public enum ButtonType {
 public struct ButtonFactory {
  public   static func createButton(ofType type: ButtonType) -> UIButton {
         let button = UIButton()
+     button.clipsToBounds = true
         switch type {
         case .basic(let action):
             button.titleLabel?.font = .systemFont(ofSize: 20)
@@ -24,6 +26,7 @@ public struct ButtonFactory {
             button.layer.borderWidth = 1
             button.layer.backgroundColor = UIColor.red.cgColor
             button.addAction(action, for: .touchUpInside)
+           
         }
         
         return button

@@ -20,14 +20,20 @@ class HomeView : BaseView<HomeViewController>,CLLocationManagerDelegate {
     
     private let mapView = MKMapView()
     private let locationManager = CLLocationManager()
-    private let locationInfo = LabelFactory.createLabel(ofType: .mediumTitleLabel(false))
+    private let locationInfo = LabelFactory.createLabel(ofType: .smallTitleLabel)
     private lazy var loadingAction = UIActivityIndicatorView.createActivityIndicator()
+    private lazy var arrowDownIcon = IconFactory.createIcon(ofType: .bottomArrow)
+    private var selectedLocation:  CLLocationCoordinate2D?
+    private var userLocation:CLLocation?
+    private lazy var toUserLocationIcon = IconFactory.createIcon(ofType: .userLocation)
+ 
     
     
     override func setupView() {
         super.setupView()
-        
+        mapView.delegate = self
         configureView()
+        
         
     }
     
@@ -44,23 +50,46 @@ class HomeView : BaseView<HomeViewController>,CLLocationManagerDelegate {
         
         mapView.addSubview(locationInfo)
         locationInfo.snp.makeConstraints { make in
-            make.leading.equalTo(10)
-            make.trailing.equalTo(-10)
-            make.top.equalToSuperview().offset(70)
-            make.height.equalTo(40)
+           
+            make.centerX.equalToSuperview()
+            make.centerY.equalToSuperview()
         }
         locationInfo.backgroundColor = .white
         locationInfo.textAlignment = .center
-        locationInfo.layer.cornerRadius = 15
-        addSubview(loadingAction)
+      
+        locationInfo.numberOfLines = 1
+        locationInfo.sizeToFit()
+        
+        locationInfo.addSubview(loadingAction)
         loadingAction.snp.makeConstraints { make in
-            make.top.equalTo(70)
+            make.centerX.equalToSuperview()
+            make.centerY.equalToSuperview()
+        }
+        
+        mapView.addSubview(arrowDownIcon)
+        arrowDownIcon.snp.makeConstraints { make in
+            make.top.equalTo(locationInfo.snp.bottom)
             make.centerX.equalToSuperview()
         }
+        
+        addSubview(toUserLocationIcon)
+        toUserLocationIcon.snp.makeConstraints { make in
+            make.bottom.equalToSuperview().offset(-50)
+            make.trailing.equalToSuperview().offset(-30)
+            make.height.equalTo(40)
+            make.width.equalTo(40)
+        }
+        
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        guard let userLocationn = locations.last else { return }
+        userLocation = locations.last
+        showUserLocation()
+    }
+    
+    
+    func showUserLocation() {
+        guard let userLocationn = userLocation else { return }
         
         let region = MKCoordinateRegion(
             center: userLocationn.coordinate,
@@ -68,30 +97,42 @@ class HomeView : BaseView<HomeViewController>,CLLocationManagerDelegate {
             longitudinalMeters: 200
         )
         mapView.setRegion(region, animated: true)
-        
         loadingAction.startAnimating()
-        fetchLocationInfo(location: userLocationn) { neighborhood in
-            self.locationInfo.text = "Your Location \(neighborhood) Street "
-            self.loadingAction.stopAnimating()
-        }
-        
+        updateLocationInfo(locaiton: userLocationn)
     }
     
-    
-    private func fetchLocationInfo(location: CLLocation, completion: @escaping (String) -> Void) {
+    private func fetchLocationInfo(location: CLLocation, completion: @escaping ((state:Bool,text:String)) -> Void) {
         let geocoder = CLGeocoder()
         geocoder.reverseGeocodeLocation(location) { (placemarks, error) in
-            if let error = error {
-                completion("No location data found")
-                return
-            }
+            
+          
             guard let placemarkInfo = placemarks?.last else {
-                completion("No location data found")
+                completion((state:true,text:"Errro"))
                 return
             }
             let neighborhood = placemarkInfo.subLocality ?? "Unknown"
-            completion(neighborhood)
+            let state = neighborhood == "Unknown"
+            completion((state:state,text:neighborhood))
             
         }
+    }
+    
+    private func updateLocationInfo(locaiton:CLLocation) {
+        loadingAction.startAnimating()
+        fetchLocationInfo(location: locaiton) { result in
+            self.locationInfo.isHidden = result.state
+            self.locationInfo.text = "\(result.text) Street "
+            self.loadingAction.stopAnimating()
+        }
+    }
+}
+
+
+extension HomeView : MKMapViewDelegate {
+    func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
+        let centerCoordinate = mapView.centerCoordinate
+        selectedLocation = centerCoordinate
+        guard let location = selectedLocation else {return}
+        updateLocationInfo(locaiton: CLLocation(latitude: location.latitude, longitude: location.longitude))
     }
 }

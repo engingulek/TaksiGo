@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D0889152D527D1700D4F9C3 /* IconFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D0889142D527D1700D4F9C3 /* IconFactory.swift */; };
 		7D1C420D2D4E6680006EFF27 /* FactoryKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D1C420C2D4E6680006EFF27 /* FactoryKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7D1C421A2D4E6698006EFF27 /* LabelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1C42192D4E6698006EFF27 /* LabelFactory.swift */; };
 		7D1C425B2D4E8F74006EFF27 /* ButtonFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1C425A2D4E8F74006EFF27 /* ButtonFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7D0889142D527D1700D4F9C3 /* IconFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconFactory.swift; sourceTree = "<group>"; };
 		7D1C42092D4E6680006EFF27 /* FactoryKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FactoryKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D1C420C2D4E6680006EFF27 /* FactoryKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FactoryKit.h; sourceTree = "<group>"; };
 		7D1C42192D4E6698006EFF27 /* LabelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelFactory.swift; sourceTree = "<group>"; };
@@ -52,6 +54,7 @@
 				7D1C420C2D4E6680006EFF27 /* FactoryKit.h */,
 				7D1C42192D4E6698006EFF27 /* LabelFactory.swift */,
 				7D1C425A2D4E8F74006EFF27 /* ButtonFactory.swift */,
+				7D0889142D527D1700D4F9C3 /* IconFactory.swift */,
 			);
 			path = FactoryKit;
 			sourceTree = "<group>";
@@ -136,6 +139,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D0889152D527D1700D4F9C3 /* IconFactory.swift in Sources */,
 				7D1C425B2D4E8F74006EFF27 /* ButtonFactory.swift in Sources */,
 				7D1C421A2D4E6698006EFF27 /* LabelFactory.swift in Sources */,
 			);
