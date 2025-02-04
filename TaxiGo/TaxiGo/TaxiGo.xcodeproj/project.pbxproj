@@ -356,6 +356,7 @@
 				DEVELOPMENT_TEAM = 45DX68AP4J;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TaxiGo/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = nkknknn;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -383,6 +384,7 @@
 				DEVELOPMENT_TEAM = 45DX68AP4J;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TaxiGo/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = nkknknn;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

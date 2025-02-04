@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D08890E2D5258DF00D4F9C3 /* UIActivityIndicatorView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D08890D2D5258DF00D4F9C3 /* UIActivityIndicatorView+Extension.swift */; };
 		7D1C426E2D4E9531006EFF27 /* CoreKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D1C426D2D4E9531006EFF27 /* CoreKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7D1C427B2D4E9542006EFF27 /* TextTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1C427A2D4E9542006EFF27 /* TextTheme.swift */; };
 		7D1C42842D4E9677006EFF27 /* ColorTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1C42832D4E9677006EFF27 /* ColorTheme.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7D08890D2D5258DF00D4F9C3 /* UIActivityIndicatorView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIActivityIndicatorView+Extension.swift"; sourceTree = "<group>"; };
 		7D1C426A2D4E9531006EFF27 /* CoreKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CoreKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D1C426D2D4E9531006EFF27 /* CoreKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreKit.h; sourceTree = "<group>"; };
 		7D1C427A2D4E9542006EFF27 /* TextTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextTheme.swift; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 			children = (
 				7D67E3A92D4F9D610026A77D /* UIImageView+Extension.swift */,
 				7D67E3AE2D4FF2060026A77D /* String+Extension.swift */,
+				7D08890D2D5258DF00D4F9C3 /* UIActivityIndicatorView+Extension.swift */,
 			);
 			path = extensions;
 			sourceTree = "<group>";
@@ -159,6 +162,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D67E3AF2D4FF2060026A77D /* String+Extension.swift in Sources */,
+				7D08890E2D5258DF00D4F9C3 /* UIActivityIndicatorView+Extension.swift in Sources */,
 				7D67E3AA2D4F9D610026A77D /* UIImageView+Extension.swift in Sources */,
 				7D1C427B2D4E9542006EFF27 /* TextTheme.swift in Sources */,
 				7D1C42842D4E9677006EFF27 /* ColorTheme.swift in Sources */,

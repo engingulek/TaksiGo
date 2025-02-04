@@ -8,9 +8,12 @@
 import Foundation
 import UIKit
 class HomeViewController : UIViewController {
-    
+    private lazy var homeView = HomeView(self)
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .blue
+       
+        view = homeView
+        view.backgroundColor = .white
+        navigationItem.hidesBackButton = true
     }
 }
