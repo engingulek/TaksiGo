@@ -7,6 +7,8 @@
 
 import Foundation
 import UIKit
+import DependencyKit
+import HomeModule
 public class ConfirmCodeRouter : ConfirmModuleProtocol {
     public init() {}
     public func createModule(phoneNumber:String) -> UIViewController {
@@ -24,8 +26,8 @@ public class ConfirmCodeRouter : ConfirmModuleProtocol {
 
 extension ConfirmCodeRouter : PresenterToRouterConfirmCodeProtocol {
     func toHomeModule(view: PresenterToViewConfirmCodeProtocol?) {
-        let viewController = UIViewController()
-        viewController.view.backgroundColor = .red
+        let homeModule : HomeModuleProtocol = DependencyRegister.shared.resolve(HomeModuleProtocol.self)
+        let viewController = homeModule.createModuler()
         view?.pushViewControllerAble(viewController, animated: true)
     }
 }

@@ -55,6 +55,17 @@ final class EnterPhoneModuleTests: XCTestCase {
         XCTAssertEqual(viewController.invoedkchangeColorNavigaitonCount, 1,"is not one (1)")
     }
     
+    func test_viewDidLoad_stateBackAction() {
+        XCTAssertFalse(viewController.invokedstateBackAction,"is not false")
+        XCTAssertEqual(viewController.invoedkstateBackActionCount, 0,"is not zero (0)")
+        presenter.viewDidLoad()
+        
+        XCTAssertTrue(viewController.invokedstateBackAction,"is not true")
+        XCTAssertEqual(viewController.invoedkstateBackActionCount, 1,"is not one (1)")
+        XCTAssertEqual(viewController.invokedstateBackActionData.map(\.state),[true],"is not correct")
+        
+    }
+    
     func test_viewDidLoad_setEnterPhoneTitleContract_ReturnContract(){
         XCTAssertFalse(viewController.invokedsetEnterPhoneTitleContract,"is not false")
         XCTAssertEqual(viewController.invokedsetEnterPhoneTitleContractCount, 0,"is not zero (0)")

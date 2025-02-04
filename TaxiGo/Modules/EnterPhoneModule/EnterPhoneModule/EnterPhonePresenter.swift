@@ -72,6 +72,7 @@ extension EnterPhonePresenter : ViewToPrensenterEnterPhoneProtocol {
             errorState: true,
             text: TextTheme.defaultEmpty.localized,
             buttonBackColor: ColorTheme.redAlpha05.rawValue))
+        view?.stateBackAction(state: true)
     }
     
     func onTappedContiuneButton() {
