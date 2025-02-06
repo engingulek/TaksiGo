@@ -34,11 +34,11 @@ class LocationManager: NSObject {
         let geocoder = CLGeocoder()
         geocoder.reverseGeocodeLocation(location) { (placemarks, error) in
             guard let placemarkInfo = placemarks?.last else {
-                completion((state:true,text:"Errro"))
+                completion((state:true,text:""))
                 return
             }
-            let neighborhood = placemarkInfo.subLocality ?? "Unknown"
-            let state = neighborhood == "Unknown"
+            let neighborhood = placemarkInfo.subLocality ?? ""
+            let state = neighborhood == ""
             completion((state:state,text:neighborhood))
             
         }

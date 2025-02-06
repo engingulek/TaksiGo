@@ -11,42 +11,32 @@ import FactoryKit
 import UIKit
 import MapKit
 import SnapKit
-import CoreLocation
+
 import CoreKit
 
-
-
-class HomeView : BaseView<HomeViewController>,CLLocationManagerDelegate {
+class MapUIView : UIView{
      var presenter : ViewToPrensenterHomeProtocol?
     private let mapView = MKMapView()
     private let locationInfo = LabelFactory.createLabel(ofType: .smallTitleLabel(false))
     private lazy var arrowDownIcon = IconFactory.createIcon(ofType: .bottomArrow)
-    private lazy var subView = SubView()
- 
     
-    override func setupView() {
-        super.setupView()
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+ 
         mapView.delegate = self
         configureView()
-        
-        
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     private func configureView() {
-        addSubview(subView)
-        subView.snp.makeConstraints { make in
-            make.leading.equalToSuperview()
-            make.trailing.equalToSuperview()
-            make.bottom.equalToSuperview()
-            make.height.equalTo(UIScreen.main.bounds.height / 3)
-        }
+      
         
         addSubview(mapView)
         mapView.snp.makeConstraints { make in
-            make.top.equalToSuperview()
-            make.leading.equalToSuperview()
-            make.trailing.equalToSuperview()
-            make.bottom.equalTo(subView.snp.top)
+            make.edges.equalToSuperview()
          
         }
         mapView.showsUserLocation = true
@@ -70,12 +60,34 @@ class HomeView : BaseView<HomeViewController>,CLLocationManagerDelegate {
             make.top.equalTo(locationInfo.snp.bottom)
             make.centerX.equalToSuperview()
         }
-        
-       
-        
+    }
+}
+
+
+extension MapUIView : MKMapViewDelegate {
+    func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
+        let centerCoordinate = mapView.centerCoordinate
+        presenter?.mapMove(location: (latitude: centerCoordinate.latitude, longitude: centerCoordinate.latitude))
+    }
+}
+
+//MARK: MapUIViewAbles
+extension MapUIView {
+    
+    func ableFuncs(able:MapUIViewAbles) {
+        switch able {
+        case .setLocationInfo(let state, let text):
+            setLocationInfo(state: state, text: text)
+        case .updateLocation(let location, let meters):
+            showUserLocation(location: (latitude: location.0, longitude: location.1), meters: meters)
+        case .errorState(let state, let text):
+            errorState(state: state, errorMessage: text)
+        }
     }
     
-    func showUserLocation(location: (latitude: Double, longitude: Double),meters:Double) {
+    
+    
+   private func showUserLocation(location: (latitude: Double, longitude: Double),meters:Double) {
         let region = MKCoordinateRegion(
             center: CLLocationCoordinate2D(latitude: location.latitude, longitude: location.longitude),
             latitudinalMeters: meters,
@@ -83,21 +95,13 @@ class HomeView : BaseView<HomeViewController>,CLLocationManagerDelegate {
         )
         mapView.setRegion(region, animated: true)
     }
-    func setLocationInfo(state:Bool,text:String) {
+   private func setLocationInfo(state:Bool,text:String) {
        
         self.locationInfo.isHidden = state
-        self.locationInfo.text = "\(text) Street "
+        self.locationInfo.text = text
         
     }
     
-    
-    
-}
-
-
-extension HomeView : MKMapViewDelegate {
-    func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
-        let centerCoordinate = mapView.centerCoordinate
-        presenter?.mapMove(location: (latitude: centerCoordinate.latitude, longitude: centerCoordinate.latitude))
+   private func errorState(state: Bool, errorMessage: String){
     }
 }

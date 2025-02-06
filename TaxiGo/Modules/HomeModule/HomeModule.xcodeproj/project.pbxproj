@@ -21,14 +21,16 @@
 		7D0888F72D520F5600D4F9C3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D0888F62D520F5600D4F9C3 /* HomeViewController.swift */; };
 		7D0888F92D520F8400D4F9C3 /* HomeProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D0888F82D520F8400D4F9C3 /* HomeProtocols.swift */; };
 		7D0888FB2D520FE300D4F9C3 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D0888FA2D520FE300D4F9C3 /* HomeRouter.swift */; };
-		7D0889072D521BAC00D4F9C3 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D0889062D521BAC00D4F9C3 /* HomeView.swift */; };
+		7D0889072D521BAC00D4F9C3 /* MapUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D0889062D521BAC00D4F9C3 /* MapUIView.swift */; };
 		7D08890A2D521D0E00D4F9C3 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 7D0889092D521D0E00D4F9C3 /* SnapKit */; };
 		7D08890C2D521D0E00D4F9C3 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 7D08890B2D521D0E00D4F9C3 /* SnapKit-Dynamic */; };
 		7D0889122D525BA800D4F9C3 /* HomeContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D0889112D525BA800D4F9C3 /* HomeContract.swift */; };
-		7D47D2062D54C41E00A22526 /* SubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D47D2052D54C41E00A22526 /* SubView.swift */; };
+		7D47D2062D54C41E00A22526 /* TaxiInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D47D2052D54C41E00A22526 /* TaxiInfoView.swift */; };
 		7D47D20C2D54C8F000A22526 /* TaxiTypeCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D47D20B2D54C8F000A22526 /* TaxiTypeCVC.swift */; };
 		7D47D20E2D54EBCF00A22526 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D47D20D2D54EBCF00A22526 /* LocationManager.swift */; };
 		7D47D2102D54FB4200A22526 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D47D20F2D54FB4200A22526 /* HomePresenter.swift */; };
+		7D47D2122D5538E800A22526 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D47D2112D5538E800A22526 /* HomeInteractor.swift */; };
+		7D47D2142D5539CF00A22526 /* TaxiType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D47D2132D5539CF00A22526 /* TaxiType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -60,12 +62,14 @@
 		7D0888F62D520F5600D4F9C3 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		7D0888F82D520F8400D4F9C3 /* HomeProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProtocols.swift; sourceTree = "<group>"; };
 		7D0888FA2D520FE300D4F9C3 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
-		7D0889062D521BAC00D4F9C3 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		7D0889062D521BAC00D4F9C3 /* MapUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapUIView.swift; sourceTree = "<group>"; };
 		7D0889112D525BA800D4F9C3 /* HomeContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeContract.swift; sourceTree = "<group>"; };
-		7D47D2052D54C41E00A22526 /* SubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubView.swift; sourceTree = "<group>"; };
+		7D47D2052D54C41E00A22526 /* TaxiInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxiInfoView.swift; sourceTree = "<group>"; };
 		7D47D20B2D54C8F000A22526 /* TaxiTypeCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxiTypeCVC.swift; sourceTree = "<group>"; };
 		7D47D20D2D54EBCF00A22526 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		7D47D20F2D54FB4200A22526 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		7D47D2112D5538E800A22526 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		7D47D2132D5539CF00A22526 /* TaxiType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxiType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,12 +114,14 @@
 				7D0888F62D520F5600D4F9C3 /* HomeViewController.swift */,
 				7D0888F82D520F8400D4F9C3 /* HomeProtocols.swift */,
 				7D0888FA2D520FE300D4F9C3 /* HomeRouter.swift */,
-				7D0889062D521BAC00D4F9C3 /* HomeView.swift */,
+				7D0889062D521BAC00D4F9C3 /* MapUIView.swift */,
 				7D0889112D525BA800D4F9C3 /* HomeContract.swift */,
-				7D47D2052D54C41E00A22526 /* SubView.swift */,
+				7D47D2052D54C41E00A22526 /* TaxiInfoView.swift */,
 				7D47D20B2D54C8F000A22526 /* TaxiTypeCVC.swift */,
 				7D47D20D2D54EBCF00A22526 /* LocationManager.swift */,
 				7D47D20F2D54FB4200A22526 /* HomePresenter.swift */,
+				7D47D2112D5538E800A22526 /* HomeInteractor.swift */,
+				7D47D2132D5539CF00A22526 /* TaxiType.swift */,
 			);
 			path = HomeModule;
 			sourceTree = "<group>";
@@ -221,10 +227,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D0888F92D520F8400D4F9C3 /* HomeProtocols.swift in Sources */,
-				7D0889072D521BAC00D4F9C3 /* HomeView.swift in Sources */,
+				7D0889072D521BAC00D4F9C3 /* MapUIView.swift in Sources */,
 				7D0889122D525BA800D4F9C3 /* HomeContract.swift in Sources */,
-				7D47D2062D54C41E00A22526 /* SubView.swift in Sources */,
+				7D47D2122D5538E800A22526 /* HomeInteractor.swift in Sources */,
+				7D47D2062D54C41E00A22526 /* TaxiInfoView.swift in Sources */,
 				7D47D20E2D54EBCF00A22526 /* LocationManager.swift in Sources */,
+				7D47D2142D5539CF00A22526 /* TaxiType.swift in Sources */,
 				7D0888FB2D520FE300D4F9C3 /* HomeRouter.swift in Sources */,
 				7D47D2102D54FB4200A22526 /* HomePresenter.swift in Sources */,
 				7D47D20C2D54C8F000A22526 /* TaxiTypeCVC.swift in Sources */,
