@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 open class BaseView<T: UIViewController>: UIView {
-    weak var controller: T?
+   public weak var controller: T?
     
    public init(_ controller: T) {
         self.controller = controller

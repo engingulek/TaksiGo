@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D0888FD2D52102E00D4F9C3 /* HomeModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D0888FC2D52102E00D4F9C3 /* HomeModule.framework */; };
+		7D0888FE2D52102E00D4F9C3 /* HomeModule.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7D0888FC2D52102E00D4F9C3 /* HomeModule.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7D0889042D5210B700D4F9C3 /* DependencyKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D0889032D5210B700D4F9C3 /* DependencyKit.framework */; };
+		7D0889052D5210B700D4F9C3 /* DependencyKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7D0889032D5210B700D4F9C3 /* DependencyKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7D58483A2D50C29D008A530D /* ConfirmCodeModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D5848392D50C29D008A530D /* ConfirmCodeModule.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7D5848472D50C2C5008A530D /* ConfirmCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5848462D50C2C5008A530D /* ConfirmCodeViewController.swift */; };
 		7D5848492D50C2D3008A530D /* ConfirmCodeProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5848482D50C2D3008A530D /* ConfirmCodeProtocols.swift */; };
@@ -42,6 +46,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		7D0888FF2D52102E00D4F9C3 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				7D0889052D5210B700D4F9C3 /* DependencyKit.framework in Embed Frameworks */,
+				7D0888FE2D52102E00D4F9C3 /* HomeModule.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7D58485F2D50D382008A530D /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -59,6 +75,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7D0888FC2D52102E00D4F9C3 /* HomeModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = HomeModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D0889032D5210B700D4F9C3 /* DependencyKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DependencyKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D5848362D50C29D008A530D /* ConfirmCodeModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ConfirmCodeModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D5848392D50C29D008A530D /* ConfirmCodeModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConfirmCodeModule.h; sourceTree = "<group>"; };
 		7D5848462D50C2C5008A530D /* ConfirmCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmCodeViewController.swift; sourceTree = "<group>"; };
@@ -97,6 +115,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D5848772D512E30008A530D /* ConfirmCodeModule.framework in Frameworks */,
+				7D0888FD2D52102E00D4F9C3 /* HomeModule.framework in Frameworks */,
+				7D0889042D5210B700D4F9C3 /* DependencyKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,6 +160,8 @@
 		7D58485B2D50D381008A530D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7D0889032D5210B700D4F9C3 /* DependencyKit.framework */,
+				7D0888FC2D52102E00D4F9C3 /* HomeModule.framework */,
 				7D5848662D50D39C008A530D /* CoreKit.framework */,
 				7D5848632D50D396008A530D /* FactoryKit.framework */,
 				7D5848602D50D38A008A530D /* ViewControllerAbleKit.framework */,
@@ -202,6 +224,7 @@
 				7D58486F2D512E30008A530D /* Sources */,
 				7D5848702D512E30008A530D /* Frameworks */,
 				7D5848712D512E30008A530D /* Resources */,
+				7D0888FF2D52102E00D4F9C3 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

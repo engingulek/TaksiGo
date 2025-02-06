@@ -19,3 +19,6 @@
 "entered" = "Girilen";
 "confirmButton" = "Doğrula";
 "codeError" = "Kod Yanlış";
+"street" = "Mahalle";
+"errorMessageOne" = "Bir şeyler ters gitti";
+"sendTaxi" = "Taksi Gönder";

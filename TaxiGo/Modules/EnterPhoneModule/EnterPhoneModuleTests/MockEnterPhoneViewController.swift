@@ -10,7 +10,7 @@ import UIKit
 @testable import EnterPhoneModule
 
 class MockEnterPhoneViewController : PresenterToViewEnterPhoneProtocol {
-    
+
     
     var invokedsetEnterPhoneTitleContract:Bool = false
     var invokedsetEnterPhoneTitleContractCount:Int = 0
@@ -62,4 +62,15 @@ class MockEnterPhoneViewController : PresenterToViewEnterPhoneProtocol {
          invokedpushViewControllerAble = true
          invoedkpushViewControllerAblecCount += 1
     }
+    
+    var invokedstateBackAction:Bool = false
+    var invoedkstateBackActionCount:Int = 0
+    var invokedstateBackActionData  = [(state:Bool,Void)]()
+    func stateBackAction(state: Bool) {
+         invokedstateBackAction = true
+         invoedkstateBackActionCount += 1
+         invokedstateBackActionData.append((state:state,()))
+    }
+    
+    
 }

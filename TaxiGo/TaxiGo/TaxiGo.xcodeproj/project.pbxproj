@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D0889012D52104600D4F9C3 /* HomeModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D0889002D52104600D4F9C3 /* HomeModule.framework */; };
+		7D0889022D52104600D4F9C3 /* HomeModule.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7D0889002D52104600D4F9C3 /* HomeModule.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7D1C40A22D4E4EF4006EFF27 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1C40A12D4E4EF4006EFF27 /* AppDelegate.swift */; };
 		7D1C40A42D4E4EF4006EFF27 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1C40A32D4E4EF4006EFF27 /* SceneDelegate.swift */; };
 		7D1C40AB2D4E4EF6006EFF27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D1C40AA2D4E4EF6006EFF27 /* Assets.xcassets */; };
@@ -31,6 +33,7 @@
 			files = (
 				7D67E38A2D4F86430026A77D /* EnterPhoneModule.framework in Embed Frameworks */,
 				7D1C41992D4E5C56006EFF27 /* DependencyKit.framework in Embed Frameworks */,
+				7D0889022D52104600D4F9C3 /* HomeModule.framework in Embed Frameworks */,
 				7D58484E2D50C45E008A530D /* ConfirmCodeModule.framework in Embed Frameworks */,
 				7D1C419B2D4E5C56006EFF27 /* OnboardingModule.framework in Embed Frameworks */,
 			);
@@ -40,6 +43,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7D0889002D52104600D4F9C3 /* HomeModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = HomeModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D1C409E2D4E4EF4006EFF27 /* TaxiGo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaxiGo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D1C40A12D4E4EF4006EFF27 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7D1C40A32D4E4EF4006EFF27 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +67,7 @@
 			files = (
 				7D67E3892D4F86430026A77D /* EnterPhoneModule.framework in Frameworks */,
 				7D1C41982D4E5C56006EFF27 /* DependencyKit.framework in Frameworks */,
+				7D0889012D52104600D4F9C3 /* HomeModule.framework in Frameworks */,
 				7D58484D2D50C45E008A530D /* ConfirmCodeModule.framework in Frameworks */,
 				7D1C419A2D4E5C56006EFF27 /* OnboardingModule.framework in Frameworks */,
 			);
@@ -104,6 +109,7 @@
 		7D1C41952D4E5C56006EFF27 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7D0889002D52104600D4F9C3 /* HomeModule.framework */,
 				7D58484C2D50C45E008A530D /* ConfirmCodeModule.framework */,
 				7D67E3882D4F86430026A77D /* EnterPhoneModule.framework */,
 				7D1C41962D4E5C56006EFF27 /* DependencyKit.framework */,
@@ -350,6 +356,7 @@
 				DEVELOPMENT_TEAM = 45DX68AP4J;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TaxiGo/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = nkknknn;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -377,6 +384,7 @@
 				DEVELOPMENT_TEAM = 45DX68AP4J;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TaxiGo/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = nkknknn;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

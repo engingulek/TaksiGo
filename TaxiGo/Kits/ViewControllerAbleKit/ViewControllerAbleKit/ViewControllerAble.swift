@@ -25,6 +25,7 @@ extension UIViewAble where Self : UIViewController  {
 public protocol SegueAble {
     func pushViewControllerAble (_ vc:UIViewController,animated:Bool)
     
+    
 }
 
 extension SegueAble  where Self : UIViewController{
@@ -36,11 +37,19 @@ extension SegueAble  where Self : UIViewController{
 
 public protocol NavigationDesing {
     func changeColorNavigaiton()
+    /// true:open , false:close
+    func stateBackAction(state:Bool)
 }
 
 extension NavigationDesing where Self : UIViewController {
     public func changeColorNavigaiton(){
         navigationController?.navigationBar.tintColor = .black
+    }
+    
+    public func stateBackAction(state:Bool) {
+        navigationController?.interactivePopGestureRecognizer?.isEnabled = state
+        navigationItem.hidesBackButton = state
+        
     }
 }
 

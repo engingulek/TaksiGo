@@ -18,3 +18,6 @@
 "entered" = "Entered";
 "confirmButton" = "Confirm";
 "codeError" = "Code Incorrect";
+"street" = "Street";
+"errorMessageOne" = "Something went wrong";
+"sendTaxi" = "Send Taxi";
