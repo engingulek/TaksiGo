@@ -14,15 +14,33 @@ import FactoryKit
 
 class SubView : UIView {
     private lazy var listTaxiTypeCollectionView : UICollectionView = UICollectionView.primaryCollectionView(scroolDirection: .vertical)
+    
+    private lazy var sendTaxiButton = ButtonFactory.createButton(ofType: .basic(action: sendTaxiButtonAction))
+    
+    private lazy var sendTaxiButtonAction  : UIAction = UIAction { _ in
+
+    }
     override init(frame: CGRect) {
         super.init(frame: frame)
         backgroundColor = .white
+        
+        addSubview(sendTaxiButton)
+        sendTaxiButton.snp.makeConstraints { make in
+          
+            make.leading.equalToSuperview().offset(10)
+            make.trailing.equalToSuperview().offset(-10)
+            make.bottom.equalTo(safeAreaLayoutGuide.snp.bottom).offset(-10)
+        }
+        
+        sendTaxiButton.setTitle("Send Taxi", for: .normal)
+        
+        
         addSubview(listTaxiTypeCollectionView)
         listTaxiTypeCollectionView.snp.makeConstraints { make in
             make.top.equalToSuperview()
             make.leading.equalToSuperview()
             make.trailing.equalToSuperview()
-            make.height.equalTo(100)
+            make.bottom.equalTo(sendTaxiButton.snp.top).offset(-5)
         }
         
         listTaxiTypeCollectionView.register(TaxiTypeCVC.self, forCellWithReuseIdentifier: TaxiTypeCVC.identifier)
@@ -30,6 +48,7 @@ class SubView : UIView {
         listTaxiTypeCollectionView.dataSource = self
         listTaxiTypeCollectionView.reloadData()
         
+      
     }
     
     required init?(coder: NSCoder) {

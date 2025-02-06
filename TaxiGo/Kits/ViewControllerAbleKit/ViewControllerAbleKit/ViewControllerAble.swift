@@ -25,6 +25,7 @@ extension UIViewAble where Self : UIViewController  {
 public protocol SegueAble {
     func pushViewControllerAble (_ vc:UIViewController,animated:Bool)
     
+    
 }
 
 extension SegueAble  where Self : UIViewController{
