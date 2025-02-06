@@ -15,7 +15,8 @@ final class HomePresenter: LocationManagerDelegate {
     private var taxiTypelist:[TaxiType] = []
     private var locationManagerDelegate = LocationManager()
     
-    init(view: PresenterToViewHomeProtocol?,intetactor:PresenterToInteractorHomeProtocol) {
+    init(view: PresenterToViewHomeProtocol?,
+         intetactor:PresenterToInteractorHomeProtocol) {
         self.view = view
         self.intetactor = intetactor
         locationManagerDelegate.delegate = self
@@ -48,6 +49,7 @@ final class HomePresenter: LocationManagerDelegate {
 extension HomePresenter: ViewToPrensenterHomeProtocol {
     
     func viewDidLoad() {
+        locationManagerDelegate.delegate = self
         view?.setBackColorAble(color: ColorTheme.primaryBackColor.rawValue)
         view?.stateBackAction(state: true)
         intetactor.fetchTaxiInfo()
