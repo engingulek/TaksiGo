@@ -13,14 +13,15 @@ import FactoryKit
 import BaseViewKit
 
 class TaxiInfoView : BaseView<HomeViewController> {
-    
+    var presenter : ViewToPrensenterHomeProtocol?
     private lazy var listTaxiTypeCollectionView : UICollectionView = UICollectionView.primaryCollectionView(scroolDirection: .vertical)
     
     private lazy var sendTaxiButton = ButtonFactory.createButton(ofType: .basic(action: sendTaxiButtonAction))
     
     private lazy var sendTaxiButtonAction  : UIAction = UIAction { _ in
+        self.presenter?.onTappedSendTaxi()
     }
-   
+    
     override func setupView() {
         super.setupView()
         
@@ -32,13 +33,13 @@ class TaxiInfoView : BaseView<HomeViewController> {
         
         addSubview(sendTaxiButton)
         sendTaxiButton.snp.makeConstraints { make in
-          
+            
             make.leading.equalToSuperview().offset(10)
             make.trailing.equalToSuperview().offset(-10)
             make.bottom.equalTo(safeAreaLayoutGuide.snp.bottom).offset(-10)
         }
         
-   
+        
         
         
         addSubview(listTaxiTypeCollectionView)
@@ -54,7 +55,7 @@ class TaxiInfoView : BaseView<HomeViewController> {
         
         listTaxiTypeCollectionView.delegate = controller
         listTaxiTypeCollectionView.dataSource = controller
-        listTaxiTypeCollectionView.reloadData()
+        
     }
     
     
@@ -62,6 +63,14 @@ class TaxiInfoView : BaseView<HomeViewController> {
     func titleData(title:String){
         sendTaxiButton.setTitle(title, for: .normal)
     }
-
+    
+    func reloadCollectionView() {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else {return}
+            listTaxiTypeCollectionView.reloadData()
+            
+        }
+    }
+    
     
 }

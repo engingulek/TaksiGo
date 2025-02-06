@@ -14,44 +14,38 @@ import SnapKit
 
 import CoreKit
 
-class MapUIView : UIView{
-     var presenter : ViewToPrensenterHomeProtocol?
+class MapUIView : BaseView<HomeViewController>{
+    var presenter : ViewToPrensenterHomeProtocol?
     private let mapView = MKMapView()
     private let locationInfo = LabelFactory.createLabel(ofType: .smallTitleLabel(false))
     private lazy var arrowDownIcon = IconFactory.createIcon(ofType: .bottomArrow)
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
- 
+    override func setupView() {
+        super.setupView()
         mapView.delegate = self
         configureView()
     }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
     private func configureView() {
-      
+        
         
         addSubview(mapView)
         mapView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
-         
+            
         }
         mapView.showsUserLocation = true
         mapView.userTrackingMode = .follow
-  
+        
         
         mapView.addSubview(locationInfo)
         locationInfo.snp.makeConstraints { make in
-           
+            
             make.centerX.equalToSuperview()
             make.centerY.equalToSuperview()
         }
         locationInfo.backgroundColor = .white
         locationInfo.textAlignment = .center
-      
+        
         locationInfo.numberOfLines = 1
         locationInfo.sizeToFit()
         
@@ -82,12 +76,13 @@ extension MapUIView {
             showUserLocation(location: (latitude: location.0, longitude: location.1), meters: meters)
         case .errorState(let state, let text):
             errorState(state: state, errorMessage: text)
+            
         }
     }
     
     
     
-   private func showUserLocation(location: (latitude: Double, longitude: Double),meters:Double) {
+    private func showUserLocation(location: (latitude: Double, longitude: Double),meters:Double) {
         let region = MKCoordinateRegion(
             center: CLLocationCoordinate2D(latitude: location.latitude, longitude: location.longitude),
             latitudinalMeters: meters,
@@ -95,13 +90,15 @@ extension MapUIView {
         )
         mapView.setRegion(region, animated: true)
     }
-   private func setLocationInfo(state:Bool,text:String) {
-       
+    private func setLocationInfo(state:Bool,text:String) {
+        
         self.locationInfo.isHidden = state
         self.locationInfo.text = text
         
     }
     
-   private func errorState(state: Bool, errorMessage: String){
+    private func errorState(state: Bool, errorMessage: String){
     }
+    
+    
 }

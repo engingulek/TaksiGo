@@ -22,7 +22,7 @@ class TaxiTypeCVC: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         configureView()
-      
+        
     }
     
     required init?(coder: NSCoder) {
@@ -35,14 +35,14 @@ class TaxiTypeCVC: UICollectionViewCell {
             make.centerY.equalToSuperview()
             make.leading.equalToSuperview().offset(10)
         }
-    
+        
         contentView.addSubview(estimatedPriceRangeLabel)
         estimatedPriceRangeLabel.snp.makeConstraints { make in
             make.trailing.equalToSuperview().offset(-10)
             make.centerY.equalToSuperview()
         }
         
-     
+        
         
         contentView.addSubview(arrivalMinuteLabel)
         arrivalMinuteLabel.snp.makeConstraints { make in
@@ -50,7 +50,7 @@ class TaxiTypeCVC: UICollectionViewCell {
             make.centerY.equalToSuperview()
         }
         
-    
+        
         
         contentView.addSubview(seatCountLabel)
         seatCountLabel.snp.makeConstraints { make in
@@ -58,7 +58,7 @@ class TaxiTypeCVC: UICollectionViewCell {
             make.centerY.equalToSuperview()
         }
         
-       
+        
         contentView.addSubview(personIcon)
         personIcon.snp.makeConstraints { make in
             make.trailing.equalTo(seatCountLabel.snp.leading).offset(-5)
@@ -66,7 +66,7 @@ class TaxiTypeCVC: UICollectionViewCell {
         }
         
         
-      
+        
         
         contentView.layer.borderColor = UIColor.lightGray.cgColor
         contentView.layer.borderWidth = 1

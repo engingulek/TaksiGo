@@ -23,6 +23,9 @@ protocol ViewToPrensenterHomeProtocol{
     func sizeForItemAt(width:CGFloat,height:CGFloat) -> CGSize
     func insetForSectionAt() ->(top:CGFloat,left:CGFloat,right:CGFloat,bottom:CGFloat)
     
+    func onTappedSendTaxi()
+    
+    
     
 }
 
@@ -32,6 +35,7 @@ protocol PresenterToViewHomeProtocol: AnyObject,Kits{
     func updateLocation(location:(latitude:Double,longitude:Double),meters:Double)
     func locationInfo(state:Bool,text:String)
     func errorState(state:Bool,errorMessage:String)
+    func reloadCollectionView()
 }
 
 //MARK: PresenterToInteractorHomeProtocol

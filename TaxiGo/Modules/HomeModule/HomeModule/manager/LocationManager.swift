@@ -28,7 +28,7 @@ class LocationManager: NSObject {
         locationManager.startUpdatingLocation()
         
     }
-
+    
     
     private  func fetchLocationInfo(location: CLLocation, completion: @escaping ((state:Bool,text:String)) -> Void)  {
         let geocoder = CLGeocoder()
