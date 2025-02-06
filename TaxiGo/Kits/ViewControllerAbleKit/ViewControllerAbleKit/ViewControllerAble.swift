@@ -48,7 +48,7 @@ extension NavigationDesing where Self : UIViewController {
     
     public func stateBackAction(state:Bool) {
         navigationController?.interactivePopGestureRecognizer?.isEnabled = state
-        navigationController?.navigationItem.hidesBackButton = state
+        navigationItem.hidesBackButton = state
         
     }
 }

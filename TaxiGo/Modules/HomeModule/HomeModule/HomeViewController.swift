@@ -9,11 +9,25 @@ import Foundation
 import UIKit
 class HomeViewController : UIViewController {
     private lazy var homeView = HomeView(self)
+    lazy var presenter : ViewToPrensenterHomeProtocol = HomePresenter(view:self)
     override func viewDidLoad() {
         super.viewDidLoad()
        
         view = homeView
-        view.backgroundColor = .white
-        navigationItem.hidesBackButton = true
+        homeView.presenter = presenter
+        presenter.viewDidLoad()
     }
+}
+
+
+extension HomeViewController : PresenterToViewHomeProtocol {
+    func locationInfo(state: Bool, text: String) {
+        homeView.setLocationInfo(state: state, text: text)
+    }
+    
+
+    func updateLocation(location: (latitude: Double, longitude: Double),meters:Double) {
+        homeView.showUserLocation(location: location,meters: meters)
+    }
+    
 }

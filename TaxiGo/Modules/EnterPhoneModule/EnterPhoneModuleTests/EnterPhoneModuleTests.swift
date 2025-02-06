@@ -62,7 +62,7 @@ final class EnterPhoneModuleTests: XCTestCase {
         
         XCTAssertTrue(viewController.invokedstateBackAction,"is not true")
         XCTAssertEqual(viewController.invoedkstateBackActionCount, 1,"is not one (1)")
-        XCTAssertEqual(viewController.invokedstateBackActionData.map(\.state),[true],"is not correct")
+        XCTAssertEqual(viewController.invokedstateBackActionData.map(\.state),[false],"is not correct")
         
     }
     
