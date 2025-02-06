@@ -20,12 +20,13 @@ class HomeView : BaseView<HomeViewController>,CLLocationManagerDelegate {
     
     private let mapView = MKMapView()
     private let locationManager = CLLocationManager()
-    private let locationInfo = LabelFactory.createLabel(ofType: .smallTitleLabel)
+    private let locationInfo = LabelFactory.createLabel(ofType: .smallTitleLabel(false))
     private lazy var loadingAction = UIActivityIndicatorView.createActivityIndicator()
     private lazy var arrowDownIcon = IconFactory.createIcon(ofType: .bottomArrow)
     private var selectedLocation:  CLLocationCoordinate2D?
     private var userLocation:CLLocation?
     private lazy var toUserLocationIcon = IconFactory.createIcon(ofType: .userLocation)
+    private lazy var subView = SubView()
  
     
     
@@ -38,9 +39,21 @@ class HomeView : BaseView<HomeViewController>,CLLocationManagerDelegate {
     }
     
     private func configureView() {
+        addSubview(subView)
+        subView.snp.makeConstraints { make in
+            make.leading.equalToSuperview()
+            make.trailing.equalToSuperview()
+            make.bottom.equalToSuperview()
+            make.height.equalTo(UIScreen.main.bounds.height / 3)
+        }
+        
         addSubview(mapView)
         mapView.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
+            make.top.equalToSuperview()
+            make.leading.equalToSuperview()
+            make.trailing.equalToSuperview()
+            make.bottom.equalTo(subView.snp.top)
+         
         }
         mapView.showsUserLocation = true
         mapView.userTrackingMode = .follow
@@ -72,14 +85,22 @@ class HomeView : BaseView<HomeViewController>,CLLocationManagerDelegate {
             make.centerX.equalToSuperview()
         }
         
-        addSubview(toUserLocationIcon)
+        mapView.addSubview(toUserLocationIcon)
         toUserLocationIcon.snp.makeConstraints { make in
-            make.bottom.equalToSuperview().offset(-50)
+            make.bottom.equalToSuperview().offset(-20)
             make.trailing.equalToSuperview().offset(-30)
             make.height.equalTo(40)
             make.width.equalTo(40)
         }
         
+        toUserLocationIcon.isUserInteractionEnabled = true
+        let tabGesture = UITapGestureRecognizer(target: self, action: #selector(toUserLocationIconOnTapped))
+        toUserLocationIcon.addGestureRecognizer(tabGesture)
+        
+    }
+    
+    @objc func toUserLocationIconOnTapped(){
+       showUserLocation()
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {

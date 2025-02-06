@@ -16,8 +16,8 @@ import CoreKit
 class EnterPhoneView : BaseView<EnterPhoneViewController> {
     var presenter : ViewToPrensenterEnterPhoneProtocol?
     private lazy var enterPhoneTitle = LabelFactory.createLabel(ofType: .largeTitleLabel(true))
-    private lazy var countryTitle = LabelFactory.createLabel(ofType: .smallTitleLabel)
-    private lazy var phoneTitle = LabelFactory.createLabel(ofType: .smallTitleLabel)
+    private lazy var countryTitle = LabelFactory.createLabel(ofType: .smallTitleLabel(false))
+    private lazy var phoneTitle = LabelFactory.createLabel(ofType: .smallTitleLabel(false))
     private lazy var errorLabel = LabelFactory.createLabel(ofType: .smallErrorLabel)
     private lazy var phoneTextFieldUIView = UIView()
     private lazy var phoneTextField : UITextField = UITextField()

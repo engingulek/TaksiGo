@@ -25,6 +25,8 @@
 		7D08890A2D521D0E00D4F9C3 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 7D0889092D521D0E00D4F9C3 /* SnapKit */; };
 		7D08890C2D521D0E00D4F9C3 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 7D08890B2D521D0E00D4F9C3 /* SnapKit-Dynamic */; };
 		7D0889122D525BA800D4F9C3 /* HomeContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D0889112D525BA800D4F9C3 /* HomeContract.swift */; };
+		7D47D2062D54C41E00A22526 /* SubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D47D2052D54C41E00A22526 /* SubView.swift */; };
+		7D47D20C2D54C8F000A22526 /* TaxiTypeCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D47D20B2D54C8F000A22526 /* TaxiTypeCVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -58,6 +60,8 @@
 		7D0888FA2D520FE300D4F9C3 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 		7D0889062D521BAC00D4F9C3 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		7D0889112D525BA800D4F9C3 /* HomeContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeContract.swift; sourceTree = "<group>"; };
+		7D47D2052D54C41E00A22526 /* SubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubView.swift; sourceTree = "<group>"; };
+		7D47D20B2D54C8F000A22526 /* TaxiTypeCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxiTypeCVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +108,8 @@
 				7D0888FA2D520FE300D4F9C3 /* HomeRouter.swift */,
 				7D0889062D521BAC00D4F9C3 /* HomeView.swift */,
 				7D0889112D525BA800D4F9C3 /* HomeContract.swift */,
+				7D47D2052D54C41E00A22526 /* SubView.swift */,
+				7D47D20B2D54C8F000A22526 /* TaxiTypeCVC.swift */,
 			);
 			path = HomeModule;
 			sourceTree = "<group>";
@@ -211,7 +217,9 @@
 				7D0888F92D520F8400D4F9C3 /* HomeProtocols.swift in Sources */,
 				7D0889072D521BAC00D4F9C3 /* HomeView.swift in Sources */,
 				7D0889122D525BA800D4F9C3 /* HomeContract.swift in Sources */,
+				7D47D2062D54C41E00A22526 /* SubView.swift in Sources */,
 				7D0888FB2D520FE300D4F9C3 /* HomeRouter.swift in Sources */,
+				7D47D20C2D54C8F000A22526 /* TaxiTypeCVC.swift in Sources */,
 				7D0888F72D520F5600D4F9C3 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
