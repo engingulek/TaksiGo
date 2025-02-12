@@ -10,6 +10,7 @@ import Alamofire
 
 public enum  NetworkPath {
     case createConfirmCode(Parameters)
+    case checkCode(Parameters)
 }
 
 
@@ -22,6 +23,8 @@ extension NetworkPath : TargetType {
         switch self {
         case .createConfirmCode:
             return Constants.confirmCode.rawValue + Constants.createConfirmCode.rawValue
+        case .checkCode:
+            return Constants.confirmCode.rawValue + Constants.checkCode.rawValue
         }
     }
     
@@ -29,12 +32,16 @@ extension NetworkPath : TargetType {
         switch self {
         case .createConfirmCode:
             return .POST
+        case .checkCode:
+            return .POST
         }
     }
     
     var requestType: RequestType {
         switch self {
         case .createConfirmCode(let parameters ):
+            return .requestParameters(parameters: parameters, encoding: JSONEncoding.init())
+        case .checkCode(let parameters):
             return .requestParameters(parameters: parameters, encoding: JSONEncoding.init())
         }
     }

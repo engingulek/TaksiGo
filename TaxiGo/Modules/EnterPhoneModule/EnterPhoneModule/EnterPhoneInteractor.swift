@@ -15,7 +15,7 @@ class EnterPhoneInteractor : PresenterToInteractorEnterPhoneProtocol {
             let _ = try await networkManager.fetch(target: .createConfirmCode(paramenter), responseClass:Int.self)
         }catch{
             presenter?.interactorError()
-            print(error.localizedDescription)
+            
         }
     }
     

@@ -17,23 +17,26 @@ protocol ViewToPrensenterConfirmCodeProtocol{
     func viewDidLoad()
     func getPhoneNumber(_ number:String)
     func onTappedConfirmCode(code:String)    
+    func toHomePagePresenter()
 }
 
 //MARK: PresenterToViewConfirmCodeProtocol
 protocol PresenterToViewConfirmCodeProtocol: AnyObject,Kits{
     func setTitleContract(contract:TitleContract)
     func setCodeErrorState(error:(errorState:Bool,text:String,borderColor:String))
+    func toHomePage()
   
 }
 
 //MARK: PresenterToInteractorConfirmCodeProtocol
 protocol PresenterToInteractorConfirmCodeProtocol{
-   func fetchConfirmCode()
+   func fetchConfirmCode(parameter:[String:Any]) async
 }
 
 //MARK: InteractorToPresenterConfirmCodeProtocol
 protocol InteractorToPresenterConfirmCodeProtocol{
-    func sendConfirmCode(code:String)
+    func sendConfirmCode(state:Bool)
+    func confirmCodeError()
 }
 
 //MARK: PresenterToRouterConfirmCodeProtocol

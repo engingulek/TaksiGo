@@ -23,13 +23,25 @@ class ConfirmCodeViewController : UIViewController, UITextFieldDelegate {
 }
 
 extension ConfirmCodeViewController : PresenterToViewConfirmCodeProtocol {
-
+ 
     func setTitleContract(contract: TitleContract) {
         confirmCodeView.setTitleContract(contract)
     }
     
     
     func setCodeErrorState(error: (errorState: Bool, text: String, borderColor: String)) {
-        confirmCodeView.setCodeErrorState(error: error)
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else {return}
+            confirmCodeView.setCodeErrorState(error: error)
+        }
     }
+    
+    // Made for DispatchQueue.main.async
+    func toHomePage() {
+        DispatchQueue.main.async {[weak self] in
+            guard let self = self else {return}
+            presenter.toHomePagePresenter()
+        }
+    }
+    
 }

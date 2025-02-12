@@ -35,6 +35,8 @@
 		7D5848822D5131CE008A530D /* MockConfirmInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5848812D5131CE008A530D /* MockConfirmInteractor.swift */; };
 		7D5AABC42D5CF0470016AF05 /* HomeModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D5AABC32D5CF0470016AF05 /* HomeModule.framework */; };
 		7D5AABC52D5CF0470016AF05 /* HomeModule.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7D5AABC32D5CF0470016AF05 /* HomeModule.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7D5AABCC2D5D0D610016AF05 /* NewtworkManagerKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D5AABCB2D5D0D610016AF05 /* NewtworkManagerKit.framework */; };
+		7D5AABCD2D5D0D610016AF05 /* NewtworkManagerKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7D5AABCB2D5D0D610016AF05 /* NewtworkManagerKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +68,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				7D5AABCD2D5D0D610016AF05 /* NewtworkManagerKit.framework in Embed Frameworks */,
 				7D5848652D50D396008A530D /* FactoryKit.framework in Embed Frameworks */,
 				7D5848622D50D38A008A530D /* ViewControllerAbleKit.framework in Embed Frameworks */,
 				7D5AABC52D5CF0470016AF05 /* HomeModule.framework in Embed Frameworks */,
@@ -98,6 +101,7 @@
 		7D58487F2D512F52008A530D /* ConfirmInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmInteractor.swift; sourceTree = "<group>"; };
 		7D5848812D5131CE008A530D /* MockConfirmInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockConfirmInteractor.swift; sourceTree = "<group>"; };
 		7D5AABC32D5CF0470016AF05 /* HomeModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = HomeModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D5AABCB2D5D0D610016AF05 /* NewtworkManagerKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = NewtworkManagerKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +113,7 @@
 				7D5848582D50D2CE008A530D /* SnapKit in Frameworks */,
 				7D5AABC42D5CF0470016AF05 /* HomeModule.framework in Frameworks */,
 				7D5848672D50D39C008A530D /* CoreKit.framework in Frameworks */,
+				7D5AABCC2D5D0D610016AF05 /* NewtworkManagerKit.framework in Frameworks */,
 				7D58485A2D50D2CE008A530D /* SnapKit-Dynamic in Frameworks */,
 				7D5848612D50D38A008A530D /* ViewControllerAbleKit.framework in Frameworks */,
 				7D58485D2D50D382008A530D /* BaseViewKit.framework in Frameworks */,
@@ -165,6 +170,7 @@
 		7D58485B2D50D381008A530D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7D5AABCB2D5D0D610016AF05 /* NewtworkManagerKit.framework */,
 				7D5AABC32D5CF0470016AF05 /* HomeModule.framework */,
 				7D0889032D5210B700D4F9C3 /* DependencyKit.framework */,
 				7D0888FC2D52102E00D4F9C3 /* HomeModule.framework */,

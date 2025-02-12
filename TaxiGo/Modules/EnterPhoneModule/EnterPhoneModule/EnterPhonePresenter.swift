@@ -35,7 +35,8 @@ final class EnterPhonePresenter {
     
     private func createConfirmCode(enterPhoneNumber:String){
         Task {
-            let parameter : [String:Any] = ["phoneNumber":enteredPhoneNumber]
+            let number = enterPhoneNumber.replacingOccurrences(of: " ", with: "")
+            let parameter : [String:Any] = ["phoneNumber":number]
            await interactor.createConfirmCode(paramenter:parameter)
         }
     }
@@ -135,6 +136,7 @@ extension EnterPhonePresenter : ViewToPrensenterEnterPhoneProtocol {
 
 extension EnterPhonePresenter : InteractorToPresenterEnterPhoneProtocol {
 
+    //TODO: Alert will be added
     func interactorError() {
         print("Interacor Error")
     }

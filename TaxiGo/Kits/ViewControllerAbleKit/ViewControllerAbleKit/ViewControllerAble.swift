@@ -30,7 +30,11 @@ public protocol SegueAble {
 
 extension SegueAble  where Self : UIViewController{
     public func pushViewControllerAble (_ vc:UIViewController,animated:Bool) {
-        navigationController?.pushViewController(vc, animated: animated)
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else {return}
+            navigationController?.pushViewController(vc, animated: animated)
+        }
+        
     }
 }
 
