@@ -6,13 +6,22 @@
 //
 
 import Foundation
+import NewtworkManagerKit
+struct ConfirmCode : Decodable {
+    let code:String
+}
 
 class ConfirmInteractor : PresenterToInteractorConfirmCodeProtocol {
     var presenter :InteractorToPresenterConfirmCodeProtocol?
-    
-    func fetchConfirmCode() {
-        presenter?.sendConfirmCode(code: "21443")
+    private let networkManager : NetworkManagerProtocol = NetworkManager()
+    func fetchConfirmCode(parameter:[String:Any]) async{
+        do{
+            let state = try await networkManager.fetch(target: .checkCode(parameter), responseClass: Bool.self)
+            presenter?.sendConfirmCode(state: state)
+        }catch {
+            presenter?.confirmCodeError()
+            
+            
+        }
     }
-    
-    
 }

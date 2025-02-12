@@ -10,6 +10,7 @@ import CoreKit
 final class EnterPhonePresenter {
     weak var view: PresenterToViewEnterPhoneProtocol?
     private var router : PresenterToRouterEnterPhoneProtocol
+    private var interactor : PresenterToInteractorEnterPhoneProtocol
     private var enteredPhoneNumber : String = ""
     
     //TODO: This will been gotten from location
@@ -22,21 +23,32 @@ final class EnterPhonePresenter {
     
     
     init(view: PresenterToViewEnterPhoneProtocol?,
-         router: PresenterToRouterEnterPhoneProtocol
+         router: PresenterToRouterEnterPhoneProtocol,
+         interactor : PresenterToInteractorEnterPhoneProtocol
          
     ) {
         self.view = view
         self.router = router
+        self.interactor = interactor
         
     }
+    
+    private func createConfirmCode(enterPhoneNumber:String){
+        Task {
+            let number = enterPhoneNumber.replacingOccurrences(of: " ", with: "")
+            let parameter : [String:Any] = ["phoneNumber":number]
+           await interactor.createConfirmCode(paramenter:parameter)
+        }
+    }
+    
+  
 }
 
 
 //MARK: EnterPhonePresenter : ViewToPrensenterEnterPhoneProtocol
 extension EnterPhonePresenter : ViewToPrensenterEnterPhoneProtocol {
     
-   
-    
+
     func viewDidLoad() {
         view?.setBackColorAble(color: ColorTheme.primaryBackColor.rawValue)
         view?.changeColorNavigaiton()
@@ -76,7 +88,10 @@ extension EnterPhonePresenter : ViewToPrensenterEnterPhoneProtocol {
     }
     
     func onTappedContiuneButton() {
+      
         router.toConfirmCode(view: view,phoneNumber: enteredPhoneNumber)
+        
+        createConfirmCode(enterPhoneNumber: enteredPhoneNumber)
     }
     
     
@@ -116,6 +131,17 @@ extension EnterPhonePresenter : ViewToPrensenterEnterPhoneProtocol {
             }
         }
     }
+}
+
+
+extension EnterPhonePresenter : InteractorToPresenterEnterPhoneProtocol {
+
+    //TODO: Alert will be added
+    func interactorError() {
+        print("Interacor Error")
+    }
+    
+    
 }
 
 

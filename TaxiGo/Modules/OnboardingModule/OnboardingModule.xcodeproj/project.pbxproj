@@ -28,6 +28,8 @@
 		7D1C428E2D4EA04F006EFF27 /* OnboardingModuleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1C428D2D4EA04F006EFF27 /* OnboardingModuleTests.swift */; };
 		7D1C428F2D4EA04F006EFF27 /* OnboardingModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D1C41212D4E5231006EFF27 /* OnboardingModule.framework */; };
 		7D1C42962D4EA06D006EFF27 /* MockOnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1C42952D4EA06D006EFF27 /* MockOnboardingViewController.swift */; };
+		7D5AABBE2D5CED130016AF05 /* EnterPhoneModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D5AABBD2D5CED130016AF05 /* EnterPhoneModule.framework */; };
+		7D5AABBF2D5CED130016AF05 /* EnterPhoneModule.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7D5AABBD2D5CED130016AF05 /* EnterPhoneModule.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7D67E3822D4F83B20026A77D /* EnterPhoneModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D67E3812D4F83B20026A77D /* EnterPhoneModule.framework */; };
 		7D67E3832D4F83B20026A77D /* EnterPhoneModule.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7D67E3812D4F83B20026A77D /* EnterPhoneModule.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7D67E3862D4F83FA0026A77D /* DependencyKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D67E3852D4F83FA0026A77D /* DependencyKit.framework */; };
@@ -53,6 +55,7 @@
 			files = (
 				7D1C421D2D4E6832006EFF27 /* FactoryKit.framework in Embed Frameworks */,
 				7D1C41FE2D4E64A4006EFF27 /* ViewControllerAbleKit.framework in Embed Frameworks */,
+				7D5AABBF2D5CED130016AF05 /* EnterPhoneModule.framework in Embed Frameworks */,
 				7D1C42802D4E962D006EFF27 /* CoreKit.framework in Embed Frameworks */,
 				7D1C41D82D4E5E6B006EFF27 /* BaseViewKit.framework in Embed Frameworks */,
 			);
@@ -91,6 +94,7 @@
 		7D1C428B2D4EA04E006EFF27 /* OnboardingModuleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OnboardingModuleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D1C428D2D4EA04F006EFF27 /* OnboardingModuleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingModuleTests.swift; sourceTree = "<group>"; };
 		7D1C42952D4EA06D006EFF27 /* MockOnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockOnboardingViewController.swift; sourceTree = "<group>"; };
+		7D5AABBD2D5CED130016AF05 /* EnterPhoneModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = EnterPhoneModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D67E3812D4F83B20026A77D /* EnterPhoneModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = EnterPhoneModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D67E3852D4F83FA0026A77D /* DependencyKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DependencyKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -101,6 +105,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D1C421C2D4E6832006EFF27 /* FactoryKit.framework in Frameworks */,
+				7D5AABBE2D5CED130016AF05 /* EnterPhoneModule.framework in Frameworks */,
 				7D1C41382D4E536A006EFF27 /* SnapKit in Frameworks */,
 				7D1C427F2D4E962D006EFF27 /* CoreKit.framework in Frameworks */,
 				7D1C413A2D4E536A006EFF27 /* SnapKit-Dynamic in Frameworks */,
@@ -159,6 +164,7 @@
 		7D1C41D52D4E5E6B006EFF27 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7D5AABBD2D5CED130016AF05 /* EnterPhoneModule.framework */,
 				7D67E3852D4F83FA0026A77D /* DependencyKit.framework */,
 				7D67E3812D4F83B20026A77D /* EnterPhoneModule.framework */,
 				7D1C427E2D4E962D006EFF27 /* CoreKit.framework */,

@@ -12,7 +12,7 @@ final class ConfirmCodePresenter {
     private var router : PresenterToRouterConfirmCodeProtocol
     private let interactor : PresenterToInteractorConfirmCodeProtocol
     private var phoneNumber :String = ""
-    private var confirmCode : String?
+    
     init(view: PresenterToViewConfirmCodeProtocol?, 
          router: PresenterToRouterConfirmCodeProtocol,
          interactor : PresenterToInteractorConfirmCodeProtocol
@@ -21,11 +21,12 @@ final class ConfirmCodePresenter {
         self.router = router
         self.interactor = interactor
     }
+    
 }
 
 //MARK: ViewToPrensenterConfirmCodeProtocol
 extension ConfirmCodePresenter : ViewToPrensenterConfirmCodeProtocol {
-   
+
     func viewDidLoad() {
         view?.setBackColorAble(color: ColorTheme.primaryBackColor.rawValue)
         let titleContract = TitleContract(
@@ -34,43 +35,59 @@ extension ConfirmCodePresenter : ViewToPrensenterConfirmCodeProtocol {
             confirmButtonTitle: TextTheme.confirmButton.localized)
         view?.setTitleContract(contract: titleContract)
         
-        interactor.fetchConfirmCode()
-        
         view?.setCodeErrorState(error: (
             errorState: true,
             text: TextTheme.defaultEmpty.localized,
             borderColor: ColorTheme.black.rawValue))
-        
-       
     }
     
     func getPhoneNumber(_ number: String) {
         phoneNumber = number
-       
+      
     }
     
     func onTappedConfirmCode(code: String) {
-        guard let confirmCode = confirmCode else {return}
+
         
-        if code != confirmCode {
-            view?.setCodeErrorState(error: (
-                errorState: true,
-                text: TextTheme.codeError.localized,
-                borderColor: ColorTheme.red.rawValue))
-            
-        }else{
-            view?.setCodeErrorState(error: (
-                errorState: false,
-                text: TextTheme.defaultEmpty.localized,
-                borderColor: ColorTheme.black.rawValue))
-            router.toHomeModule(view: view)
+        let parameter : [String:Any] = [
+            "phoneNumber" : phoneNumber.replacingOccurrences(of: " ", with: ""),
+            "code":code
+        ]
+        
+        Task {
+            await interactor.fetchConfirmCode(parameter:parameter)
         }
     }
+    
+    func toHomePagePresenter() {
+        router.toHomeModule(view: view)
+    }
+    
+   
 }
 
 
 extension ConfirmCodePresenter : InteractorToPresenterConfirmCodeProtocol {
-    func sendConfirmCode(code: String) {
-        confirmCode = code
+    func sendConfirmCode(state: Bool) {
+        if state  {
+            
+            view?.setCodeErrorState(error: (
+                errorState: false,
+                text: TextTheme.defaultEmpty.localized,
+                borderColor: ColorTheme.black.rawValue))
+            view?.toHomePage()
+            
+           
+         
+        }else{
+            view?.setCodeErrorState(error: (
+                errorState: true,
+                text: TextTheme.codeError.localized,
+                borderColor: ColorTheme.red.rawValue))
+        }
+    }
+    //TODO: Alert will be added
+    func confirmCodeError() {
+        print("Error confirm code")
     }
 }

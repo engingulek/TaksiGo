@@ -17,12 +17,14 @@ public class EnterPhoneRouter : EnterPhoneModuleProtocol {
     public func createModule() -> UIViewController {
         let viewController = EnterPhoneViewController()
         let router = EnterPhoneRouter()
-       
-        let presenter : ViewToPrensenterEnterPhoneProtocol =
+        let interactor = EnterPhoneInteractor()
+        let presenter : ViewToPrensenterEnterPhoneProtocol & InteractorToPresenterEnterPhoneProtocol =
         EnterPhonePresenter(view: viewController,
-                            router: router)
+                            router: router,
+                            interactor: interactor)
         viewController.presenter = presenter
-      
+        interactor.presenter = presenter
+        
         return viewController
     }
 }

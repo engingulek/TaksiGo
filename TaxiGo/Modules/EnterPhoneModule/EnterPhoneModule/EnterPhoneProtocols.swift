@@ -36,12 +36,13 @@ protocol PresenterToViewEnterPhoneProtocol: AnyObject,Kits{
 
 //MARK: PresenterToInteractorEnterPhoneProtocol
 protocol PresenterToInteractorEnterPhoneProtocol{
-   
+    func createConfirmCode(paramenter: [String:Any]) async
 }
 
 //MARK: InteractorToPresenterEnterPhoneProtocol
 protocol InteractorToPresenterEnterPhoneProtocol{
-   
+    
+    func interactorError()
 }
 
 //MARK: PresenterToRouterEnterPhoneProtocol
