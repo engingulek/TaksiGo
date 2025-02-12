@@ -11,7 +11,9 @@ import UIKit
 class EnterPhoneViewController : UIViewController {
     lazy var presenter : ViewToPrensenterEnterPhoneProtocol = EnterPhonePresenter(
         view: self,
-        router: EnterPhoneRouter())
+        router: EnterPhoneRouter(),
+        interactor:  EnterPhoneInteractor()
+    )
     private lazy var enterPhoneView = EnterPhoneView(self)
     override func viewDidLoad() {
         super.viewDidLoad()
