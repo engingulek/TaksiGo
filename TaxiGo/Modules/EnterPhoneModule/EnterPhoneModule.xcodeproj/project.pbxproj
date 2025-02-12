@@ -11,6 +11,8 @@
 		7D5848512D50C4BD008A530D /* ConfirmCodeModule.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7D58484F2D50C4BD008A530D /* ConfirmCodeModule.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7D5848542D50C50D008A530D /* DependencyKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D5848532D50C50D008A530D /* DependencyKit.framework */; };
 		7D5848552D50C50D008A530D /* DependencyKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7D5848532D50C50D008A530D /* DependencyKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7D5AABC12D5CEF4F0016AF05 /* ConfirmCodeModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D5AABC02D5CEF4F0016AF05 /* ConfirmCodeModule.framework */; };
+		7D5AABC22D5CEF4F0016AF05 /* ConfirmCodeModule.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7D5AABC02D5CEF4F0016AF05 /* ConfirmCodeModule.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7D67E36C2D4F81D40026A77D /* EnterPhoneModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D67E36B2D4F81D40026A77D /* EnterPhoneModule.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7D67E3792D4F820C0026A77D /* EnterPhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D67E3782D4F820C0026A77D /* EnterPhoneViewController.swift */; };
 		7D67E37B2D4F821B0026A77D /* EnterPhoneProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D67E37A2D4F821B0026A77D /* EnterPhoneProtocols.swift */; };
@@ -66,6 +68,7 @@
 				7D67E3952D4F88760026A77D /* FactoryKit.framework in Embed Frameworks */,
 				7D67E3932D4F88760026A77D /* CoreKit.framework in Embed Frameworks */,
 				7D67E3972D4F88760026A77D /* ViewControllerAbleKit.framework in Embed Frameworks */,
+				7D5AABC22D5CEF4F0016AF05 /* ConfirmCodeModule.framework in Embed Frameworks */,
 				7D67E3912D4F88760026A77D /* BaseViewKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -76,6 +79,7 @@
 /* Begin PBXFileReference section */
 		7D58484F2D50C4BD008A530D /* ConfirmCodeModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ConfirmCodeModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D5848532D50C50D008A530D /* DependencyKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DependencyKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D5AABC02D5CEF4F0016AF05 /* ConfirmCodeModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ConfirmCodeModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D67E3682D4F81D40026A77D /* EnterPhoneModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EnterPhoneModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D67E36B2D4F81D40026A77D /* EnterPhoneModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EnterPhoneModule.h; sourceTree = "<group>"; };
 		7D67E3782D4F820C0026A77D /* EnterPhoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterPhoneViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +103,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D5AABC12D5CEF4F0016AF05 /* ConfirmCodeModule.framework in Frameworks */,
 				7D67E3942D4F88760026A77D /* FactoryKit.framework in Frameworks */,
 				7D67E3922D4F88760026A77D /* CoreKit.framework in Frameworks */,
 				7D67E3962D4F88760026A77D /* ViewControllerAbleKit.framework in Frameworks */,
@@ -158,6 +163,7 @@
 		7D67E38B2D4F88760026A77D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7D5AABC02D5CEF4F0016AF05 /* ConfirmCodeModule.framework */,
 				7D5848532D50C50D008A530D /* DependencyKit.framework */,
 				7D58484F2D50C4BD008A530D /* ConfirmCodeModule.framework */,
 				7D67E38C2D4F88760026A77D /* BaseViewKit.framework */,

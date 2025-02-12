@@ -33,6 +33,8 @@
 		7D58487E2D512E49008A530D /* MockConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D58487D2D512E49008A530D /* MockConfirmViewController.swift */; };
 		7D5848802D512F52008A530D /* ConfirmInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D58487F2D512F52008A530D /* ConfirmInteractor.swift */; };
 		7D5848822D5131CE008A530D /* MockConfirmInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5848812D5131CE008A530D /* MockConfirmInteractor.swift */; };
+		7D5AABC42D5CF0470016AF05 /* HomeModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D5AABC32D5CF0470016AF05 /* HomeModule.framework */; };
+		7D5AABC52D5CF0470016AF05 /* HomeModule.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7D5AABC32D5CF0470016AF05 /* HomeModule.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +68,7 @@
 			files = (
 				7D5848652D50D396008A530D /* FactoryKit.framework in Embed Frameworks */,
 				7D5848622D50D38A008A530D /* ViewControllerAbleKit.framework in Embed Frameworks */,
+				7D5AABC52D5CF0470016AF05 /* HomeModule.framework in Embed Frameworks */,
 				7D5848682D50D39C008A530D /* CoreKit.framework in Embed Frameworks */,
 				7D58485E2D50D382008A530D /* BaseViewKit.framework in Embed Frameworks */,
 			);
@@ -94,6 +97,7 @@
 		7D58487D2D512E49008A530D /* MockConfirmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockConfirmViewController.swift; sourceTree = "<group>"; };
 		7D58487F2D512F52008A530D /* ConfirmInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmInteractor.swift; sourceTree = "<group>"; };
 		7D5848812D5131CE008A530D /* MockConfirmInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockConfirmInteractor.swift; sourceTree = "<group>"; };
+		7D5AABC32D5CF0470016AF05 /* HomeModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = HomeModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,7 @@
 			files = (
 				7D5848642D50D396008A530D /* FactoryKit.framework in Frameworks */,
 				7D5848582D50D2CE008A530D /* SnapKit in Frameworks */,
+				7D5AABC42D5CF0470016AF05 /* HomeModule.framework in Frameworks */,
 				7D5848672D50D39C008A530D /* CoreKit.framework in Frameworks */,
 				7D58485A2D50D2CE008A530D /* SnapKit-Dynamic in Frameworks */,
 				7D5848612D50D38A008A530D /* ViewControllerAbleKit.framework in Frameworks */,
@@ -160,6 +165,7 @@
 		7D58485B2D50D381008A530D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7D5AABC32D5CF0470016AF05 /* HomeModule.framework */,
 				7D0889032D5210B700D4F9C3 /* DependencyKit.framework */,
 				7D0888FC2D52102E00D4F9C3 /* HomeModule.framework */,
 				7D5848662D50D39C008A530D /* CoreKit.framework */,
