@@ -7,13 +7,14 @@
 
 import Foundation
 import CoreKit
+import UserDefaultsManagerKit
 final class ConfirmCodePresenter {
     weak var view : PresenterToViewConfirmCodeProtocol?
     private var router : PresenterToRouterConfirmCodeProtocol
     private let interactor : PresenterToInteractorConfirmCodeProtocol
     private var phoneNumber :String = ""
-    
-    init(view: PresenterToViewConfirmCodeProtocol?, 
+    private let userDefaultManager : UserDefaultsManagerProtocol = UserSessionManager()
+    init(view: PresenterToViewConfirmCodeProtocol?,
          router: PresenterToRouterConfirmCodeProtocol,
          interactor : PresenterToInteractorConfirmCodeProtocol
     ) {
@@ -54,6 +55,7 @@ extension ConfirmCodePresenter : ViewToPrensenterConfirmCodeProtocol {
             "code":code
         ]
         
+        
         Task {
             await interactor.fetchConfirmCode(parameter:parameter)
         }
@@ -77,8 +79,7 @@ extension ConfirmCodePresenter : InteractorToPresenterConfirmCodeProtocol {
                 borderColor: ColorTheme.black.rawValue))
             view?.toHomePage()
             
-           
-         
+            userDefaultManager.login(phoneNumber: phoneNumber)
         }else{
             view?.setCodeErrorState(error: (
                 errorState: true,

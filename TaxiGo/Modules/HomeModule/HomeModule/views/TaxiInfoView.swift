@@ -15,7 +15,7 @@ import BaseViewKit
 class TaxiInfoView : BaseView<HomeViewController> {
     var presenter : ViewToPrensenterHomeProtocol?
     private lazy var listTaxiTypeCollectionView : UICollectionView = UICollectionView.primaryCollectionView(scroolDirection: .vertical)
-    
+    private lazy var messageLabel = LabelFactory.createLabel(ofType: .mediumErrorLabel(true))
     private lazy var sendTaxiButton = ButtonFactory.createButton(ofType: .basic(action: sendTaxiButtonAction))
     
     private lazy var sendTaxiButtonAction  : UIAction = UIAction { _ in
@@ -56,12 +56,23 @@ class TaxiInfoView : BaseView<HomeViewController> {
         listTaxiTypeCollectionView.delegate = controller
         listTaxiTypeCollectionView.dataSource = controller
         
+        addSubview(messageLabel)
+        messageLabel.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.centerY.equalToSuperview()
+        }
+        
     }
     
     
     
     func titleData(title:String){
         sendTaxiButton.setTitle(title, for: .normal)
+    }
+    
+    func messageSetLabel(isHidden:Bool,message:String){
+        messageLabel.isHidden = isHidden
+        messageLabel.text = message
     }
     
     func reloadCollectionView() {

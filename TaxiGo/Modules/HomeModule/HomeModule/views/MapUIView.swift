@@ -19,11 +19,12 @@ class MapUIView : BaseView<HomeViewController>{
     private let mapView = MKMapView()
     private let locationInfo = LabelFactory.createLabel(ofType: .smallTitleLabel(false))
     private lazy var arrowDownIcon = IconFactory.createIcon(ofType: .bottomArrow)
-    
+
     override func setupView() {
         super.setupView()
         mapView.delegate = self
         configureView()
+        
     }
     private func configureView() {
         
@@ -61,8 +62,62 @@ class MapUIView : BaseView<HomeViewController>{
 extension MapUIView : MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
         let centerCoordinate = mapView.centerCoordinate
-        presenter?.mapMove(location: (latitude: centerCoordinate.latitude, longitude: centerCoordinate.latitude))
+        presenter?.mapMove(location: (latitude: centerCoordinate.latitude, longitude: centerCoordinate.longitude))
     }
+    
+    
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        if annotation is MKUserLocation { return nil } 
+        
+        guard let customAnnotation = annotation as? CustomAnnotation else { return nil }
+        
+        let identifier = "customPin"
+        var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
+        annotationView?.updateConstraints()
+        if annotationView == nil {
+            annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+            annotationView?.canShowCallout = true
+        } else {
+            annotationView?.annotation = annotation
+        }
+       
+        
+        
+        annotationView?.image = UIImage(resource: customAnnotation.image)
+        
+        annotationView?.snp.makeConstraints({ make in
+            make.size.equalTo(40)
+        })
+        
+        return annotationView
+    }
+    
+    func addCustomAnnotations(list:[TaxiInfoElement]) {
+        for location in list {
+            
+            let annotation = CustomAnnotation(
+                title:"",
+                coordinate: CLLocationCoordinate2D(latitude: location.latitude, longitude: location.longitude),
+                image: location.taxiTypeName == "yellow" ? .yellowTaxi : .blackTaxi)
+            
+            mapView.addAnnotation(annotation)
+      
+            
+        }
+    }
+    
+    func test() {
+        mapView.removeAnnotations(mapView.annotations)
+       
+    }
+    
+    func resizeImage(image: UIImage, targetSize: CGSize) -> UIImage {
+        let renderer = UIGraphicsImageRenderer(size: targetSize)
+        return renderer.image { _ in
+            image.draw(in: CGRect(origin: .zero, size: targetSize))
+        }
+    }
+    
 }
 
 //MARK: MapUIViewAbles
@@ -99,6 +154,4 @@ extension MapUIView {
     
     private func errorState(state: Bool, errorMessage: String){
     }
-    
-    
 }

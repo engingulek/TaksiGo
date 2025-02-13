@@ -19,12 +19,13 @@ protocol ViewToPrensenterHomeProtocol{
     func mapMove(location:(latitude:Double,longitude:Double))
     
     func numberOfItemsIn() -> Int
-    func cellForItem(at indexPath:IndexPath) -> TaxiType
+    func cellForItem(at indexPath:IndexPath) -> TaxiCellInfo
     func sizeForItemAt(width:CGFloat,height:CGFloat) -> CGSize
     func insetForSectionAt() ->(top:CGFloat,left:CGFloat,right:CGFloat,bottom:CGFloat)
     
     func onTappedSendTaxi()
     
+    func distanceKm(price:Double) -> Double
     
     
 }
@@ -36,16 +37,18 @@ protocol PresenterToViewHomeProtocol: AnyObject,Kits{
     func locationInfo(state:Bool,text:String)
     func errorState(state:Bool,errorMessage:String)
     func reloadCollectionView()
+    func setTaxiInfoToMap(list:[TaxiInfoElement])
+    func setMessageLabelOnTaxiInfoView(isHidden:Bool,text:String)
 }
 
 //MARK: PresenterToInteractorHomeProtocol
 protocol PresenterToInteractorHomeProtocol{
-    func fetchTaxiInfo()
+    func fetchTaxiInfo() 
 }
 
 //MARK: InteractorToPresenterHomeProtocol
 protocol InteractorToPresenterHomeProtocol{
-    func sendTaxiTypes(list:[TaxiType])
+    func sendTaxiTypes(list:[TaxiInfoElement])
 }
 
 //MARK: PresenterToRouterHomeProtocol

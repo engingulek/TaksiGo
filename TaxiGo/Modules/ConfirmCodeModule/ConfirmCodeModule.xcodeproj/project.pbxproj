@@ -11,6 +11,8 @@
 		7D0888FE2D52102E00D4F9C3 /* HomeModule.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7D0888FC2D52102E00D4F9C3 /* HomeModule.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7D0889042D5210B700D4F9C3 /* DependencyKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D0889032D5210B700D4F9C3 /* DependencyKit.framework */; };
 		7D0889052D5210B700D4F9C3 /* DependencyKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7D0889032D5210B700D4F9C3 /* DependencyKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7D459E6D2D5E126400EEF6A7 /* UserDefaultsManagerKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D459E6C2D5E126400EEF6A7 /* UserDefaultsManagerKit.framework */; };
+		7D459E6E2D5E126400EEF6A7 /* UserDefaultsManagerKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7D459E6C2D5E126400EEF6A7 /* UserDefaultsManagerKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7D58483A2D50C29D008A530D /* ConfirmCodeModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D5848392D50C29D008A530D /* ConfirmCodeModule.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7D5848472D50C2C5008A530D /* ConfirmCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5848462D50C2C5008A530D /* ConfirmCodeViewController.swift */; };
 		7D5848492D50C2D3008A530D /* ConfirmCodeProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5848482D50C2D3008A530D /* ConfirmCodeProtocols.swift */; };
@@ -69,6 +71,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				7D5AABCD2D5D0D610016AF05 /* NewtworkManagerKit.framework in Embed Frameworks */,
+				7D459E6E2D5E126400EEF6A7 /* UserDefaultsManagerKit.framework in Embed Frameworks */,
 				7D5848652D50D396008A530D /* FactoryKit.framework in Embed Frameworks */,
 				7D5848622D50D38A008A530D /* ViewControllerAbleKit.framework in Embed Frameworks */,
 				7D5AABC52D5CF0470016AF05 /* HomeModule.framework in Embed Frameworks */,
@@ -83,6 +86,7 @@
 /* Begin PBXFileReference section */
 		7D0888FC2D52102E00D4F9C3 /* HomeModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = HomeModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D0889032D5210B700D4F9C3 /* DependencyKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DependencyKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D459E6C2D5E126400EEF6A7 /* UserDefaultsManagerKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UserDefaultsManagerKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D5848362D50C29D008A530D /* ConfirmCodeModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ConfirmCodeModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D5848392D50C29D008A530D /* ConfirmCodeModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConfirmCodeModule.h; sourceTree = "<group>"; };
 		7D5848462D50C2C5008A530D /* ConfirmCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmCodeViewController.swift; sourceTree = "<group>"; };
@@ -113,6 +117,7 @@
 				7D5848582D50D2CE008A530D /* SnapKit in Frameworks */,
 				7D5AABC42D5CF0470016AF05 /* HomeModule.framework in Frameworks */,
 				7D5848672D50D39C008A530D /* CoreKit.framework in Frameworks */,
+				7D459E6D2D5E126400EEF6A7 /* UserDefaultsManagerKit.framework in Frameworks */,
 				7D5AABCC2D5D0D610016AF05 /* NewtworkManagerKit.framework in Frameworks */,
 				7D58485A2D50D2CE008A530D /* SnapKit-Dynamic in Frameworks */,
 				7D5848612D50D38A008A530D /* ViewControllerAbleKit.framework in Frameworks */,
@@ -170,6 +175,7 @@
 		7D58485B2D50D381008A530D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7D459E6C2D5E126400EEF6A7 /* UserDefaultsManagerKit.framework */,
 				7D5AABCB2D5D0D610016AF05 /* NewtworkManagerKit.framework */,
 				7D5AABC32D5CF0470016AF05 /* HomeModule.framework */,
 				7D0889032D5210B700D4F9C3 /* DependencyKit.framework */,

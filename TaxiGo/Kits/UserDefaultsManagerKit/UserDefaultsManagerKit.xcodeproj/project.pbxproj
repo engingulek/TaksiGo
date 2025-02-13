@@ -7,145 +7,100 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7D459E752D5E239C00EEF6A7 /* WebSocketManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D459E742D5E239C00EEF6A7 /* WebSocketManager.swift */; };
-		7D459E772D5E24A000EEF6A7 /* WebSocketTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D459E762D5E24A000EEF6A7 /* WebSocketTargetType.swift */; };
-		7D459E792D5E27EE00EEF6A7 /* WebSocketPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D459E782D5E27EE00EEF6A7 /* WebSocketPath.swift */; };
-		7D459E7B2D5E28CE00EEF6A7 /* WebSocketConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D459E7A2D5E28CE00EEF6A7 /* WebSocketConstants.swift */; };
-		7D6342472D5CD22700055877 /* NewtworkManagerKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D6342462D5CD22700055877 /* NewtworkManagerKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7D6342552D5CD28F00055877 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 7D6342542D5CD28F00055877 /* Alamofire */; };
-		7D6342572D5CD28F00055877 /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 7D6342562D5CD28F00055877 /* AlamofireDynamic */; };
-		7D6342592D5CD2A400055877 /* TargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6342582D5CD2A400055877 /* TargetType.swift */; };
-		7D63425B2D5CD2DF00055877 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D63425A2D5CD2DF00055877 /* Constants.swift */; };
-		7D63425D2D5CD2F700055877 /* NetworkPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D63425C2D5CD2F700055877 /* NetworkPath.swift */; };
-		7D63425F2D5CD51400055877 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D63425E2D5CD51400055877 /* NetworkManager.swift */; };
+		7D459E5E2D5E11AB00EEF6A7 /* UserDefaultsManagerKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D459E5D2D5E11AB00EEF6A7 /* UserDefaultsManagerKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7D459E6B2D5E11C200EEF6A7 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D459E6A2D5E11C200EEF6A7 /* UserDefaultsManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		7D459E742D5E239C00EEF6A7 /* WebSocketManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketManager.swift; sourceTree = "<group>"; };
-		7D459E762D5E24A000EEF6A7 /* WebSocketTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketTargetType.swift; sourceTree = "<group>"; };
-		7D459E782D5E27EE00EEF6A7 /* WebSocketPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketPath.swift; sourceTree = "<group>"; };
-		7D459E7A2D5E28CE00EEF6A7 /* WebSocketConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketConstants.swift; sourceTree = "<group>"; };
-		7D6342432D5CD22700055877 /* NewtworkManagerKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NewtworkManagerKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7D6342462D5CD22700055877 /* NewtworkManagerKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewtworkManagerKit.h; sourceTree = "<group>"; };
-		7D6342582D5CD2A400055877 /* TargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetType.swift; sourceTree = "<group>"; };
-		7D63425A2D5CD2DF00055877 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		7D63425C2D5CD2F700055877 /* NetworkPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkPath.swift; sourceTree = "<group>"; };
-		7D63425E2D5CD51400055877 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		7D459E5A2D5E11AB00EEF6A7 /* UserDefaultsManagerKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UserDefaultsManagerKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D459E5D2D5E11AB00EEF6A7 /* UserDefaultsManagerKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserDefaultsManagerKit.h; sourceTree = "<group>"; };
+		7D459E6A2D5E11C200EEF6A7 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		7D6342402D5CD22700055877 /* Frameworks */ = {
+		7D459E572D5E11AB00EEF6A7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7D6342552D5CD28F00055877 /* Alamofire in Frameworks */,
-				7D6342572D5CD28F00055877 /* AlamofireDynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		7D459E722D5E22D900EEF6A7 /* Restful */ = {
+		7D459E502D5E11AB00EEF6A7 = {
 			isa = PBXGroup;
 			children = (
-				7D6342582D5CD2A400055877 /* TargetType.swift */,
-				7D63425A2D5CD2DF00055877 /* Constants.swift */,
-				7D63425C2D5CD2F700055877 /* NetworkPath.swift */,
-				7D63425E2D5CD51400055877 /* NetworkManager.swift */,
-			);
-			path = Restful;
-			sourceTree = "<group>";
-		};
-		7D459E732D5E238700EEF6A7 /* WebSocket */ = {
-			isa = PBXGroup;
-			children = (
-				7D459E742D5E239C00EEF6A7 /* WebSocketManager.swift */,
-				7D459E762D5E24A000EEF6A7 /* WebSocketTargetType.swift */,
-				7D459E782D5E27EE00EEF6A7 /* WebSocketPath.swift */,
-				7D459E7A2D5E28CE00EEF6A7 /* WebSocketConstants.swift */,
-			);
-			path = WebSocket;
-			sourceTree = "<group>";
-		};
-		7D6342392D5CD22700055877 = {
-			isa = PBXGroup;
-			children = (
-				7D6342452D5CD22700055877 /* NewtworkManagerKit */,
-				7D6342442D5CD22700055877 /* Products */,
+				7D459E5C2D5E11AB00EEF6A7 /* UserDefaultsManagerKit */,
+				7D459E5B2D5E11AB00EEF6A7 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		7D6342442D5CD22700055877 /* Products */ = {
+		7D459E5B2D5E11AB00EEF6A7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7D6342432D5CD22700055877 /* NewtworkManagerKit.framework */,
+				7D459E5A2D5E11AB00EEF6A7 /* UserDefaultsManagerKit.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		7D6342452D5CD22700055877 /* NewtworkManagerKit */ = {
+		7D459E5C2D5E11AB00EEF6A7 /* UserDefaultsManagerKit */ = {
 			isa = PBXGroup;
 			children = (
-				7D459E732D5E238700EEF6A7 /* WebSocket */,
-				7D459E722D5E22D900EEF6A7 /* Restful */,
-				7D6342462D5CD22700055877 /* NewtworkManagerKit.h */,
+				7D459E5D2D5E11AB00EEF6A7 /* UserDefaultsManagerKit.h */,
+				7D459E6A2D5E11C200EEF6A7 /* UserDefaultsManager.swift */,
 			);
-			path = NewtworkManagerKit;
+			path = UserDefaultsManagerKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		7D63423E2D5CD22700055877 /* Headers */ = {
+		7D459E552D5E11AB00EEF6A7 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7D6342472D5CD22700055877 /* NewtworkManagerKit.h in Headers */,
+				7D459E5E2D5E11AB00EEF6A7 /* UserDefaultsManagerKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		7D6342422D5CD22700055877 /* NewtworkManagerKit */ = {
+		7D459E592D5E11AB00EEF6A7 /* UserDefaultsManagerKit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7D63424A2D5CD22700055877 /* Build configuration list for PBXNativeTarget "NewtworkManagerKit" */;
+			buildConfigurationList = 7D459E612D5E11AB00EEF6A7 /* Build configuration list for PBXNativeTarget "UserDefaultsManagerKit" */;
 			buildPhases = (
-				7D63423E2D5CD22700055877 /* Headers */,
-				7D63423F2D5CD22700055877 /* Sources */,
-				7D6342402D5CD22700055877 /* Frameworks */,
-				7D6342412D5CD22700055877 /* Resources */,
+				7D459E552D5E11AB00EEF6A7 /* Headers */,
+				7D459E562D5E11AB00EEF6A7 /* Sources */,
+				7D459E572D5E11AB00EEF6A7 /* Frameworks */,
+				7D459E582D5E11AB00EEF6A7 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = NewtworkManagerKit;
-			packageProductDependencies = (
-				7D6342542D5CD28F00055877 /* Alamofire */,
-				7D6342562D5CD28F00055877 /* AlamofireDynamic */,
-			);
-			productName = NewtworkManagerKit;
-			productReference = 7D6342432D5CD22700055877 /* NewtworkManagerKit.framework */;
+			name = UserDefaultsManagerKit;
+			productName = UserDefaultsManagerKit;
+			productReference = 7D459E5A2D5E11AB00EEF6A7 /* UserDefaultsManagerKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		7D63423A2D5CD22700055877 /* Project object */ = {
+		7D459E512D5E11AB00EEF6A7 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
-					7D6342422D5CD22700055877 = {
+					7D459E592D5E11AB00EEF6A7 = {
 						CreatedOnToolsVersion = 15.0;
 						LastSwiftMigration = 1500;
 					};
 				};
 			};
-			buildConfigurationList = 7D63423D2D5CD22700055877 /* Build configuration list for PBXProject "NewtworkManagerKit" */;
+			buildConfigurationList = 7D459E542D5E11AB00EEF6A7 /* Build configuration list for PBXProject "UserDefaultsManagerKit" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -153,21 +108,18 @@
 				en,
 				Base,
 			);
-			mainGroup = 7D6342392D5CD22700055877;
-			packageReferences = (
-				7D6342532D5CD28F00055877 /* XCRemoteSwiftPackageReference "Alamofire" */,
-			);
-			productRefGroup = 7D6342442D5CD22700055877 /* Products */;
+			mainGroup = 7D459E502D5E11AB00EEF6A7;
+			productRefGroup = 7D459E5B2D5E11AB00EEF6A7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7D6342422D5CD22700055877 /* NewtworkManagerKit */,
+				7D459E592D5E11AB00EEF6A7 /* UserDefaultsManagerKit */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		7D6342412D5CD22700055877 /* Resources */ = {
+		7D459E582D5E11AB00EEF6A7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -177,25 +129,18 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		7D63423F2D5CD22700055877 /* Sources */ = {
+		7D459E562D5E11AB00EEF6A7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7D63425F2D5CD51400055877 /* NetworkManager.swift in Sources */,
-				7D459E752D5E239C00EEF6A7 /* WebSocketManager.swift in Sources */,
-				7D63425D2D5CD2F700055877 /* NetworkPath.swift in Sources */,
-				7D6342592D5CD2A400055877 /* TargetType.swift in Sources */,
-				7D459E792D5E27EE00EEF6A7 /* WebSocketPath.swift in Sources */,
-				7D459E772D5E24A000EEF6A7 /* WebSocketTargetType.swift in Sources */,
-				7D63425B2D5CD2DF00055877 /* Constants.swift in Sources */,
-				7D459E7B2D5E28CE00EEF6A7 /* WebSocketConstants.swift in Sources */,
+				7D459E6B2D5E11C200EEF6A7 /* UserDefaultsManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		7D6342482D5CD22700055877 /* Debug */ = {
+		7D459E5F2D5E11AB00EEF6A7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -261,7 +206,7 @@
 			};
 			name = Debug;
 		};
-		7D6342492D5CD22700055877 /* Release */ = {
+		7D459E602D5E11AB00EEF6A7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -320,7 +265,7 @@
 			};
 			name = Release;
 		};
-		7D63424B2D5CD22700055877 /* Debug */ = {
+		7D459E622D5E11AB00EEF6A7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
@@ -343,7 +288,7 @@
 				MARKETING_VERSION = 1.0;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
-				PRODUCT_BUNDLE_IDENTIFIER = engingulek.NewtworkManagerKit;
+				PRODUCT_BUNDLE_IDENTIFIER = engingulek.UserDefaultsManagerKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -353,7 +298,7 @@
 			};
 			name = Debug;
 		};
-		7D63424C2D5CD22700055877 /* Release */ = {
+		7D459E632D5E11AB00EEF6A7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
@@ -376,7 +321,7 @@
 				MARKETING_VERSION = 1.0;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
-				PRODUCT_BUNDLE_IDENTIFIER = engingulek.NewtworkManagerKit;
+				PRODUCT_BUNDLE_IDENTIFIER = engingulek.UserDefaultsManagerKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -388,49 +333,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		7D63423D2D5CD22700055877 /* Build configuration list for PBXProject "NewtworkManagerKit" */ = {
+		7D459E542D5E11AB00EEF6A7 /* Build configuration list for PBXProject "UserDefaultsManagerKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7D6342482D5CD22700055877 /* Debug */,
-				7D6342492D5CD22700055877 /* Release */,
+				7D459E5F2D5E11AB00EEF6A7 /* Debug */,
+				7D459E602D5E11AB00EEF6A7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7D63424A2D5CD22700055877 /* Build configuration list for PBXNativeTarget "NewtworkManagerKit" */ = {
+		7D459E612D5E11AB00EEF6A7 /* Build configuration list for PBXNativeTarget "UserDefaultsManagerKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7D63424B2D5CD22700055877 /* Debug */,
-				7D63424C2D5CD22700055877 /* Release */,
+				7D459E622D5E11AB00EEF6A7 /* Debug */,
+				7D459E632D5E11AB00EEF6A7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		7D6342532D5CD28F00055877 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.10.2;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		7D6342542D5CD28F00055877 /* Alamofire */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 7D6342532D5CD28F00055877 /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = Alamofire;
-		};
-		7D6342562D5CD28F00055877 /* AlamofireDynamic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 7D6342532D5CD28F00055877 /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = AlamofireDynamic;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
-	rootObject = 7D63423A2D5CD22700055877 /* Project object */;
+	rootObject = 7D459E512D5E11AB00EEF6A7 /* Project object */;
 }
