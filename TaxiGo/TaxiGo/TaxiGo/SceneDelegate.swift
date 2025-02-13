@@ -11,6 +11,7 @@ import OnboardingModule
 import EnterPhoneModule
 import ConfirmCodeModule
 import HomeModule
+import UserDefaultsManagerKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
@@ -21,9 +22,19 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
         registerDependencies()
-        let onboardingModule:OnboardingModuleProtocol = DependencyRegister.shared.resolve(OnboardingModuleProtocol.self)
-        window?.rootViewController =  UINavigationController(rootViewController: onboardingModule.createModule())
+        let userManager : UserDefaultsManagerProtocol = UserSessionManager()
+        if userManager.isLoggedIn {
+            let homeModule:HomeModuleProtocol = DependencyRegister.shared.resolve(HomeModuleProtocol.self)
+            window?.rootViewController =  UINavigationController(rootViewController: homeModule.createModuler())
+        }else{
+            let onboardingModule:OnboardingModuleProtocol = DependencyRegister.shared.resolve(OnboardingModuleProtocol.self)
+            window?.rootViewController =  UINavigationController(rootViewController: onboardingModule.createModule())
+          
+        }
+        
         window?.makeKeyAndVisible()
+        
+       
     }
 
     private func registerDependencies(){
