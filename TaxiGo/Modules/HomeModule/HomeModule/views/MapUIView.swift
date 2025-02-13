@@ -73,7 +73,7 @@ extension MapUIView : MKMapViewDelegate {
         
         let identifier = "customPin"
         var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
-        
+        annotationView?.updateConstraints()
         if annotationView == nil {
             annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: identifier)
             annotationView?.canShowCallout = true
@@ -94,12 +94,21 @@ extension MapUIView : MKMapViewDelegate {
     
     func addCustomAnnotations(list:[TaxiInfoElement]) {
         for location in list {
+            
             let annotation = CustomAnnotation(
                 title:"",
                 coordinate: CLLocationCoordinate2D(latitude: location.latitude, longitude: location.longitude),
                 image: location.taxiTypeName == "yellow" ? .yellowTaxi : .blackTaxi)
+            
             mapView.addAnnotation(annotation)
+      
+            
         }
+    }
+    
+    func test() {
+        mapView.removeAnnotations(mapView.annotations)
+       
     }
     
     func resizeImage(image: UIImage, targetSize: CGSize) -> UIImage {

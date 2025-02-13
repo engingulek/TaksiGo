@@ -65,7 +65,13 @@ extension HomeViewController : PresenterToViewHomeProtocol {
     }
     
     func setTaxiInfoToMap(list: [TaxiInfoElement]) {
-        mapUIView.addCustomAnnotations(list: list)
+        DispatchQueue.main.async {[weak self] in
+            guard let self = self else {return}
+            mapUIView.test()
+            mapUIView.addCustomAnnotations(list: list)
+           
+        }
+        
     }
     
     func setMessageLabelOnTaxiInfoView(isHidden: Bool, text: String) {

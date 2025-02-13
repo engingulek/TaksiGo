@@ -120,7 +120,7 @@ extension HomePresenter : InteractorToPresenterHomeProtocol {
     func sendTaxiTypes(list: [TaxiInfoElement]) {
         let blackList = list.filter { $0.taxiTypeName == "black" }
         let yellowList = list.filter { $0.taxiTypeName == "yellow" }
-        
+        taxiTypeCellList = []
         if yellowList.count != 0 {
             let yellowTaxi = TaxiCellInfo(taxiTypeName: .yellow, seatCount: SeatSize.yellow.rawValue, kmPrice:KmPrice.yellow.rawValue)
             taxiTypeCellList.append(yellowTaxi)
@@ -130,6 +130,7 @@ extension HomePresenter : InteractorToPresenterHomeProtocol {
             let blackTaxi = TaxiCellInfo(taxiTypeName: .black, seatCount: SeatSize.black.rawValue, kmPrice: KmPrice.black.rawValue)
             taxiTypeCellList.append(blackTaxi)
         }
+        
         
         view?.setTaxiInfoToMap(list: list)
        
