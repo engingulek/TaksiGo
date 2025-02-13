@@ -50,19 +50,23 @@ class LocationManager: NSObject {
         }
     }
     
-    func calculatekm(userLocation:(latitude: Double, longitude: Double),stepLocation:(latitude: Double, longitude: Double)) -> Double {
+    func calculatekm(userLocation:(latitude: Double, longitude: Double),selectedLocation:(latitude: Double, longitude: Double)) -> Double {
       
         
         let firstLocation = CLLocation(
             latitude: userLocation.latitude,
             longitude: userLocation.longitude)
-        let secondLocation = CLLocation(latitude: stepLocation.latitude,
-                                        longitude: stepLocation.longitude)
+        let secondLocation = CLLocation(latitude: selectedLocation.latitude,
+                                        longitude: selectedLocation.longitude)
+      
         let distanceInMeters = firstLocation.distance(from: secondLocation)
-        
+      
         let distanceInKilometers = distanceInMeters / 1000
+      
         return distanceInKilometers
     }
+    
+   
 }
 
 

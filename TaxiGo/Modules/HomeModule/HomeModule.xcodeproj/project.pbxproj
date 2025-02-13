@@ -28,6 +28,7 @@
 		7D459E7D2D5E2A2600EEF6A7 /* NewtworkManagerKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D459E7C2D5E2A2600EEF6A7 /* NewtworkManagerKit.framework */; };
 		7D459E7E2D5E2A2600EEF6A7 /* NewtworkManagerKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7D459E7C2D5E2A2600EEF6A7 /* NewtworkManagerKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7D459E802D5E4D7400EEF6A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D459E7F2D5E4D7400EEF6A7 /* Assets.xcassets */; };
+		7D459E822D5E5B1300EEF6A7 /* CustomAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D459E812D5E5B1300EEF6A7 /* CustomAnnotation.swift */; };
 		7D47D2062D54C41E00A22526 /* TaxiInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D47D2052D54C41E00A22526 /* TaxiInfoView.swift */; };
 		7D47D20C2D54C8F000A22526 /* TaxiTypeCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D47D20B2D54C8F000A22526 /* TaxiTypeCVC.swift */; };
 		7D47D20E2D54EBCF00A22526 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D47D20D2D54EBCF00A22526 /* LocationManager.swift */; };
@@ -84,6 +85,7 @@
 		7D0889112D525BA800D4F9C3 /* HomeContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeContract.swift; sourceTree = "<group>"; };
 		7D459E7C2D5E2A2600EEF6A7 /* NewtworkManagerKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = NewtworkManagerKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D459E7F2D5E4D7400EEF6A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7D459E812D5E5B1300EEF6A7 /* CustomAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAnnotation.swift; sourceTree = "<group>"; };
 		7D47D2052D54C41E00A22526 /* TaxiInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxiInfoView.swift; sourceTree = "<group>"; };
 		7D47D20B2D54C8F000A22526 /* TaxiTypeCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxiTypeCVC.swift; sourceTree = "<group>"; };
 		7D47D20D2D54EBCF00A22526 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 				7D47D2112D5538E800A22526 /* HomeInteractor.swift */,
 				7D47D2132D5539CF00A22526 /* TaxiType.swift */,
 				7D459E7F2D5E4D7400EEF6A7 /* Assets.xcassets */,
+				7D459E812D5E5B1300EEF6A7 /* CustomAnnotation.swift */,
 			);
 			path = HomeModule;
 			sourceTree = "<group>";
@@ -331,6 +334,7 @@
 				7D47D2102D54FB4200A22526 /* HomePresenter.swift in Sources */,
 				7D47D20C2D54C8F000A22526 /* TaxiTypeCVC.swift in Sources */,
 				7D0888F72D520F5600D4F9C3 /* HomeViewController.swift in Sources */,
+				7D459E822D5E5B1300EEF6A7 /* CustomAnnotation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

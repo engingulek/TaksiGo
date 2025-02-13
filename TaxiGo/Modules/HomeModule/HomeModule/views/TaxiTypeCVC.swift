@@ -34,6 +34,7 @@ class TaxiTypeCVC: UICollectionViewCell {
         taxiImageView.snp.makeConstraints { make in
             make.centerY.equalToSuperview()
             make.leading.equalToSuperview().offset(10)
+            make.size.equalTo(50)
         }
         
         contentView.addSubview(estimatedPriceRangeLabel)
@@ -68,19 +69,17 @@ class TaxiTypeCVC: UICollectionViewCell {
     }
     
     
-    func configureData(taxiType:TaxiInfoElement,price:Double) {
+    func configureData(cellType : TaxiCellInfo,estimatedPrice:Double) {
         
-      
-        taxiImageView.setImageWithKigfisher(
-            with: taxiType.taxiTypeName == "yellow" ? TaxiType.yellow.rawValue : TaxiType.black.rawValue,
-            size: 50
-        )
-        taxiTypeLabel.text = taxiType.taxiTypeName
+        let imageResource = cellType.taxiTypeName == .yellow ? UIImage(resource: .yellowTaxi) :UIImage(resource: .blackTaxi)
+        taxiImageView.image = imageResource
+     
+        taxiTypeLabel.text = cellType.taxiTypeName.rawValue
         
+        estimatedPriceRangeLabel.text = String(format: "%.2f", estimatedPrice) + "₺"
+
         
-        estimatedPriceRangeLabel.text = "\(price)₺"
-        
-        seatCountLabel.text = "\(taxiType.seatCount)"
+        seatCountLabel.text = "\(cellType.seatCount)"
     }
     
     func configureUI() {

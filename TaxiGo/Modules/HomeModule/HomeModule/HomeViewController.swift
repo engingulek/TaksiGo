@@ -40,6 +40,7 @@ class HomeViewController : UIViewController {
 
 //MARK: HomeViewController : PresenterToViewHomeProtocol
 extension HomeViewController : PresenterToViewHomeProtocol {
+  
     
     func titleContract(title: TitleContract) {
         taxiInfoView.titleData(title: title.buttonTitle)
@@ -62,6 +63,20 @@ extension HomeViewController : PresenterToViewHomeProtocol {
     func reloadCollectionView() {
         taxiInfoView.reloadCollectionView()
     }
+    
+    func setTaxiInfoToMap(list: [TaxiInfoElement]) {
+        mapUIView.addCustomAnnotations(list: list)
+    }
+    
+    func setMessageLabelOnTaxiInfoView(isHidden: Bool, text: String) {
+        DispatchQueue.main.async {[weak self] in
+            guard let self = self else {return}
+            taxiInfoView.messageSetLabel(isHidden: isHidden, message: text)
+        }
+    }
+    
+   
+    
 }
 
 
@@ -76,12 +91,10 @@ extension HomeViewController : UICollectionViewDelegate,UICollectionViewDataSour
             withReuseIdentifier: TaxiTypeCVC.identifier,
             for: indexPath) as? TaxiTypeCVC else {return UICollectionViewCell()}
         
-        let taxiType = presenter.cellForItem(at: indexPath)
-        let kmPrice = presenter.distanceKm(
-            stepLocation: (latitude: taxiType.latitude, longitude: taxiType.longitude),
-            price: taxiType.kmPrice)
-        
-        cell.configureData(taxiType: taxiType, price: kmPrice)
+     
+        let type = presenter.cellForItem(at: indexPath)
+        let price = presenter.distanceKm(price: type.kmPrice)
+        cell.configureData(cellType: type,estimatedPrice: price)
         if indexPath.item == 1 {
             cell.configureUI()
         }

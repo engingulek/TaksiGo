@@ -12,7 +12,7 @@ final class HomePresenter: LocationManagerDelegate {
     private var intetactor : PresenterToInteractorHomeProtocol
     private var userLocation : (latitude: Double, longitude: Double)?
     private var selectedLocation: (latitude: Double, longitude: Double)?
-    private var taxiTypelist:[TaxiInfoElement] = []
+    private var taxiTypeCellList : [TaxiCellInfo] = []
     private var locationManagerDelegate = LocationManager()
     
     init(view: PresenterToViewHomeProtocol?,
@@ -25,7 +25,9 @@ final class HomePresenter: LocationManagerDelegate {
     func didUpdateLocation(location: (latitude: Double, longitude: Double)) {
         userLocation = location
         guard let userLocation = userLocation else {return}
+        
         view?.updateLocation(location: userLocation,meters: 200)
+        
         locationInfoAction(location: userLocation)
         
     }
@@ -47,34 +49,36 @@ final class HomePresenter: LocationManagerDelegate {
 
 //MARK: HomePresenter: ViewToPrensenterHomeProtocol
 extension HomePresenter: ViewToPrensenterHomeProtocol {
-    func distanceKm(stepLocation: (latitude: Double, longitude: Double), price: Double) -> Double {
+    func distanceKm(price: Double) -> Double {
         guard let userLocation = userLocation else {return 0}
-       let km = locationManagerDelegate.calculatekm(userLocation: userLocation,
-                                            stepLocation:stepLocation )
+        guard let selectedLocation = selectedLocation else {return 0}
+        let km = locationManagerDelegate.calculatekm(userLocation: userLocation,
+                                                     selectedLocation: selectedLocation)
+        
         let totalPrice = km * price
-        return totalPrice <= 200 ? 200 : totalPrice
+        return totalPrice <= 150 ? 150 : totalPrice
         
     }
     
-   
+    
     
     func viewDidLoad() {
         locationManagerDelegate.delegate = self
         view?.setBackColorAble(color: ColorTheme.primaryBackColor.rawValue)
         view?.stateBackAction(state: true)
         intetactor.fetchTaxiInfo()
-      
+        view?.setMessageLabelOnTaxiInfoView(isHidden: false, text: TextTheme.selectedLocationMessage.localized)
         let titleContract = TitleContract(buttonTitle: TextTheme.sendTaxi.localized)
         view?.titleContract(title: titleContract)
     }
     
     
     func numberOfItemsIn() -> Int {
-        return taxiTypelist.count
+        return taxiTypeCellList.count
     }
     
-    func cellForItem(at indexPath: IndexPath) -> TaxiInfoElement {
-        return taxiTypelist[indexPath.item]
+    func cellForItem(at indexPath: IndexPath) -> TaxiCellInfo {
+        return taxiTypeCellList[indexPath.item]
     }
     
     func sizeForItemAt(width: CGFloat, height: CGFloat) -> CGSize {
@@ -84,8 +88,6 @@ extension HomePresenter: ViewToPrensenterHomeProtocol {
         return CGSize(width: itemWidth, height: 50)
     }
     
-    
-    
     func insetForSectionAt() -> (top: CGFloat, left: CGFloat, right: CGFloat, bottom: CGFloat) {
         return (top: 10, left: 10, right: 10, bottom: 10)
     }
@@ -94,26 +96,43 @@ extension HomePresenter: ViewToPrensenterHomeProtocol {
     
     func mapMove(location: (latitude: Double, longitude: Double)) {
         selectedLocation = location
-        guard let selectedLocation = selectedLocation else {return}
+        guard let selectedLocation = selectedLocation else {
+            view?.setMessageLabelOnTaxiInfoView(isHidden: false, text: TextTheme.selectedLocationMessage.localized)
+            return}
+        
+        guard let userLocation = userLocation  else {return}
         locationInfoAction(location: selectedLocation)
+        let km = locationManagerDelegate.calculatekm(userLocation: userLocation,
+                                                     selectedLocation: selectedLocation)
+        
+        let message = km < 0.01 ? TextTheme.selectedLocationMessage.localized : TextTheme.defaultEmpty.localized
+        let state = !(km < 0.01)
+        view?.setMessageLabelOnTaxiInfoView(isHidden: state, text: message)
+        view?.reloadCollectionView()
     }
-    
-
-    
-    
     func onTappedSendTaxi() {
         
     }
 }
 
-//MARK: HomePresenter : InteractorToPresenterHomeProtocol 
+//MARK: HomePresenter : InteractorToPresenterHomeProtocol
 extension HomePresenter : InteractorToPresenterHomeProtocol {
     func sendTaxiTypes(list: [TaxiInfoElement]) {
-        taxiTypelist = list
-        view?.reloadCollectionView()
-     
+        let blackList = list.filter { $0.taxiTypeName == "black" }
+        let yellowList = list.filter { $0.taxiTypeName == "yellow" }
+        
+        if yellowList.count != 0 {
+            let yellowTaxi = TaxiCellInfo(taxiTypeName: .yellow, seatCount: SeatSize.yellow.rawValue, kmPrice:KmPrice.yellow.rawValue)
+            taxiTypeCellList.append(yellowTaxi)
+        }
+        
+        if blackList.count != 0 {
+            let blackTaxi = TaxiCellInfo(taxiTypeName: .black, seatCount: SeatSize.black.rawValue, kmPrice: KmPrice.black.rawValue)
+            taxiTypeCellList.append(blackTaxi)
+        }
+        
+        view?.setTaxiInfoToMap(list: list)
+       
     }
-    
-  
 }
 
