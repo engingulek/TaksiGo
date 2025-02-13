@@ -13,3 +13,11 @@ struct TaxiType {
     let seatCount:Int
     let kmPrice:Double
 }
+
+struct TaxiInfoElement: Codable {
+    let id: Int
+    let taxiTypeName: String
+    let latitude, longitude: Double
+    let seatCount: Int
+    let kmPrice: Double
+}

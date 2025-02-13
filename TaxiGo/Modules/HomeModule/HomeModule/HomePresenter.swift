@@ -12,7 +12,7 @@ final class HomePresenter: LocationManagerDelegate {
     private var intetactor : PresenterToInteractorHomeProtocol
     private var userLocation : (latitude: Double, longitude: Double)?
     private var selectedLocation: (latitude: Double, longitude: Double)?
-    private var taxiTypelist:[TaxiType] = []
+    private var taxiTypelist:[TaxiInfoElement] = []
     private var locationManagerDelegate = LocationManager()
     
     init(view: PresenterToViewHomeProtocol?,
@@ -53,6 +53,7 @@ extension HomePresenter: ViewToPrensenterHomeProtocol {
         view?.setBackColorAble(color: ColorTheme.primaryBackColor.rawValue)
         view?.stateBackAction(state: true)
         intetactor.fetchTaxiInfo()
+      
         let titleContract = TitleContract(buttonTitle: TextTheme.sendTaxi.localized)
         view?.titleContract(title: titleContract)
     }
@@ -62,7 +63,7 @@ extension HomePresenter: ViewToPrensenterHomeProtocol {
         return taxiTypelist.count
     }
     
-    func cellForItem(at indexPath: IndexPath) -> TaxiType {
+    func cellForItem(at indexPath: IndexPath) -> TaxiInfoElement {
         return taxiTypelist[indexPath.item]
     }
     
@@ -95,9 +96,12 @@ extension HomePresenter: ViewToPrensenterHomeProtocol {
 
 //MARK: HomePresenter : InteractorToPresenterHomeProtocol 
 extension HomePresenter : InteractorToPresenterHomeProtocol {
-    func sendTaxiTypes(list: [TaxiType]) {
+    func sendTaxiTypes(list: [TaxiInfoElement]) {
         taxiTypelist = list
         view?.reloadCollectionView()
+     
     }
+    
+  
 }
 

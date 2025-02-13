@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D459E752D5E239C00EEF6A7 /* WebSocketManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D459E742D5E239C00EEF6A7 /* WebSocketManager.swift */; };
+		7D459E772D5E24A000EEF6A7 /* WebSocketTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D459E762D5E24A000EEF6A7 /* WebSocketTargetType.swift */; };
+		7D459E792D5E27EE00EEF6A7 /* WebSocketPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D459E782D5E27EE00EEF6A7 /* WebSocketPath.swift */; };
+		7D459E7B2D5E28CE00EEF6A7 /* WebSocketConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D459E7A2D5E28CE00EEF6A7 /* WebSocketConstants.swift */; };
 		7D6342472D5CD22700055877 /* NewtworkManagerKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D6342462D5CD22700055877 /* NewtworkManagerKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7D6342552D5CD28F00055877 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 7D6342542D5CD28F00055877 /* Alamofire */; };
 		7D6342572D5CD28F00055877 /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 7D6342562D5CD28F00055877 /* AlamofireDynamic */; };
@@ -17,6 +21,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7D459E742D5E239C00EEF6A7 /* WebSocketManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketManager.swift; sourceTree = "<group>"; };
+		7D459E762D5E24A000EEF6A7 /* WebSocketTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketTargetType.swift; sourceTree = "<group>"; };
+		7D459E782D5E27EE00EEF6A7 /* WebSocketPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketPath.swift; sourceTree = "<group>"; };
+		7D459E7A2D5E28CE00EEF6A7 /* WebSocketConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketConstants.swift; sourceTree = "<group>"; };
 		7D6342432D5CD22700055877 /* NewtworkManagerKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NewtworkManagerKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D6342462D5CD22700055877 /* NewtworkManagerKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewtworkManagerKit.h; sourceTree = "<group>"; };
 		7D6342582D5CD2A400055877 /* TargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetType.swift; sourceTree = "<group>"; };
@@ -38,6 +46,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7D459E722D5E22D900EEF6A7 /* Restful */ = {
+			isa = PBXGroup;
+			children = (
+				7D6342582D5CD2A400055877 /* TargetType.swift */,
+				7D63425A2D5CD2DF00055877 /* Constants.swift */,
+				7D63425C2D5CD2F700055877 /* NetworkPath.swift */,
+				7D63425E2D5CD51400055877 /* NetworkManager.swift */,
+			);
+			path = Restful;
+			sourceTree = "<group>";
+		};
+		7D459E732D5E238700EEF6A7 /* WebSocket */ = {
+			isa = PBXGroup;
+			children = (
+				7D459E742D5E239C00EEF6A7 /* WebSocketManager.swift */,
+				7D459E762D5E24A000EEF6A7 /* WebSocketTargetType.swift */,
+				7D459E782D5E27EE00EEF6A7 /* WebSocketPath.swift */,
+				7D459E7A2D5E28CE00EEF6A7 /* WebSocketConstants.swift */,
+			);
+			path = WebSocket;
+			sourceTree = "<group>";
+		};
 		7D6342392D5CD22700055877 = {
 			isa = PBXGroup;
 			children = (
@@ -57,11 +87,9 @@
 		7D6342452D5CD22700055877 /* NewtworkManagerKit */ = {
 			isa = PBXGroup;
 			children = (
+				7D459E732D5E238700EEF6A7 /* WebSocket */,
+				7D459E722D5E22D900EEF6A7 /* Restful */,
 				7D6342462D5CD22700055877 /* NewtworkManagerKit.h */,
-				7D6342582D5CD2A400055877 /* TargetType.swift */,
-				7D63425A2D5CD2DF00055877 /* Constants.swift */,
-				7D63425C2D5CD2F700055877 /* NetworkPath.swift */,
-				7D63425E2D5CD51400055877 /* NetworkManager.swift */,
 			);
 			path = NewtworkManagerKit;
 			sourceTree = "<group>";
@@ -154,9 +182,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D63425F2D5CD51400055877 /* NetworkManager.swift in Sources */,
+				7D459E752D5E239C00EEF6A7 /* WebSocketManager.swift in Sources */,
 				7D63425D2D5CD2F700055877 /* NetworkPath.swift in Sources */,
 				7D6342592D5CD2A400055877 /* TargetType.swift in Sources */,
+				7D459E792D5E27EE00EEF6A7 /* WebSocketPath.swift in Sources */,
+				7D459E772D5E24A000EEF6A7 /* WebSocketTargetType.swift in Sources */,
 				7D63425B2D5CD2DF00055877 /* Constants.swift in Sources */,
+				7D459E7B2D5E28CE00EEF6A7 /* WebSocketConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

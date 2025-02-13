@@ -74,10 +74,10 @@ class TaxiTypeCVC: UICollectionViewCell {
     }
     
     
-    func configureData(taxiType:TaxiType) {
+    func configureData(taxiType:TaxiInfoElement) {
         
         taxiImageView.setImageWithKigfisher(
-            with: taxiType.imageURL,
+            with: "",
             size: 50
         )
         taxiTypeLabel.text = taxiType.taxiTypeName

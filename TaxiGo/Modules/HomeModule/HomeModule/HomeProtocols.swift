@@ -19,7 +19,7 @@ protocol ViewToPrensenterHomeProtocol{
     func mapMove(location:(latitude:Double,longitude:Double))
     
     func numberOfItemsIn() -> Int
-    func cellForItem(at indexPath:IndexPath) -> TaxiType
+    func cellForItem(at indexPath:IndexPath) -> TaxiInfoElement
     func sizeForItemAt(width:CGFloat,height:CGFloat) -> CGSize
     func insetForSectionAt() ->(top:CGFloat,left:CGFloat,right:CGFloat,bottom:CGFloat)
     
@@ -40,12 +40,12 @@ protocol PresenterToViewHomeProtocol: AnyObject,Kits{
 
 //MARK: PresenterToInteractorHomeProtocol
 protocol PresenterToInteractorHomeProtocol{
-    func fetchTaxiInfo()
+    func fetchTaxiInfo() 
 }
 
 //MARK: InteractorToPresenterHomeProtocol
 protocol InteractorToPresenterHomeProtocol{
-    func sendTaxiTypes(list:[TaxiType])
+    func sendTaxiTypes(list:[TaxiInfoElement])
 }
 
 //MARK: PresenterToRouterHomeProtocol
