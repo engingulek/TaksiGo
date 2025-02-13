@@ -25,6 +25,7 @@ protocol ViewToPrensenterHomeProtocol{
     
     func onTappedSendTaxi()
     
+    func distanceKm(stepLocation:(latitude: Double, longitude: Double),price:Double) -> Double
     
     
 }

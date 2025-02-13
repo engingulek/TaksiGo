@@ -47,6 +47,16 @@ final class HomePresenter: LocationManagerDelegate {
 
 //MARK: HomePresenter: ViewToPrensenterHomeProtocol
 extension HomePresenter: ViewToPrensenterHomeProtocol {
+    func distanceKm(stepLocation: (latitude: Double, longitude: Double), price: Double) -> Double {
+        guard let userLocation = userLocation else {return 0}
+       let km = locationManagerDelegate.calculatekm(userLocation: userLocation,
+                                            stepLocation:stepLocation )
+        let totalPrice = km * price
+        return totalPrice <= 200 ? 200 : totalPrice
+        
+    }
+    
+   
     
     func viewDidLoad() {
         locationManagerDelegate.delegate = self
@@ -87,6 +97,8 @@ extension HomePresenter: ViewToPrensenterHomeProtocol {
         guard let selectedLocation = selectedLocation else {return}
         locationInfoAction(location: selectedLocation)
     }
+    
+
     
     
     func onTappedSendTaxi() {

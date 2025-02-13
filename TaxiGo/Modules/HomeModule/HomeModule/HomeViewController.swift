@@ -75,8 +75,13 @@ extension HomeViewController : UICollectionViewDelegate,UICollectionViewDataSour
         guard let cell = collectionView.dequeueReusableCell(
             withReuseIdentifier: TaxiTypeCVC.identifier,
             for: indexPath) as? TaxiTypeCVC else {return UICollectionViewCell()}
+        
         let taxiType = presenter.cellForItem(at: indexPath)
-        cell.configureData(taxiType: taxiType)
+        let kmPrice = presenter.distanceKm(
+            stepLocation: (latitude: taxiType.latitude, longitude: taxiType.longitude),
+            price: taxiType.kmPrice)
+        
+        cell.configureData(taxiType: taxiType, price: kmPrice)
         if indexPath.item == 1 {
             cell.configureUI()
         }

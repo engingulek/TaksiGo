@@ -13,7 +13,7 @@ class TaxiTypeCVC: UICollectionViewCell {
     static  let identifier : String  = "taxiTypeCell"
     private lazy var taxiImageView:UIImageView = UIImageView()
     private lazy var taxiTypeLabel = LabelFactory.createLabel(ofType: .mediumTitleLabel(true))
-    private lazy var arrivalMinuteLabel = LabelFactory.createLabel(ofType: .smallTitleLabel(false))
+    
     private lazy var seatCountLabel = LabelFactory.createLabel(ofType: .smallTitleLabel(true))
     private lazy var estimatedPriceRangeLabel = LabelFactory.createLabel(ofType: .smallTitleLabel(true))
     private lazy var personIcon = IconFactory.createIcon(ofType: .person)
@@ -43,18 +43,12 @@ class TaxiTypeCVC: UICollectionViewCell {
         }
         
         
-        
-        contentView.addSubview(arrivalMinuteLabel)
-        arrivalMinuteLabel.snp.makeConstraints { make in
-            make.centerX.equalToSuperview()
-            make.centerY.equalToSuperview()
-        }
-        
+    
         
         
         contentView.addSubview(seatCountLabel)
         seatCountLabel.snp.makeConstraints { make in
-            make.trailing.equalTo(arrivalMinuteLabel.snp.leading).offset(-10)
+            make.centerX.equalToSuperview()
             make.centerY.equalToSuperview()
         }
         
@@ -74,18 +68,17 @@ class TaxiTypeCVC: UICollectionViewCell {
     }
     
     
-    func configureData(taxiType:TaxiInfoElement) {
+    func configureData(taxiType:TaxiInfoElement,price:Double) {
         
+      
         taxiImageView.setImageWithKigfisher(
-            with: "",
+            with: taxiType.taxiTypeName == "yellow" ? TaxiType.yellow.rawValue : TaxiType.black.rawValue,
             size: 50
         )
         taxiTypeLabel.text = taxiType.taxiTypeName
         
-        estimatedPriceRangeLabel.text = "\(taxiType.kmPrice * 20)"
         
-        arrivalMinuteLabel.text = "2dk"
-        
+        estimatedPriceRangeLabel.text = "\(price)₺"
         
         seatCountLabel.text = "\(taxiType.seatCount)"
     }
