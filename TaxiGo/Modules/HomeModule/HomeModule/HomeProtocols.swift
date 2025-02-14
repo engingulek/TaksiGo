@@ -11,6 +11,12 @@ import ViewControllerAbleKit
 
 typealias Kits = UIViewAble & SegueAble  & NavigationDesing
 
+struct CellType<T> {
+    let data:T
+    let borderColor:String
+    let borderWidth:CGFloat
+    let borderCornerRadius:CGFloat
+}
 
 //MARK: ViewToPrensenterHomeProtocol
 protocol ViewToPrensenterHomeProtocol{
@@ -19,14 +25,15 @@ protocol ViewToPrensenterHomeProtocol{
     func mapMove(location:(latitude:Double,longitude:Double))
     
     func numberOfItemsIn() -> Int
-    func cellForItem(at indexPath:IndexPath) -> TaxiCellInfo
+    func cellForItem(at indexPath:IndexPath) -> CellType<TaxiCellInfo>
     func sizeForItemAt(width:CGFloat,height:CGFloat) -> CGSize
     func insetForSectionAt() ->(top:CGFloat,left:CGFloat,right:CGFloat,bottom:CGFloat)
+    func didSelectItem(at indexPath:IndexPath)
     
     func onTappedSendTaxi()
     
     func distanceKm(price:Double) -> Double
-    
+    func toUserLocation()
     
 }
 
@@ -38,7 +45,7 @@ protocol PresenterToViewHomeProtocol: AnyObject,Kits{
     func errorState(state:Bool,errorMessage:String)
     func reloadCollectionView()
     func setTaxiInfoToMap(list:[TaxiInfoElement])
-    func setMessageLabelOnTaxiInfoView(isHidden:Bool,text:String)
+   func setMessageLabelOnTaxiInfoView(isHidden:Bool,text:String)
 }
 
 //MARK: PresenterToInteractorHomeProtocol

@@ -29,6 +29,7 @@ struct TaxiInfoElement: Codable {
     let latitude, longitude: Double
     let seatCount: Int
     let kmPrice: Double
+    let free_state:Bool
 }
 
 struct TaxiCellInfo {

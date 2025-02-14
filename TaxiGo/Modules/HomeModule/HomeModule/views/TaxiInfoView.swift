@@ -73,6 +73,8 @@ class TaxiInfoView : BaseView<HomeViewController> {
     func messageSetLabel(isHidden:Bool,message:String){
         messageLabel.isHidden = isHidden
         messageLabel.text = message
+        listTaxiTypeCollectionView.isHidden = !isHidden
+    
     }
     
     func reloadCollectionView() {

@@ -16,4 +16,6 @@ public enum ColorTheme : String {
     case red = "#FF0000"
     
     case black = "#000000"
+    
+    case ligthGray = "#D3D3D3"
 }

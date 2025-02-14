@@ -9,7 +9,6 @@ import Foundation
 import  UIKit
 public enum IconType {
     case bottomArrow
-    case userLocation
     case person
 }
 
@@ -23,16 +22,9 @@ public struct IconFactory {
         case .bottomArrow:
             imageView.image = UIImage(systemName: "arrowtriangle.down.fill")?
                 .withTintColor(.white, renderingMode: .alwaysOriginal)
-        case .userLocation:
-            imageView.image = UIImage(systemName: "location.circle.fill")?
-                .withTintColor(.black, renderingMode: .alwaysOriginal)
-            
         case .person:
             imageView.image = UIImage(systemName: "person.fill")?
                 .withTintColor(.black, renderingMode: .alwaysOriginal)
-            
-            
-
         }
         
         return imageView

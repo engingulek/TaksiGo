@@ -63,9 +63,7 @@ class TaxiTypeCVC: UICollectionViewCell {
         
         
         
-        contentView.layer.borderColor = UIColor.lightGray.cgColor
-        contentView.layer.borderWidth = 1
-        contentView.layer.cornerRadius = 10
+       
     }
     
     
@@ -82,7 +80,9 @@ class TaxiTypeCVC: UICollectionViewCell {
         seatCountLabel.text = "\(cellType.seatCount)"
     }
     
-    func configureUI() {
-        contentView.layer.borderColor = UIColor.black.cgColor
+    func configureUI(color:String,width:CGFloat,cornerRadius:CGFloat) {
+        contentView.layer.borderColor = UIColor(hex: color)?.cgColor
+        contentView.layer.borderWidth = width
+        contentView.layer.cornerRadius = cornerRadius
     }
 }
