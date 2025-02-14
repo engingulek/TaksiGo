@@ -9,15 +9,14 @@ import Foundation
 import UIKit
 public enum ButtonType {
     case basic(action:UIAction)
-  
-    
+    case iconButton(action:UIAction,icon:String)
 }
 
 
 public struct ButtonFactory {
- public   static func createButton(ofType type: ButtonType) -> UIButton {
+    public   static func createButton(ofType type: ButtonType) -> UIButton {
         let button = UIButton()
-     button.clipsToBounds = true
+        button.clipsToBounds = true
         switch type {
         case .basic(let action):
             button.titleLabel?.font = .systemFont(ofSize: 20)
@@ -26,7 +25,14 @@ public struct ButtonFactory {
             button.layer.borderWidth = 1
             button.layer.backgroundColor = UIColor.red.cgColor
             button.addAction(action, for: .touchUpInside)
-           
+        case .iconButton(let action, let icon):
+         
+            var config = UIButton.Configuration.plain()
+            config.image = UIImage(systemName: icon)
+            config.preferredSymbolConfigurationForImage = UIImage.SymbolConfiguration(pointSize: 20)
+            config.baseForegroundColor = .red
+            button.addAction(action, for: .touchUpInside)
+            button.configuration = config
         }
         
         return button

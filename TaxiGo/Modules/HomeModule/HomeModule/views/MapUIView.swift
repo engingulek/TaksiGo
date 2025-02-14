@@ -19,6 +19,13 @@ class MapUIView : BaseView<HomeViewController>{
     private let mapView = MKMapView()
     private let locationInfo = LabelFactory.createLabel(ofType: .smallTitleLabel(false))
     private lazy var arrowDownIcon = IconFactory.createIcon(ofType: .bottomArrow)
+    private lazy var userLocationButtonIcon = ButtonFactory.createButton(
+        ofType: .iconButton(action: userLocationButtonIconAction,
+                            icon: "location.square.fill"))
+    
+    private lazy var userLocationButtonIconAction  : UIAction = UIAction { _ in
+        self.presenter?.toUserLocation()
+    }
 
     override func setupView() {
         super.setupView()
@@ -54,6 +61,12 @@ class MapUIView : BaseView<HomeViewController>{
         arrowDownIcon.snp.makeConstraints { make in
             make.top.equalTo(locationInfo.snp.bottom)
             make.centerX.equalToSuperview()
+        }
+        mapView.addSubview(userLocationButtonIcon)
+        userLocationButtonIcon.snp.makeConstraints { make in
+            make.bottom.equalToSuperview().offset(-20)
+            make.trailing.equalToSuperview().offset(-20)
+           
         }
     }
 }
