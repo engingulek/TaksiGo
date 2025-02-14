@@ -98,13 +98,15 @@ extension HomeViewController : UICollectionViewDelegate,UICollectionViewDataSour
             for: indexPath) as? TaxiTypeCVC else {return UICollectionViewCell()}
         
      
-        let type = presenter.cellForItem(at: indexPath)
-        let price = presenter.distanceKm(price: type.kmPrice)
-        cell.configureData(cellType: type,estimatedPrice: price)
-        if indexPath.item == 1 {
-            cell.configureUI()
-        }
+        let info = presenter.cellForItem(at: indexPath)
+        let price = presenter.distanceKm(price: info.data.kmPrice)
+        cell.configureData(cellType: info.data,estimatedPrice: price)
+        cell.configureUI(color: info.borderColor, width: info.borderWidth, cornerRadius: info.borderCornerRadius)
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        presenter.didSelectItem(at: indexPath)
     }
 }
 

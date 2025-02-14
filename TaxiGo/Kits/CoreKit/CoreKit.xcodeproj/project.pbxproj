@@ -11,6 +11,7 @@
 		7D1C426E2D4E9531006EFF27 /* CoreKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D1C426D2D4E9531006EFF27 /* CoreKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7D1C427B2D4E9542006EFF27 /* TextTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1C427A2D4E9542006EFF27 /* TextTheme.swift */; };
 		7D1C42842D4E9677006EFF27 /* ColorTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1C42832D4E9677006EFF27 /* ColorTheme.swift */; };
+		7D459E842D5FA38400EEF6A7 /* CornerRadiusTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D459E832D5FA38400EEF6A7 /* CornerRadiusTheme.swift */; };
 		7D47D20A2D54C86100A22526 /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D47D2092D54C86100A22526 /* UICollectionView+Extension.swift */; };
 		7D67E3AA2D4F9D610026A77D /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D67E3A92D4F9D610026A77D /* UIImageView+Extension.swift */; };
 		7D67E3AD2D4F9D730026A77D /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 7D67E3AC2D4F9D730026A77D /* Kingfisher */; };
@@ -23,6 +24,7 @@
 		7D1C426D2D4E9531006EFF27 /* CoreKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreKit.h; sourceTree = "<group>"; };
 		7D1C427A2D4E9542006EFF27 /* TextTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextTheme.swift; sourceTree = "<group>"; };
 		7D1C42832D4E9677006EFF27 /* ColorTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTheme.swift; sourceTree = "<group>"; };
+		7D459E832D5FA38400EEF6A7 /* CornerRadiusTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerRadiusTheme.swift; sourceTree = "<group>"; };
 		7D47D2092D54C86100A22526 /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
 		7D67E3A92D4F9D610026A77D /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		7D67E3AE2D4FF2060026A77D /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				7D1C427A2D4E9542006EFF27 /* TextTheme.swift */,
 				7D1C426D2D4E9531006EFF27 /* CoreKit.h */,
 				7D1C42832D4E9677006EFF27 /* ColorTheme.swift */,
+				7D459E832D5FA38400EEF6A7 /* CornerRadiusTheme.swift */,
 			);
 			path = CoreKit;
 			sourceTree = "<group>";
@@ -170,6 +173,7 @@
 				7D67E3AA2D4F9D610026A77D /* UIImageView+Extension.swift in Sources */,
 				7D1C427B2D4E9542006EFF27 /* TextTheme.swift in Sources */,
 				7D1C42842D4E9677006EFF27 /* ColorTheme.swift in Sources */,
+				7D459E842D5FA38400EEF6A7 /* CornerRadiusTheme.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

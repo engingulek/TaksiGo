@@ -14,6 +14,7 @@ final class HomePresenter: LocationManagerDelegate {
     private var selectedLocation: (latitude: Double, longitude: Double)?
     private var taxiTypeCellList : [TaxiCellInfo] = []
     private var locationManagerDelegate = LocationManager()
+    private var selectedTaxiTypeIndex : IndexPath = [0,0]
     
     init(view: PresenterToViewHomeProtocol?,
          intetactor:PresenterToInteractorHomeProtocol) {
@@ -81,8 +82,12 @@ extension HomePresenter: ViewToPrensenterHomeProtocol {
         return taxiTypeCellList.count
     }
     
-    func cellForItem(at indexPath: IndexPath) -> TaxiCellInfo {
-        return taxiTypeCellList[indexPath.item]
+    func cellForItem(at indexPath: IndexPath) -> CellType<TaxiCellInfo> {
+        let taxiInfo = taxiTypeCellList[indexPath.item]
+        let borderColor = indexPath == selectedTaxiTypeIndex ? ColorTheme.black.rawValue : ColorTheme.ligthGray.rawValue
+        let borderWidth = WidthTheme.small.rawValue
+        let borderCornerRadius = CornerRadiusTheme.medium.rawValue
+        return CellType(data: taxiInfo, borderColor: borderColor, borderWidth: borderWidth, borderCornerRadius: borderCornerRadius)
     }
     
     func sizeForItemAt(width: CGFloat, height: CGFloat) -> CGSize {
@@ -95,8 +100,10 @@ extension HomePresenter: ViewToPrensenterHomeProtocol {
     func insetForSectionAt() -> (top: CGFloat, left: CGFloat, right: CGFloat, bottom: CGFloat) {
         return (top: 10, left: 10, right: 10, bottom: 10)
     }
-    
-    
+    func didSelectItem(at indexPath: IndexPath) {
+        selectedTaxiTypeIndex = indexPath
+        view?.reloadCollectionView()
+    }
     
     func mapMove(location: (latitude: Double, longitude: Double)) {
         selectedLocation = location
@@ -114,6 +121,7 @@ extension HomePresenter: ViewToPrensenterHomeProtocol {
        view?.setMessageLabelOnTaxiInfoView(isHidden: state, text: message)
         view?.reloadCollectionView()
     }
+    
     func onTappedSendTaxi() {
         
     }
