@@ -38,7 +38,7 @@ protocol PresenterToViewHomeProtocol: AnyObject,Kits{
     func errorState(state:Bool,errorMessage:String)
     func reloadCollectionView()
     func setTaxiInfoToMap(list:[TaxiInfoElement])
-    func setMessageLabelOnTaxiInfoView(isHidden:Bool,text:String)
+   func setMessageLabelOnTaxiInfoView(isHidden:Bool,text:String)
 }
 
 //MARK: PresenterToInteractorHomeProtocol

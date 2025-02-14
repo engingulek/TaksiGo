@@ -105,9 +105,9 @@ extension HomePresenter: ViewToPrensenterHomeProtocol {
         let km = locationManagerDelegate.calculatekm(userLocation: userLocation,
                                                      selectedLocation: selectedLocation)
         
-        let message = km < 0.01 ? TextTheme.selectedLocationMessage.localized : TextTheme.defaultEmpty.localized
-        let state = !(km < 0.01)
-        view?.setMessageLabelOnTaxiInfoView(isHidden: state, text: message)
+       let message = km < 0.01 ? TextTheme.selectedLocationMessage.localized : TextTheme.defaultEmpty.localized
+       let state = !(km < 0.01)
+       view?.setMessageLabelOnTaxiInfoView(isHidden: state, text: message)
         view?.reloadCollectionView()
     }
     func onTappedSendTaxi() {
@@ -118,21 +118,28 @@ extension HomePresenter: ViewToPrensenterHomeProtocol {
 //MARK: HomePresenter : InteractorToPresenterHomeProtocol
 extension HomePresenter : InteractorToPresenterHomeProtocol {
     func sendTaxiTypes(list: [TaxiInfoElement]) {
-        let blackList = list.filter { $0.taxiTypeName == "black" }
-        let yellowList = list.filter { $0.taxiTypeName == "yellow" }
         taxiTypeCellList = []
+        let blackList = list.filter { $0.taxiTypeName == "black" && $0.free_state == true }
+        let yellowList = list.filter { $0.taxiTypeName == "yellow" && $0.free_state == true }
+       
         if yellowList.count != 0 {
-            let yellowTaxi = TaxiCellInfo(taxiTypeName: .yellow, seatCount: SeatSize.yellow.rawValue, kmPrice:KmPrice.yellow.rawValue)
+            let yellowTaxi = TaxiCellInfo(taxiTypeName: .yellow, 
+                                          seatCount: SeatSize.yellow.rawValue,
+                                          kmPrice:KmPrice.yellow.rawValue)
             taxiTypeCellList.append(yellowTaxi)
         }
         
         if blackList.count != 0 {
-            let blackTaxi = TaxiCellInfo(taxiTypeName: .black, seatCount: SeatSize.black.rawValue, kmPrice: KmPrice.black.rawValue)
+            let blackTaxi = TaxiCellInfo(taxiTypeName: .black, 
+                                         seatCount: SeatSize.black.rawValue,
+                                         kmPrice: KmPrice.black.rawValue)
             taxiTypeCellList.append(blackTaxi)
         }
         
         
-        view?.setTaxiInfoToMap(list: list)
+        let taxiInfoList = list.filter { $0.free_state == true }
+        view?.setTaxiInfoToMap(list: taxiInfoList)
+        view?.reloadCollectionView()
        
     }
 }

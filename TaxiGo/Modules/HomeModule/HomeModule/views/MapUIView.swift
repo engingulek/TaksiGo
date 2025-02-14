@@ -106,7 +106,7 @@ extension MapUIView : MKMapViewDelegate {
         }
     }
     
-    func test() {
+    func removeAnnotations() {
         mapView.removeAnnotations(mapView.annotations)
        
     }
