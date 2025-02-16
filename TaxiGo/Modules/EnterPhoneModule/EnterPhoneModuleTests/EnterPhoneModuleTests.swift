@@ -8,21 +8,32 @@
 import XCTest
 @testable import EnterPhoneModule
 import CoreKit
-
+import ConfirmCodeModule
+import DependencyKit
 final class EnterPhoneModuleTests: XCTestCase {
     private var viewController : MockEnterPhoneViewController!
     private var presenter : EnterPhonePresenter!
     private var router:EnterPhoneRouter!
-   
+    private var interactor : MockEnterPhoneInteractor!
+    private let container = DependencyRegister.shared.container
+    
     override func setUp() {
         super.setUp()
         viewController = .init()
         router = .init()
+        interactor = .init()
       
         presenter = .init(
             view: viewController,
-            router: router
+            router: router,
+            interactor:interactor
           )
+        
+        interactor.presenter = presenter
+        
+        container.register(ConfirmModuleProtocol.self) { _ in
+            ConfirmCodeRouter()
+        }
     }
 
     override func tearDown() {
@@ -79,8 +90,7 @@ final class EnterPhoneModuleTests: XCTestCase {
             countryTitle: TextTheme.countryTitle.localized,
             phoneNumberTitle: TextTheme.phoneNumber.localized,
             phoneTextFieldPlaceholder: TextTheme.phoneNumber.localized,
-            contiuneButtonTitke: TextTheme.countiuneButtonTitle.localized,
-            numberList: []
+            contiuneButtonTitke: TextTheme.countiuneButtonTitle.localized
         )
         
         XCTAssertEqual(viewController.invokedsetEnterPhoneTitleContractData.map(\.contract.enterPhoneTitle),
@@ -120,31 +130,35 @@ final class EnterPhoneModuleTests: XCTestCase {
     }
     
     
-    /*func test_pushViewControllerAble() {
+    func test_pushViewControllerAble() {
         XCTAssertFalse(viewController.invokedpushViewControllerAble)
         XCTAssertEqual(viewController.invoedkpushViewControllerAblecCount, 0,"is not 0")
-        presenter.onTappedContiuneButton()
+        
+        presenter.onAction(action: .tappedContinueButton)
+        presenter.toConfirmCodePresenter()
         
         XCTAssertTrue(viewController.invokedpushViewControllerAble)
         XCTAssertEqual(viewController.invoedkpushViewControllerAblecCount, 1,"is not 1")
         
-    }*/
+    }
     
     func test_phoneNumber_ReturErrorIsNotTrue() {
         XCTAssertFalse(viewController.invokePhoneNumberState)
         XCTAssertEqual(viewController.invoedPhoneNumberStateCount, 0,"is not 0")
+        
+        presenter.onAction(action: .selectedCountryNumber(
+            .init(
+                id: 1,
+                phohoneCode: "+90",
+                length: 10,
+                name: "Türkiye",
+             
+                phoneFormat: #"^5\d{9}$"#
+                
+        )))
        
-        presenter.selectedCounryNumber(country:  .init(
-            id: 1,
-            phohoneCode: "+90",
-            length: 10,
-            name: "Türkiye",
-         
-            phoneFormat: #"^5\d{9}$"#
-            ))
         
-        
-        presenter.phoneNumberTextFieldChanged(text: "5345658496")
+        presenter.onAction(action: .phoneNumberTextFieldChanged("5345658496"))
         
         XCTAssertEqual(viewController.invokedPhoneNumberData.map(\.error.buttonBackColor),[ColorTheme.red.rawValue])
         
@@ -159,17 +173,20 @@ final class EnterPhoneModuleTests: XCTestCase {
         XCTAssertFalse(viewController.invokePhoneNumberState)
         XCTAssertEqual(viewController.invoedPhoneNumberStateCount, 0,"is not 0")
        
-        presenter.selectedCounryNumber(country:  .init(
-            id: 1,
-            phohoneCode: "+90",
-            length: 10,
-            name: "Türkiye",
-         
-            phoneFormat: #"^5\d{9}$"#
-            ))
+        presenter.onAction(action: .selectedCountryNumber(
+            .init(
+                id: 1,
+                phohoneCode: "+90",
+                length: 10,
+                name: "Türkiye",
+             
+                phoneFormat: #"^5\d{9}$"#
+                
+        )))
+       
         
+        presenter.onAction(action: .phoneNumberTextFieldChanged("534565849654242"))
         
-        presenter.phoneNumberTextFieldChanged(text: "534565849654242")
         
         XCTAssertEqual(viewController.invokedPhoneNumberData.map(\.error.buttonBackColor),[ColorTheme.redAlpha05.rawValue])
         
@@ -183,18 +200,19 @@ final class EnterPhoneModuleTests: XCTestCase {
     func test_phoneNumber_ReturFormatError() {
         XCTAssertFalse(viewController.invokePhoneNumberState)
         XCTAssertEqual(viewController.invoedPhoneNumberStateCount, 0,"is not 0")
-       
-        presenter.selectedCounryNumber(country:  .init(
-            id: 1,
-            phohoneCode: "+90",
-            length: 10,
-            name: "Türkiye",
-         
-            phoneFormat: #"^5\d{9}$"#
-            ))
         
+        presenter.onAction(action: .selectedCountryNumber(
+            .init(
+                id: 1,
+                phohoneCode: "+90",
+                length: 10,
+                name: "Türkiye",
+             
+                phoneFormat: #"^5\d{9}$"#
+                
+        )))
+        presenter.onAction(action: .phoneNumberTextFieldChanged("4345658496"))
         
-        presenter.phoneNumberTextFieldChanged(text: "4345658496")
         
         XCTAssertEqual(viewController.invokedPhoneNumberData.map(\.error.buttonBackColor),[ColorTheme.redAlpha05.rawValue])
         
@@ -202,6 +220,25 @@ final class EnterPhoneModuleTests: XCTestCase {
         XCTAssertEqual(viewController.invokedPhoneNumberData.map(\.error.text),[TextTheme.checkNumber.localized])
         
         XCTAssertEqual(viewController.invokedPhoneNumberData.map(\.error.errorState),[true])
+    }
+    
+    
+    func test_createAlertMessage() {
+        XCTAssertFalse(viewController.invokedCreateAlerMessage)
+        XCTAssertEqual(viewController.invokedCreateAlertMessageCount, 0,"is not 0")
+        
+        interactor.mockError = true
+        presenter.onAction(action: .tappedContinueButton)
+        presenter.toConfirmCodePresenter()
+        
+        XCTAssertTrue(viewController.invokedCreateAlerMessage)
+        XCTAssertEqual(viewController.invokedCreateAlertMessageCount, 1,"is not 1")
+        
+        XCTAssertEqual(viewController.involedCreateAlertMessageData.map(\.title), [TextTheme.errorTitle.localized])
+        XCTAssertEqual(viewController.involedCreateAlertMessageData.map(\.message), [TextTheme.errorMessageOne.localized])
+        XCTAssertEqual(viewController.involedCreateAlertMessageData.map(\.actionTitle), [TextTheme.ok.localized])
+        
+        
     }
     
 

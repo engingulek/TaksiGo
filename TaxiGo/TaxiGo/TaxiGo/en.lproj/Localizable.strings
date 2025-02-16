@@ -21,4 +21,6 @@
 "street" = "Street";
 "errorMessageOne" = "Something went wrong";
 "sendTaxi" = "Send Taxi";
+"errorTitle" = "Error";
 "selectedLocationMessage"  = "Please Select Your Destination";
+"ok" = "OK";

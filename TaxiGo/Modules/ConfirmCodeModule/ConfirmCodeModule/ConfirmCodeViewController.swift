@@ -8,7 +8,8 @@
 import Foundation
 import UIKit
 import SnapKit
-class ConfirmCodeViewController : UIViewController, UITextFieldDelegate {
+
+class ConfirmCodeViewController : UIViewController {
     lazy var presenter : ViewToPrensenterConfirmCodeProtocol = 
     ConfirmCodePresenter(view: self, router: ConfirmCodeRouter(),interactor: ConfirmInteractor())
     private lazy var confirmCodeView = ConfirmCodeView(self)
@@ -22,12 +23,12 @@ class ConfirmCodeViewController : UIViewController, UITextFieldDelegate {
     }
 }
 
+//MARK: ConfirmCodeViewController : PresenterToViewConfirmCodeProtocol
 extension ConfirmCodeViewController : PresenterToViewConfirmCodeProtocol {
  
     func setTitleContract(contract: TitleContract) {
         confirmCodeView.setTitleContract(contract)
     }
-    
     
     func setCodeErrorState(error: (errorState: Bool, text: String, borderColor: String)) {
         DispatchQueue.main.async { [weak self] in
@@ -43,5 +44,4 @@ extension ConfirmCodeViewController : PresenterToViewConfirmCodeProtocol {
             presenter.toHomePagePresenter()
         }
     }
-    
 }

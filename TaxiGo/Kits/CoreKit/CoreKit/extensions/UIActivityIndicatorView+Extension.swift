@@ -14,6 +14,7 @@ extension UIActivityIndicatorView {
         activityIndicator.style = .medium
         activityIndicator.color = .black
         activityIndicator.hidesWhenStopped = true
+     
         return activityIndicator
     }
 }

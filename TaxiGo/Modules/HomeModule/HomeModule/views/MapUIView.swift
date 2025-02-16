@@ -71,7 +71,6 @@ class MapUIView : BaseView<HomeViewController>{
     }
 }
 
-
 extension MapUIView : MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
         let centerCoordinate = mapView.centerCoordinate
@@ -94,8 +93,6 @@ extension MapUIView : MKMapViewDelegate {
             annotationView?.annotation = annotation
         }
        
-        
-        
         annotationView?.image = UIImage(resource: customAnnotation.image)
         
         annotationView?.snp.makeConstraints({ make in
@@ -115,7 +112,6 @@ extension MapUIView : MKMapViewDelegate {
             
             mapView.addAnnotation(annotation)
       
-            
         }
     }
     
@@ -142,13 +138,8 @@ extension MapUIView {
             setLocationInfo(state: state, text: text)
         case .updateLocation(let location, let meters):
             showUserLocation(location: (latitude: location.0, longitude: location.1), meters: meters)
-        case .errorState(let state, let text):
-            errorState(state: state, errorMessage: text)
-            
         }
     }
-    
-    
     
     private func showUserLocation(location: (latitude: Double, longitude: Double),meters:Double) {
         let region = MKCoordinateRegion(
@@ -165,6 +156,5 @@ extension MapUIView {
         
     }
     
-    private func errorState(state: Bool, errorMessage: String){
-    }
+    
 }

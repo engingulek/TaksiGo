@@ -8,13 +8,15 @@
 import XCTest
 import UIKit
 import CoreKit
+import HomeModule
+import DependencyKit
 @testable import ConfirmCodeModule
 final class ConfirmCodeModuleTests: XCTestCase {
     private var viewController : MockConfirmViewController!
     private var interactor : MockConfirmInteractor!
     private var router:ConfirmCodeRouter!
     private var presenter : ConfirmCodePresenter!
-    
+    private let container = DependencyRegister.shared.container
     override func setUp()  {
         super.setUp()
         viewController = .init()
@@ -24,7 +26,12 @@ final class ConfirmCodeModuleTests: XCTestCase {
             view: viewController, 
             router: router,
             interactor: interactor)
+        
         interactor.presenter = presenter
+        
+        container.register(HomeModuleProtocol.self) { _ in
+            HomeRouter()
+        }
     }
 
     override func tearDown()  {
@@ -80,12 +87,13 @@ final class ConfirmCodeModuleTests: XCTestCase {
         XCTAssertFalse(viewController.invokeCodeErrorState,"is not false")
         XCTAssertEqual(viewController.invoedCodeErrorStateCount,0,"is not zero (0)")
         
-        interactor.mockCode = "21443"
+        interactor.codeSuccess = false
 
         presenter.viewDidLoad()
         
         let wrongCode = "21111"
         presenter.onTappedConfirmCode(code:wrongCode)
+        presenter.toHomePagePresenter()
         /// viewDidLoad -> 1 after with onTappedConfirmCode +1 = 2
         XCTAssertEqual(viewController.invoedCodeErrorStateCount,2,"is not zero (2)")
         XCTAssertTrue(viewController.invokeCodeErrorState,"is not true")
@@ -95,5 +103,23 @@ final class ConfirmCodeModuleTests: XCTestCase {
         XCTAssertEqual(viewController.invokedCodeErrorStateData.map(\.error.text),[TextTheme.defaultEmpty.localized,TextTheme.codeError.localized])
         
         XCTAssertEqual(viewController.invokedCodeErrorStateData.map(\.error.borderColor),[ColorTheme.black.rawValue,ColorTheme.red.rawValue])
+    }
+    
+    
+    func test_createAlertMessage() {
+        XCTAssertFalse(viewController.invokedCreateAlerMessage)
+        XCTAssertEqual(viewController.invokedCreateAlertMessageCount, 0,"is not 0")
+        
+        interactor.mockError = true
+        presenter.onTappedConfirmCode(code: "12345")
+        presenter.toHomePagePresenter()
+        XCTAssertTrue(viewController.invokedCreateAlerMessage)
+        XCTAssertEqual(viewController.invokedCreateAlertMessageCount, 1,"is not 1")
+        
+        XCTAssertEqual(viewController.involedCreateAlertMessageData.map(\.title), [TextTheme.errorTitle.localized])
+        XCTAssertEqual(viewController.involedCreateAlertMessageData.map(\.message), [TextTheme.errorMessageOne.localized])
+        XCTAssertEqual(viewController.involedCreateAlertMessageData.map(\.actionTitle), [TextTheme.ok.localized])
+        
+        
     }
 }

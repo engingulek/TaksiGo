@@ -8,7 +8,10 @@
 import Foundation
 import UIKit
 import ViewControllerAbleKit
-typealias Kits = UIViewAble & SegueAble & NavigationDesing
+typealias Kits = 
+UIViewAble &
+SegueAble &
+NavigationDesing & AlertMessageAble
 
 
 
@@ -16,12 +19,8 @@ typealias Kits = UIViewAble & SegueAble & NavigationDesing
 protocol ViewToPrensenterEnterPhoneProtocol{
     var view : PresenterToViewEnterPhoneProtocol? {get}
     func viewDidLoad()
-    func onTappedContiuneButton()
-    func selectedCounryNumber(country:CountryNumber)
-    func phoneNumberTextFieldChanged(text:String?)
-   
-    
-    
+    func onAction(action:EnterPhoneActionType)
+    func toConfirmCodePresenter()
 }
 
 //MARK: PresenterToViewEnterPhoneProtocol
@@ -29,9 +28,12 @@ protocol PresenterToViewEnterPhoneProtocol: AnyObject,Kits{
     func setEnterPhoneTitleContract(titleContract:Contract)
    
     func updateCountryPhone(countryPhone:CountryNumber)
-    func phoneNumberState(error:(errorState:Bool,text:String,buttonBackColor:String))
+    func phoneNumberState(error:(
+        errorState:Bool,
+        text:String,buttonBackColor:String))
  
-  
+    func toConfirmCodeScreen()
+   
 }
 
 //MARK: PresenterToInteractorEnterPhoneProtocol
@@ -43,13 +45,13 @@ protocol PresenterToInteractorEnterPhoneProtocol{
 protocol InteractorToPresenterEnterPhoneProtocol{
     
     func interactorError()
+    func interactorSucccess()
 }
 
 //MARK: PresenterToRouterEnterPhoneProtocol
 protocol PresenterToRouterEnterPhoneProtocol {
     func toConfirmCode(view:PresenterToViewEnterPhoneProtocol?,phoneNumber:String)
 }
-
 
 //MARK: EnterPhoneModuleProtocol
 public protocol EnterPhoneModuleProtocol {

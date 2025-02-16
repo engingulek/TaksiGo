@@ -74,3 +74,26 @@ extension UIColor {
         )
     }
 }
+
+//MARK: AlertMessageAble
+public protocol AlertMessageAble {
+    func createAlertMesssage(title:String,message:String,actionTitle:String)
+   
+}
+
+extension AlertMessageAble  where Self : UIViewController {
+    public  func createAlertMesssage(title:String,message:String,actionTitle:String){
+        DispatchQueue.main.async {[weak self] in
+            guard let self = self else {return}
+            let alert = UIAlertController(
+                title: title,
+                message: message,
+                preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: actionTitle, style: .default))
+            present(alert, animated: true)
+        }
+       
+    }
+}
+

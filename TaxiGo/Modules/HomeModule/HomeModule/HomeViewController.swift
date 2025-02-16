@@ -56,14 +56,11 @@ extension HomeViewController : PresenterToViewHomeProtocol {
         
     }
     
-    func errorState(state: Bool, errorMessage: String) {
-        mapUIView.ableFuncs(able: .errorState(state, errorMessage))
-    }
-    
     func reloadCollectionView() {
         taxiInfoView.reloadCollectionView()
     }
     
+    // send taxiList to mapUIview
     func setTaxiInfoToMap(list: [TaxiInfoElement]) {
         DispatchQueue.main.async {[weak self] in
             guard let self = self else {return}
@@ -71,20 +68,16 @@ extension HomeViewController : PresenterToViewHomeProtocol {
             mapUIView.addCustomAnnotations(list: list)
            
         }
-        
     }
     
+    // If the destination location is not selected, Message will be shown on taxiInfoView
    func setMessageLabelOnTaxiInfoView(isHidden: Bool, text: String) {
         DispatchQueue.main.async {[weak self] in
             guard let self = self else {return}
             taxiInfoView.messageSetLabel(isHidden: isHidden, message: text)
         }
     }
-    
-   
-    
 }
-
 
 //MARK: HomeViewController : UICollectionViewDelegate,UICollectionViewDataSource
 extension HomeViewController : UICollectionViewDelegate,UICollectionViewDataSource  {

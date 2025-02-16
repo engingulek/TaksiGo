@@ -28,7 +28,7 @@ class LocationManager: NSObject {
         
     }
     
-    
+    // for location info, get subLocality of location
     private  func fetchLocationInfo(location: CLLocation, completion: @escaping ((state:Bool,text:String)) -> Void)  {
         let geocoder = CLGeocoder()
         geocoder.reverseGeocodeLocation(location) { (placemarks, error) in
@@ -48,6 +48,7 @@ class LocationManager: NSObject {
             completion(state, text)
         }
     }
+    
     
     func calculatekm(userLocation:(latitude: Double, longitude: Double),selectedLocation:(latitude: Double, longitude: Double)) -> Double {
       
@@ -70,7 +71,7 @@ class LocationManager: NSObject {
 
 
 extension LocationManager : CLLocationManagerDelegate {
-    
+    //MARK: CLLocationManagerDelegate -> didUpdateLocations
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let lastLocation = locations.last else {return}
         let location = (latitude:lastLocation.coordinate.latitude,

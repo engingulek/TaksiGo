@@ -14,9 +14,28 @@ struct Contract {
     let phoneNumberTitle:String
     let phoneTextFieldPlaceholder:String
     let contiuneButtonTitke:String
-    let numberList:[CountryNumber]
-    
-    
+    let numberList:[CountryNumber] = [  .init(
+        id: 1,
+        phohoneCode: "+90",
+        length: 10,
+        name: "Türkiye",
+        
+        phoneFormat: #"^5\d{9}$"#
+    ), .init(
+            id: 2,
+            phohoneCode: "+44",
+            length: 10,
+            name: "UK",
+            
+            phoneFormat:  #"^7\d{9}$"#
+        )]
+}
+
+
+enum EnterPhoneActionType {
+    case tappedContinueButton
+    case selectedCountryNumber(CountryNumber)
+    case phoneNumberTextFieldChanged(String?)
 }
 
 

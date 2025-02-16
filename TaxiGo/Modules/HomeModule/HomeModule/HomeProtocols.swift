@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 import ViewControllerAbleKit
 
-typealias Kits = UIViewAble & SegueAble  & NavigationDesing
+typealias Kits = UIViewAble & SegueAble  & NavigationDesing & AlertMessageAble
 
 struct CellType<T> {
     let data:T
@@ -42,7 +42,7 @@ protocol PresenterToViewHomeProtocol: AnyObject,Kits{
     func titleContract(title:TitleContract)
     func updateLocation(location:(latitude:Double,longitude:Double),meters:Double)
     func locationInfo(state:Bool,text:String)
-    func errorState(state:Bool,errorMessage:String)
+    
     func reloadCollectionView()
     func setTaxiInfoToMap(list:[TaxiInfoElement])
    func setMessageLabelOnTaxiInfoView(isHidden:Bool,text:String)

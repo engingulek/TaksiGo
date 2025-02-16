@@ -7,9 +7,6 @@
 
 import Foundation
 import NewtworkManagerKit
-struct ConfirmCode : Decodable {
-    let code:String
-}
 
 class ConfirmInteractor : PresenterToInteractorConfirmCodeProtocol {
     var presenter :InteractorToPresenterConfirmCodeProtocol?
@@ -20,8 +17,6 @@ class ConfirmInteractor : PresenterToInteractorConfirmCodeProtocol {
             presenter?.sendConfirmCode(state: state)
         }catch {
             presenter?.confirmCodeError()
-            
-            
         }
     }
 }

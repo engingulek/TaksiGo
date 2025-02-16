@@ -12,8 +12,5 @@ struct CountryNumber {
     let phohoneCode:String
     let length:Int
     let name:String
-    
     let phoneFormat:String
-    
-   
 }

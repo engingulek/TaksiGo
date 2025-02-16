@@ -26,6 +26,8 @@ public enum TextTheme :String {
     case errorMessageOne
     case sendTaxi
     case selectedLocationMessage
+    case errorTitle
+    case ok
     
     
    public var localized: String {
@@ -67,6 +69,10 @@ public enum TextTheme :String {
                return NSLocalizedString("sendTaxi", comment: "sendTaxi text")
            case .selectedLocationMessage:
                return NSLocalizedString("selectedLocationMessage", comment: "selectedLocationMessage text")
+           case .errorTitle:
+               return NSLocalizedString("errorTitle", comment: "errorTitle text")
+           case .ok:
+               return NSLocalizedString("ok", comment: "ok text")
                
                
                

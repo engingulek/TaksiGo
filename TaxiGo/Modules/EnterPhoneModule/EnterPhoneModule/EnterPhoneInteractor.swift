@@ -12,12 +12,15 @@ class EnterPhoneInteractor : PresenterToInteractorEnterPhoneProtocol {
     private let networkManager : NetworkManagerProtocol = NetworkManager()
     func createConfirmCode(paramenter: [String:Any]) async {
         do{
-            let _ = try await networkManager.fetch(target: .createConfirmCode(paramenter), responseClass:Int.self)
+            let result = try await networkManager.fetch(target: .createConfirmCode(paramenter), responseClass:Bool.self)
+            if result {
+                presenter?.interactorSucccess()
+            }else{
+                presenter?.interactorError()
+            }
         }catch{
             presenter?.interactorError()
             
         }
     }
-    
-    
 }

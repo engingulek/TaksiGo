@@ -9,24 +9,25 @@ import Foundation
 import UIKit
 
 class EnterPhoneViewController : UIViewController {
+    
     lazy var presenter : ViewToPrensenterEnterPhoneProtocol = EnterPhonePresenter(
         view: self,
         router: EnterPhoneRouter(),
         interactor:  EnterPhoneInteractor()
     )
+    
     private lazy var enterPhoneView = EnterPhoneView(self)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view = enterPhoneView
         presenter.viewDidLoad()
         enterPhoneView.presenter = presenter
-       
     }
 }
 
 extension EnterPhoneViewController : PresenterToViewEnterPhoneProtocol {
-  
-
+ 
     func setEnterPhoneTitleContract(titleContract: Contract) {
         enterPhoneView.configureTitleContract(titleContract: titleContract)
     }
@@ -41,6 +42,13 @@ extension EnterPhoneViewController : PresenterToViewEnterPhoneProtocol {
             text: String,
             buttonBackColor: String)) {
         enterPhoneView.setError(error: error)
+    }
+    
+    func toConfirmCodeScreen() {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else {return}
+            presenter.toConfirmCodePresenter()
+        }
     }
 }
 

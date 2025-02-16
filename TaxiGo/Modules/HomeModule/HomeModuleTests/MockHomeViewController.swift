@@ -12,14 +12,15 @@ import UIKit
 
 class MockHomeViewController : PresenterToViewHomeProtocol {
     
+    
     var invokedsetTitleContractt:Bool = false
     var invokedsetTitleContractCount:Int = 0
     var invokedsetTitleContractData = [(contract:HomeModule.TitleContract,Void)]()
     func titleContract(title: HomeModule.TitleContract) {
-     
-             invokedsetTitleContractt = true
-            invokedsetTitleContractCount += 1
-            invokedsetTitleContractData.append((contract: title, ()))
+        
+        invokedsetTitleContractt = true
+        invokedsetTitleContractCount += 1
+        invokedsetTitleContractData.append((contract: title, ()))
         
     }
     
@@ -33,8 +34,8 @@ class MockHomeViewController : PresenterToViewHomeProtocol {
             invokedupdateLocation = true
             invokedupdateLocationCount += 1
             invokedupdateLocationData.append((location:location , meters:meters))
-          
-    }
+            
+        }
     
     var invokedlocationInfo:Bool = false
     var invokedlocationInfoCount:Int = 0
@@ -44,7 +45,7 @@ class MockHomeViewController : PresenterToViewHomeProtocol {
         invokedlocationInfo = true
         invokedlocationInfoCount += 1
         invokedlocationInfoData.append((state: state, text: text))
-      
+        
     }
     
     var invokederrorState:Bool = false
@@ -60,8 +61,8 @@ class MockHomeViewController : PresenterToViewHomeProtocol {
     var invokereloadCollectionView:Bool = false
     var invoedkreloadCollectionViewCount:Int = 0
     func reloadCollectionView() {
-         invokereloadCollectionView = true
-         invoedkreloadCollectionViewCount += 1
+        invokereloadCollectionView = true
+        invoedkreloadCollectionViewCount += 1
     }
     
     var invokechangeColorNavigaiton:Bool = false
@@ -75,16 +76,16 @@ class MockHomeViewController : PresenterToViewHomeProtocol {
     var invoedkstateBackActionCount:Int = 0
     var invokedstateBackActionData  = [(state:Bool,Void)]()
     func stateBackAction(state: Bool) {
-         invokedstateBackAction = true
-         invoedkstateBackActionCount += 1
-         invokedstateBackActionData.append((state:state,()))
+        invokedstateBackAction = true
+        invoedkstateBackActionCount += 1
+        invokedstateBackActionData.append((state:state,()))
     }
     
     var invokedpushViewControllerAble:Bool = false
     var invoedkpushViewControllerAblecCount:Int = 0
     func pushViewControllerAble(_ vc: UIViewController, animated: Bool) {
-         invokedpushViewControllerAble = true
-         invoedkpushViewControllerAblecCount += 1
+        invokedpushViewControllerAble = true
+        invoedkpushViewControllerAblecCount += 1
     }
     
     var invokedsetBackColorAble:Bool = false
@@ -93,9 +94,36 @@ class MockHomeViewController : PresenterToViewHomeProtocol {
     func setBackColorAble(color: String) {
         invokedsetBackColorAble = true
         invokedsetBackColorAbleCount += 1
-      
         invokedsetBackColorAbleData.append((color:color,()))
     }
+    
+    var involedSetMessageLabelOnTaxiInfoView:Bool = false
+    var involedSetMessageLabelOnTaxiInfoViewCount:Int = 0
+    var involedSetMessageLabelOnTaxiInfoViewData = [(isHidden:Bool,text:String)]()
+    func setMessageLabelOnTaxiInfoView(isHidden: Bool, text: String) {
+        involedSetMessageLabelOnTaxiInfoView = true
+        involedSetMessageLabelOnTaxiInfoViewCount += 1
+        involedSetMessageLabelOnTaxiInfoViewData.append((isHidden: isHidden, text:text))
+    }
+    
+    
+    var involedsetTaxiInfoToMap:Bool = false
+    var involedsetTaxiInfoToMapCount:Int = 0
+    var involedsetTaxiInfoToMapData = [(list:[HomeModule.TaxiInfoElement],Void)]()
+    func setTaxiInfoToMap(list: [HomeModule.TaxiInfoElement]) {
+    
+    involedsetTaxiInfoToMap = true
+    involedsetTaxiInfoToMapCount += 1
+    involedsetTaxiInfoToMapData.append((list: list, ()))
+        
+    }
+    
+    
+    
+    func createAlertMesssage(title: String, message: String, actionTitle: String) {
+        
+    }
+    
     
     
 }

@@ -21,10 +21,7 @@ class MockEnterPhoneViewController : PresenterToViewEnterPhoneProtocol {
         invokedsetEnterPhoneTitleContractData.append((contract:titleContract,()))
     }
     
-    //TODO: This will been done when add locaiton
-    func updateCountryPhone(countryPhone: EnterPhoneModule.CountryNumber) {
-        
-    }
+  
     
     var invokePhoneNumberState:Bool = false
     var invoedPhoneNumberStateCount:Int = 0
@@ -70,6 +67,23 @@ class MockEnterPhoneViewController : PresenterToViewEnterPhoneProtocol {
          invokedstateBackAction = true
          invoedkstateBackActionCount += 1
          invokedstateBackActionData.append((state:state,()))
+    }
+    
+    var invokedCreateAlerMessage:Bool = false
+    var invokedCreateAlertMessageCount:Int = 0
+    var involedCreateAlertMessageData = [(title: String, message: String, actionTitle: String)]()
+    func createAlertMesssage(title: String, message: String, actionTitle: String) {
+        invokedCreateAlerMessage = true
+        invokedCreateAlertMessageCount += 1
+       involedCreateAlertMessageData.append((title: title, message: message, actionTitle: actionTitle))
+    }
+    
+    func updateCountryPhone(countryPhone: EnterPhoneModule.CountryNumber) {
+         
+    }
+    
+    func toConfirmCodeScreen() {
+        
     }
     
     

@@ -9,11 +9,14 @@ import Foundation
 import UIKit
 @testable import ConfirmCodeModule
 class MockConfirmInteractor : PresenterToInteractorConfirmCodeProtocol {
-    var mockCode:String = ""
+    var mockError:Bool = false
+    var codeSuccess:Bool = false
     var presenter :InteractorToPresenterConfirmCodeProtocol?
-    func fetchConfirmCode() {
-        presenter?.sendConfirmCode(code: mockCode)
+    func fetchConfirmCode(parameter: [String : Any]) async {
+        if mockError {
+            presenter?.confirmCodeError()
+        }else{
+            presenter?.sendConfirmCode(state: codeSuccess)
+        }
     }
-    
-    
 }
