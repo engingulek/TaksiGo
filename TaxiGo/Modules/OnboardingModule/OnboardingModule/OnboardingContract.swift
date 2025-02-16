@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+
 struct OnboardingContract {
     let imageTitle:ImageResource
     let bannerTitle:String

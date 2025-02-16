@@ -37,6 +37,4 @@ class MockOnboardingViewController : PresenterToViewOnboardingProtocol {
          invokedpushViewControllerAble = true
          invoedkpushViewControllerAblecCount += 1
     }
-    
-    
 }

@@ -12,7 +12,9 @@ import BaseViewKit
 import FactoryKit
 
 class OnboardingView : BaseView<OnboardingViewController> {
+    
     var presenter :ViewToPrensenterOnboardingProtocol?
+    
     private lazy var onboardingImage : UIImageView = UIImageView()
     private lazy var bannerLabel = LabelFactory.createLabel(ofType: .bannerLabel)
     private lazy var subbannerLabel = LabelFactory.createLabel(ofType: .subbannerLabel)
@@ -22,16 +24,12 @@ class OnboardingView : BaseView<OnboardingViewController> {
         self.presenter?.onTappedStartButton()
     }
     
-    
     override func setupView() {
         super.setupView()
         configureView()
-        
-        
     }
     
     private func configureView() {
-        
         
         addSubview(onboardingImage)
         onboardingImage.snp.makeConstraints { make in
@@ -47,8 +45,6 @@ class OnboardingView : BaseView<OnboardingViewController> {
             
         }
         
-        
-        
         addSubview(subbannerLabel)
         subbannerLabel.snp.makeConstraints { make in
             make.leading.equalToSuperview().offset(10)
@@ -57,8 +53,6 @@ class OnboardingView : BaseView<OnboardingViewController> {
             
         }
         
-        
-        
         addSubview(startButton)
         startButton.snp.makeConstraints { make in
             make.leading.equalToSuperview().offset(15)
@@ -66,9 +60,6 @@ class OnboardingView : BaseView<OnboardingViewController> {
             make.height.equalTo(50)
             make.bottom.equalTo(safeAreaLayoutGuide.snp.bottom).offset(-10)
         }
-        
-        
-        
     }
     
     func configureData(contract:OnboardingContract) {
