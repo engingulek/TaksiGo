@@ -9,7 +9,8 @@ import Foundation
 import UIKit
 @testable import ConfirmCodeModule
 class MockConfirmViewController : PresenterToViewConfirmCodeProtocol {
-    
+  
+
     var invokedsetTitleContractt:Bool = false
     var invokedsetTitleContractCount:Int = 0
     var invokedsetTitleContractData = [(contract:ConfirmCodeModule.TitleContract,Void)]()
@@ -45,13 +46,29 @@ class MockConfirmViewController : PresenterToViewConfirmCodeProtocol {
         invokedsetBackColorAbleData.append((color:color,()))
     }
     
-    
     var invokedpushViewControllerAble:Bool = false
     var invoedkpushViewControllerAblecCount:Int = 0
     func pushViewControllerAble(_ vc: UIViewController, animated: Bool) {
          invokedpushViewControllerAble = true
          invoedkpushViewControllerAblecCount += 1
     }
+    
+    var invokedCreateAlerMessage:Bool = false
+    var invokedCreateAlertMessageCount:Int = 0
+    var involedCreateAlertMessageData = [(title: String, message: String, actionTitle: String)]()
+    func createAlertMesssage(title: String, message: String, actionTitle: String) {
+        invokedCreateAlerMessage = true
+        invokedCreateAlertMessageCount += 1
+       involedCreateAlertMessageData.append((title: title, message: message, actionTitle: actionTitle))
+    }
+    
+    func toHomePage() {
+        
+    }
+    
+    
+    
+    
     
     
 }

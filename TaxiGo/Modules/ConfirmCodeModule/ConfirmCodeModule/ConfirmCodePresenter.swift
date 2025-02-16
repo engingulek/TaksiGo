@@ -48,14 +48,10 @@ extension ConfirmCodePresenter : ViewToPrensenterConfirmCodeProtocol {
     }
     
     func onTappedConfirmCode(code: String) {
-
-        
         let parameter : [String:Any] = [
             "phoneNumber" : phoneNumber.replacingOccurrences(of: " ", with: ""),
             "code":code
         ]
-        
-        
         Task {
             await interactor.fetchConfirmCode(parameter:parameter)
         }
@@ -64,8 +60,6 @@ extension ConfirmCodePresenter : ViewToPrensenterConfirmCodeProtocol {
     func toHomePagePresenter() {
         router.toHomeModule(view: view)
     }
-    
-   
 }
 
 
@@ -87,8 +81,11 @@ extension ConfirmCodePresenter : InteractorToPresenterConfirmCodeProtocol {
                 borderColor: ColorTheme.red.rawValue))
         }
     }
-    //TODO: Alert will be added
+    
     func confirmCodeError() {
-        print("Error confirm code")
+        view?.createAlertMesssage(
+            title: TextTheme.errorTitle.localized,
+            message: TextTheme.errorMessageOne.localized,
+            actionTitle: TextTheme.ok.localized)
     }
 }

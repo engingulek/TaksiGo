@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 import ViewControllerAbleKit
 
-typealias Kits = UIViewAble & SegueAble
+typealias Kits = UIViewAble & SegueAble & AlertMessageAble
 
 //MARK: ViewToPrensenterConfirmCodeProtocol
 protocol ViewToPrensenterConfirmCodeProtocol{
@@ -43,9 +43,6 @@ protocol InteractorToPresenterConfirmCodeProtocol{
 protocol PresenterToRouterConfirmCodeProtocol {
     func toHomeModule(view:PresenterToViewConfirmCodeProtocol?)
 }
-
-
-
 
 
 //MARK: ConfirmModuleProtocol

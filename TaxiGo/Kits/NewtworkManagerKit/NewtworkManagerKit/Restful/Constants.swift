@@ -11,6 +11,6 @@ import Foundation
 enum Constants : String {
     case baseUrl = "http://localhost:8080/api/"
     case confirmCode = "confirmCode/"
-    case createConfirmCode = "createConfirmCod"
+    case createConfirmCode = "createConfirmCode"
     case checkCode = "checkCode"
 }
