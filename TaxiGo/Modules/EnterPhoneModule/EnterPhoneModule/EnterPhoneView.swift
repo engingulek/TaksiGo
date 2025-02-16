@@ -25,6 +25,7 @@ class EnterPhoneView : BaseView<EnterPhoneViewController> {
     private lazy var countryNumberList : [CountryNumber] = []
     private lazy var contiuneButton = ButtonFactory.createButton(ofType: .basic(action: contiuneButtonAction))
     
+    
     private lazy var contiuneButtonAction  : UIAction = UIAction { _ in
         self.presenter?.onTappedContiuneButton()
     }
@@ -126,6 +127,8 @@ class EnterPhoneView : BaseView<EnterPhoneViewController> {
             make.height.equalTo(50)
             make.top.equalTo(phoneTextFieldUIView.snp.bottom).offset(40)
         }
+        
+      
     }
     
     func configureTitleContract(titleContract:Contract) {
@@ -147,4 +150,6 @@ class EnterPhoneView : BaseView<EnterPhoneViewController> {
         contiuneButton.backgroundColor = UIColor(hex: error.buttonBackColor)
         contiuneButton.isEnabled = !error.errorState
     }
+    
+  
 }

@@ -25,8 +25,8 @@ class EnterPhoneViewController : UIViewController {
 }
 
 extension EnterPhoneViewController : PresenterToViewEnterPhoneProtocol {
-  
-
+ 
+ 
     func setEnterPhoneTitleContract(titleContract: Contract) {
         enterPhoneView.configureTitleContract(titleContract: titleContract)
     }
@@ -42,5 +42,18 @@ extension EnterPhoneViewController : PresenterToViewEnterPhoneProtocol {
             buttonBackColor: String)) {
         enterPhoneView.setError(error: error)
     }
+    
+    func toConfirmCodeScreen() {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else {return}
+            presenter.toConfirmCodePresenter()
+        }
+    }
+    
+  
+    
+    
+  
+
 }
 

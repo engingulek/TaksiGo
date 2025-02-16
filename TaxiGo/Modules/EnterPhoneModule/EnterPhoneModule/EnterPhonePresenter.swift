@@ -14,14 +14,12 @@ final class EnterPhonePresenter {
     private var enteredPhoneNumber : String = ""
     
     //TODO: This will been gotten from location
-    private var selectedCountryNumber = CountryNumber(  id: 1,
-                                                        phohoneCode: "+90",
-                                                        length: 10,
-                                                        name: "Türkiye",
-                                                        
-                                                        phoneFormat: #"^5\d{9}$"#)
-    
-    
+    private var selectedCountryNumber = CountryNumber(id: 1,
+                                                      phohoneCode: "+90",
+                                                      length: 10,
+                                                      name: "Türkiye",
+                                                      
+                                                      phoneFormat: #"^5\d{9}$"#)
     init(view: PresenterToViewEnterPhoneProtocol?,
          router: PresenterToRouterEnterPhoneProtocol,
          interactor : PresenterToInteractorEnterPhoneProtocol
@@ -30,25 +28,25 @@ final class EnterPhonePresenter {
         self.view = view
         self.router = router
         self.interactor = interactor
-        
     }
     
     private func createConfirmCode(enterPhoneNumber:String){
+      
         Task {
             let number = enterPhoneNumber.replacingOccurrences(of: " ", with: "")
             let parameter : [String:Any] = ["phoneNumber":number]
-           await interactor.createConfirmCode(paramenter:parameter)
+            await interactor.createConfirmCode(paramenter:parameter)
         }
     }
-    
-  
 }
 
 
 //MARK: EnterPhonePresenter : ViewToPrensenterEnterPhoneProtocol
 extension EnterPhonePresenter : ViewToPrensenterEnterPhoneProtocol {
+    func toConfirmCodePresenter() {
+        router.toConfirmCode(view: view,phoneNumber: enteredPhoneNumber)
+    }
     
-
     func viewDidLoad() {
         view?.setBackColorAble(color: ColorTheme.primaryBackColor.rawValue)
         view?.changeColorNavigaiton()
@@ -58,22 +56,7 @@ extension EnterPhonePresenter : ViewToPrensenterEnterPhoneProtocol {
             countryTitle: TextTheme.countryTitle.localized,
             phoneNumberTitle: TextTheme.phoneNumber.localized,
             phoneTextFieldPlaceholder: TextTheme.phoneNumber.localized,
-            contiuneButtonTitke: TextTheme.countiuneButtonTitle.localized,
-            numberList: [    .init(
-                id: 1,
-                phohoneCode: "+90",
-                length: 10,
-                name: "Türkiye",
-                
-                phoneFormat: #"^5\d{9}$"#
-            ), .init(
-                    id: 2,
-                    phohoneCode: "+44",
-                    length: 10,
-                    name: "UK",
-                    
-                    phoneFormat:  #"^7\d{9}$"#
-                )]
+            contiuneButtonTitke: TextTheme.countiuneButtonTitle.localized
         )
         
         view?.setEnterPhoneTitleContract(titleContract: titleContract)
@@ -88,8 +71,6 @@ extension EnterPhonePresenter : ViewToPrensenterEnterPhoneProtocol {
     }
     
     func onTappedContiuneButton() {
-      
-        router.toConfirmCode(view: view,phoneNumber: enteredPhoneNumber)
         
         createConfirmCode(enterPhoneNumber: enteredPhoneNumber)
     }
@@ -135,13 +116,15 @@ extension EnterPhonePresenter : ViewToPrensenterEnterPhoneProtocol {
 
 
 extension EnterPhonePresenter : InteractorToPresenterEnterPhoneProtocol {
-
-    //TODO: Alert will be added
-    func interactorError() {
-        print("Interacor Error")
+    
+    func interactorSucccess() {
+        view?.toConfirmCodeScreen()
     }
     
-    
+    func interactorError() {
+        view?.createAlertMesssage(
+            title: TextTheme.errorTitle.localized,
+            message: TextTheme.errorMessageOne.localized,
+            actionTitle: TextTheme.ok.localized)
+    }
 }
-
-

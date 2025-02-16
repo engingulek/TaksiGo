@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 import ViewControllerAbleKit
-typealias Kits = UIViewAble & SegueAble & NavigationDesing
+typealias Kits = UIViewAble & SegueAble & NavigationDesing & AlertMessageAble
 
 
 
@@ -19,6 +19,7 @@ protocol ViewToPrensenterEnterPhoneProtocol{
     func onTappedContiuneButton()
     func selectedCounryNumber(country:CountryNumber)
     func phoneNumberTextFieldChanged(text:String?)
+    func toConfirmCodePresenter()
    
     
     
@@ -31,6 +32,8 @@ protocol PresenterToViewEnterPhoneProtocol: AnyObject,Kits{
     func updateCountryPhone(countryPhone:CountryNumber)
     func phoneNumberState(error:(errorState:Bool,text:String,buttonBackColor:String))
  
+    func toConfirmCodeScreen()
+   
   
 }
 
@@ -43,6 +46,7 @@ protocol PresenterToInteractorEnterPhoneProtocol{
 protocol InteractorToPresenterEnterPhoneProtocol{
     
     func interactorError()
+    func interactorSucccess()
 }
 
 //MARK: PresenterToRouterEnterPhoneProtocol
