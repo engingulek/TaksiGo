@@ -31,7 +31,7 @@ final class EnterPhonePresenter {
     }
     
     private func createConfirmCode(enterPhoneNumber:String){
-      
+        
         Task {
             let number = enterPhoneNumber.replacingOccurrences(of: " ", with: "")
             let parameter : [String:Any] = ["phoneNumber":number]
@@ -43,6 +43,7 @@ final class EnterPhonePresenter {
 
 //MARK: EnterPhonePresenter : ViewToPrensenterEnterPhoneProtocol
 extension EnterPhonePresenter : ViewToPrensenterEnterPhoneProtocol {
+
     func toConfirmCodePresenter() {
         router.toConfirmCode(view: view,phoneNumber: enteredPhoneNumber)
     }
@@ -69,18 +70,23 @@ extension EnterPhonePresenter : ViewToPrensenterEnterPhoneProtocol {
             buttonBackColor: ColorTheme.redAlpha05.rawValue))
         view?.stateBackAction(state: false)
     }
-    
-    func onTappedContiuneButton() {
-        
-        createConfirmCode(enterPhoneNumber: enteredPhoneNumber)
+}
+
+//MARK: EnterPhonePresenter - OnAction
+extension EnterPhonePresenter {
+    func onAction(action:EnterPhoneActionType) {
+        switch action {
+        case .tappedContinueButton:
+            createConfirmCode(enterPhoneNumber: enteredPhoneNumber)
+        case .selectedCountryNumber(let countryNumber):
+            view?.updateCountryPhone(countryPhone: countryNumber)
+        case .phoneNumberTextFieldChanged(let text):
+            phoneNumberTextFieldChanged(text: text)
+        }
     }
     
-    
-    func selectedCounryNumber(country: CountryNumber) {
-        view?.updateCountryPhone(countryPhone: country)
-    }
-    
-    func phoneNumberTextFieldChanged(text: String?) {
+    /// control phone number
+    private  func phoneNumberTextFieldChanged(text: String?) {
         guard let text = text else { return }
         
         let characterSet = CharacterSet.letters
@@ -113,7 +119,6 @@ extension EnterPhonePresenter : ViewToPrensenterEnterPhoneProtocol {
         }
     }
 }
-
 
 extension EnterPhonePresenter : InteractorToPresenterEnterPhoneProtocol {
     

@@ -29,8 +29,13 @@ struct Contract {
             
             phoneFormat:  #"^7\d{9}$"#
         )]
-    
-    
+}
+
+
+enum EnterPhoneActionType {
+    case tappedContinueButton
+    case selectedCountryNumber(CountryNumber)
+    case phoneNumberTextFieldChanged(String?)
 }
 
 

@@ -27,37 +27,19 @@ class EnterPhoneView : BaseView<EnterPhoneViewController> {
     
     
     private lazy var contiuneButtonAction  : UIAction = UIAction { _ in
-        self.presenter?.onTappedContiuneButton()
+        self.presenter?.onAction(action: .tappedContinueButton)
     }
     
     override func setupView() {
         super.setupView()
         configureView()
-      
-     
+        
         menuButton.addTarget(self, action: #selector(showMenu(_:)), for: .touchUpInside)
         phoneTextField.addTarget(self, action: #selector(phoneTextFieldEditChanged(_:)), for: .editingChanged)
       
     }
-    
-    @objc func showMenu(_ sender: UIButton) {
-        var menuElementList : [UIMenuElement] = []
-        countryNumberList.forEach { country in
-            menuElementList.append(UIAction(title: "\(country.name)(\(country.phohoneCode))", handler: { _ in
-                self.presenter?.selectedCounryNumber(country: country)
-            }))
-        }
-        let menu = UIMenu(title: "", children: menuElementList)
-        
-        sender.showsMenuAsPrimaryAction = true
-        sender.menu = menu
-    }
-    
-    
-    @objc func phoneTextFieldEditChanged(_ textField: UITextField){
-        presenter?.phoneNumberTextFieldChanged(text: textField.text)
-    }
-    
+   
+    ///configureView
     private func configureView() {
         addSubview(enterPhoneTitle)
         enterPhoneTitle.snp.makeConstraints { make in
@@ -111,8 +93,7 @@ class EnterPhoneView : BaseView<EnterPhoneViewController> {
             make.top.equalTo(countryTitle.snp.top)
             make.leading.equalTo(phoneTextFieldUIView.snp.leading)
         }
-        
-        
+    
         addSubview(errorLabel)
         errorLabel.snp.makeConstraints { make in
             make.top.equalTo(phoneTextFieldUIView.snp.bottom).offset(5)
@@ -127,10 +108,9 @@ class EnterPhoneView : BaseView<EnterPhoneViewController> {
             make.height.equalTo(50)
             make.top.equalTo(phoneTextFieldUIView.snp.bottom).offset(40)
         }
-        
-      
     }
     
+    ///configureTitleContract
     func configureTitleContract(titleContract:Contract) {
         enterPhoneTitle.text = titleContract.enterPhoneTitle
         countryTitle.text = titleContract.countryTitle
@@ -139,17 +119,38 @@ class EnterPhoneView : BaseView<EnterPhoneViewController> {
         countryNumberList = titleContract.numberList
     }
 
-  
-
+    ///updateCountryPhone
     func updateCountryPhone(countryPhone:CountryNumber){
         menuButton.setTitle("\(countryPhone.name)(\(countryPhone.phohoneCode))", for: .normal)
     }
     
+    ///setError
     func setError(error:(errorState:Bool,text:String,buttonBackColor:String)) {
         errorLabel.text = error.text
         contiuneButton.backgroundColor = UIColor(hex: error.buttonBackColor)
         contiuneButton.isEnabled = !error.errorState
     }
+}
+
+//MARK: Actions on EnterPhoneView
+extension EnterPhoneView {
     
-  
+    @objc func showMenu(_ sender: UIButton) {
+        var menuElementList : [UIMenuElement] = []
+        countryNumberList.forEach { country in
+            menuElementList.append(UIAction(title: "\(country.name)(\(country.phohoneCode))", handler: { _ in
+                self.presenter?.onAction(action: .selectedCountryNumber(country))
+            }))
+        }
+        let menu = UIMenu(title: "", children: menuElementList)
+        
+        sender.showsMenuAsPrimaryAction = true
+        sender.menu = menu
+    }
+    
+    
+    @objc func phoneTextFieldEditChanged(_ textField: UITextField){
+        presenter?.onAction(action: .phoneNumberTextFieldChanged(textField.text))
+    }
+    
 }

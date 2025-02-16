@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D102E242D625D0E00B51D24 /* MockEnterPhoneInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D102E232D625D0E00B51D24 /* MockEnterPhoneInteractor.swift */; };
 		7D5848502D50C4BD008A530D /* ConfirmCodeModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D58484F2D50C4BD008A530D /* ConfirmCodeModule.framework */; };
 		7D5848512D50C4BD008A530D /* ConfirmCodeModule.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7D58484F2D50C4BD008A530D /* ConfirmCodeModule.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7D5848542D50C50D008A530D /* DependencyKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D5848532D50C50D008A530D /* DependencyKit.framework */; };
@@ -81,6 +82,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7D102E232D625D0E00B51D24 /* MockEnterPhoneInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockEnterPhoneInteractor.swift; sourceTree = "<group>"; };
 		7D58484F2D50C4BD008A530D /* ConfirmCodeModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ConfirmCodeModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D5848532D50C50D008A530D /* DependencyKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DependencyKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D5AABC02D5CEF4F0016AF05 /* ConfirmCodeModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ConfirmCodeModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -188,6 +190,7 @@
 			children = (
 				7D67E3B62D50162D0026A77D /* EnterPhoneModuleTests.swift */,
 				7D67E3BE2D5016C50026A77D /* MockEnterPhoneViewController.swift */,
+				7D102E232D625D0E00B51D24 /* MockEnterPhoneInteractor.swift */,
 			);
 			path = EnterPhoneModuleTests;
 			sourceTree = "<group>";
@@ -327,6 +330,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D67E3BF2D5016C50026A77D /* MockEnterPhoneViewController.swift in Sources */,
+				7D102E242D625D0E00B51D24 /* MockEnterPhoneInteractor.swift in Sources */,
 				7D67E3B72D50162D0026A77D /* EnterPhoneModuleTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
