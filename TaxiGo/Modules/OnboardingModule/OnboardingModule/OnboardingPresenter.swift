@@ -7,7 +7,9 @@
 
 import Foundation
 import CoreKit
+
 final class OnboardingPresenter {
+    
     weak var view : PresenterToViewOnboardingProtocol?
     private var router: PresenterToRouterOnboardingProtocol
     
@@ -30,7 +32,7 @@ extension OnboardingPresenter : ViewToPrensenterOnboardingProtocol {
             buttonTitle: TextTheme.onboardingButtonTitle.localized)
         view?.setOnboardingContract(contract: contract)
     }
-    
+
     func onTappedStartButton() {
         router.toPhoneNumberConfirm(view: view)
     }

@@ -20,25 +20,25 @@ protocol ViewToPrensenterOnboardingProtocol{
 //MARK: PresenterToViewOnboardingProtocol
 protocol PresenterToViewOnboardingProtocol: AnyObject,Kits{
     func setOnboardingContract(contract : OnboardingContract)
- 
-  
 }
-
-//MARK: PresenterToInteractorOnboardingProtocol
-/*protocol PresenterToInteractorOnboardingProtocol{
-    
-}*/
-
-//MARK: InteractorToPresenterOnboardingProtocol
-/*protocol InteractorToPresenterOnboardingProtocol{
-  
-}*/
 
 //MARK: PresenterToRouterOnboardingProtocol
 protocol PresenterToRouterOnboardingProtocol {
     func toPhoneNumberConfirm(view:PresenterToViewOnboardingProtocol?)
 }
 
+//MARK: OnboardingModuleProtocol
 public protocol OnboardingModuleProtocol {
     func createModule() -> UIViewController
 }
+
+
+//MARK: PresenterToInteractorOnboardingProtocol
+/*protocol PresenterToInteractorOnboardingProtocol{
+ 
+ }*/
+
+//MARK: InteractorToPresenterOnboardingProtocol
+/*protocol InteractorToPresenterOnboardingProtocol{
+ 
+ }*/

@@ -8,10 +8,14 @@
 import XCTest
 @testable import OnboardingModule
 import CoreKit
+import DependencyKit
+import EnterPhoneModule
 final class OnboardingModuleTests: XCTestCase {
+    
     private var viewController : MockOnboardingViewController!
     private var presenter : OnboardingPresenter!
     private var router:  OnboardingRouter!
+    private let container = DependencyRegister.shared.container
     override func setUp()  {
         super.setUp()
         viewController = .init()
@@ -19,6 +23,11 @@ final class OnboardingModuleTests: XCTestCase {
         presenter = .init(
             view: viewController,
             router: router)
+        
+        container.register(EnterPhoneModuleProtocol.self) { _ in
+            EnterPhoneRouter()
+        }
+        
     }
     
     override func tearDown()  {
@@ -50,6 +59,7 @@ final class OnboardingModuleTests: XCTestCase {
         
         XCTAssertTrue(viewController.invokedsetOnboardingContract,"is not true")
         XCTAssertEqual(viewController.invokedsetOnboardingContractCount, 1,"is not 1")
+        
         let expectedContract = OnboardingContract(
             imageTitle: .onboarding,
             bannerTitle: TextTheme.bannerTitle.localized,
@@ -73,9 +83,7 @@ final class OnboardingModuleTests: XCTestCase {
 
     }
     
-    
-    
-    func test_onTappedStartButton() {
+   func test_onTappedStartButton() {
         XCTAssertFalse(viewController.invokedpushViewControllerAble,"is not false")
         XCTAssertEqual(viewController.invoedkpushViewControllerAblecCount, 0,"is not zero (0)")
         presenter.onTappedStartButton()
@@ -83,7 +91,4 @@ final class OnboardingModuleTests: XCTestCase {
         XCTAssertTrue(viewController.invokedpushViewControllerAble,"is not false")
         XCTAssertEqual(viewController.invoedkpushViewControllerAblecCount, 1,"is not zero (0)")
     }
-    
-    
-    
 }

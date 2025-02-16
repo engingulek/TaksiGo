@@ -9,7 +9,6 @@ import Foundation
 import CoreLocation
 import MapKit
 
-
 protocol LocationManagerDelegate: AnyObject {
     func didUpdateLocation(location:(latitude:Double,longitude:Double))
     func didFailWithError(_ error: Error)

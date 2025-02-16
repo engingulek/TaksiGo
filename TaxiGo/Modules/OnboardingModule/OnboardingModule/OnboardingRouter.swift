@@ -8,10 +8,13 @@
 import Foundation
 import UIKit
 import EnterPhoneModule
-
 import DependencyKit
+
+//MARK: OnboardingRouter : OnboardingModuleProtocol
 public class OnboardingRouter : OnboardingModuleProtocol {
+    
     public init() {}
+    
     public func createModule() -> UIViewController {
         let viewController = OnboardingViewController()
         let router  = OnboardingRouter()
@@ -23,9 +26,11 @@ public class OnboardingRouter : OnboardingModuleProtocol {
     }
 }
 
+//MARK: OnboardingRouter : PresenterToRouterOnboardingProtocol
 extension OnboardingRouter : PresenterToRouterOnboardingProtocol {
     func toPhoneNumberConfirm(view:PresenterToViewOnboardingProtocol?) {
-        let enterPhoneModule : EnterPhoneModuleProtocol = DependencyRegister.shared.resolve(EnterPhoneModuleProtocol.self)
+        let enterPhoneModule : EnterPhoneModuleProtocol = DependencyRegister
+            .shared.resolve(EnterPhoneModuleProtocol.self)
         let viewController = enterPhoneModule.createModule()
         view?.pushViewControllerAble(viewController, animated: true)
     }
