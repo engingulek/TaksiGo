@@ -8,6 +8,7 @@
 import Foundation
 import MapKit
 
+// For TaxiType Annotation
 class CustomAnnotation: NSObject, MKAnnotation {
     
     var title:String?

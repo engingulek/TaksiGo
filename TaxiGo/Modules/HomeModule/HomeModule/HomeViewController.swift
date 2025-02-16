@@ -60,6 +60,7 @@ extension HomeViewController : PresenterToViewHomeProtocol {
         taxiInfoView.reloadCollectionView()
     }
     
+    // send taxiList to mapUIview
     func setTaxiInfoToMap(list: [TaxiInfoElement]) {
         DispatchQueue.main.async {[weak self] in
             guard let self = self else {return}
@@ -69,6 +70,7 @@ extension HomeViewController : PresenterToViewHomeProtocol {
         }
     }
     
+    // If the destination location is not selected, Message will be shown on taxiInfoView
    func setMessageLabelOnTaxiInfoView(isHidden: Bool, text: String) {
         DispatchQueue.main.async {[weak self] in
             guard let self = self else {return}

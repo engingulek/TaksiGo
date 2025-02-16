@@ -215,8 +215,6 @@ final class HomeModuleTests: XCTestCase {
         ]
         
         presenter.viewDidLoad()
-        print(presenter.numberOfItemsIn())
-        let count = presenter.numberOfItemsIn()
         
         let indexPath : IndexPath = [0,0]
         

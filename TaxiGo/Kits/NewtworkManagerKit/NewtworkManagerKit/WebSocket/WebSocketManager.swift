@@ -68,7 +68,7 @@ public class WebSocketManager: WebSocketManagerProtocol {
              
                 return updatedProducts
             } catch {
-                print("JSON çözümleme hatası: \(error)")
+                
             }
         }
         return nil

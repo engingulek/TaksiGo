@@ -15,7 +15,6 @@ class MockConfirmInteractor : PresenterToInteractorConfirmCodeProtocol {
     func fetchConfirmCode(parameter: [String : Any]) async {
         if mockError {
             presenter?.confirmCodeError()
-            print("dadsadsa")
         }else{
             presenter?.sendConfirmCode(state: codeSuccess)
         }
