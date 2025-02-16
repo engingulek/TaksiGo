@@ -11,7 +11,7 @@ import Foundation
 
 class MockHomeInteractor : PresenterToInteractorHomeProtocol {
     
-    var mockList: [TaxiType] = []
+    var mockList: [TaxiInfoElement] = []
     var presenrer : InteractorToPresenterHomeProtocol?
     
     func fetchTaxiInfo() {

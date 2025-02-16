@@ -56,10 +56,6 @@ extension HomeViewController : PresenterToViewHomeProtocol {
         
     }
     
-    func errorState(state: Bool, errorMessage: String) {
-        mapUIView.ableFuncs(able: .errorState(state, errorMessage))
-    }
-    
     func reloadCollectionView() {
         taxiInfoView.reloadCollectionView()
     }
@@ -71,7 +67,6 @@ extension HomeViewController : PresenterToViewHomeProtocol {
             mapUIView.addCustomAnnotations(list: list)
            
         }
-        
     }
     
    func setMessageLabelOnTaxiInfoView(isHidden: Bool, text: String) {
@@ -80,11 +75,7 @@ extension HomeViewController : PresenterToViewHomeProtocol {
             taxiInfoView.messageSetLabel(isHidden: isHidden, message: text)
         }
     }
-    
-   
-    
 }
-
 
 //MARK: HomeViewController : UICollectionViewDelegate,UICollectionViewDataSource
 extension HomeViewController : UICollectionViewDelegate,UICollectionViewDataSource  {

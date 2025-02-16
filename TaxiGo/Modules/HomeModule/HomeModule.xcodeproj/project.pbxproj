@@ -147,18 +147,16 @@
 		7D0888D72D520F2C00D4F9C3 /* HomeModule */ = {
 			isa = PBXGroup;
 			children = (
+				7D102E252D626A8900B51D24 /* models */,
 				7D47D2162D554F0900A22526 /* manager */,
 				7D47D2152D554EE700A22526 /* views */,
 				7D0888D82D520F2C00D4F9C3 /* HomeModule.h */,
 				7D0888F62D520F5600D4F9C3 /* HomeViewController.swift */,
 				7D0888F82D520F8400D4F9C3 /* HomeProtocols.swift */,
 				7D0888FA2D520FE300D4F9C3 /* HomeRouter.swift */,
-				7D0889112D525BA800D4F9C3 /* HomeContract.swift */,
 				7D47D20F2D54FB4200A22526 /* HomePresenter.swift */,
 				7D47D2112D5538E800A22526 /* HomeInteractor.swift */,
-				7D47D2132D5539CF00A22526 /* TaxiType.swift */,
 				7D459E7F2D5E4D7400EEF6A7 /* Assets.xcassets */,
-				7D459E812D5E5B1300EEF6A7 /* CustomAnnotation.swift */,
 			);
 			path = HomeModule;
 			sourceTree = "<group>";
@@ -174,6 +172,16 @@
 				7D0888EA2D520F4A00D4F9C3 /* ViewControllerAbleKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7D102E252D626A8900B51D24 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				7D0889112D525BA800D4F9C3 /* HomeContract.swift */,
+				7D47D2132D5539CF00A22526 /* TaxiType.swift */,
+				7D459E812D5E5B1300EEF6A7 /* CustomAnnotation.swift */,
+			);
+			path = models;
 			sourceTree = "<group>";
 		};
 		7D47D2152D554EE700A22526 /* views */ = {

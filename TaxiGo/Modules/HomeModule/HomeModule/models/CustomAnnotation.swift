@@ -7,6 +7,7 @@
 
 import Foundation
 import MapKit
+
 class CustomAnnotation: NSObject, MKAnnotation {
     
     var title:String?

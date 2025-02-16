@@ -12,14 +12,11 @@ class HomeInteractor : PresenterToInteractorHomeProtocol {
     private let webSocketManager :  WebSocketManagerProtocol = WebSocketManager()
     
     func fetchTaxiInfo()  {
-        
-     
-      webSocketManager.connect(target: .taxiInfo, response: [TaxiInfoElement].self) { result in
-          guard let result = result else {return}
-          self.presenter?.sendTaxiTypes(list: result)
+        webSocketManager.connect(
+            target: .taxiInfo,
+            response: [TaxiInfoElement].self) { result in
+                guard let result = result else {return}
+                self.presenter?.sendTaxiTypes(list: result)
             }
-          
-           // presenter?.sendTaxiTypes(list: result)
-       
     }
 }
