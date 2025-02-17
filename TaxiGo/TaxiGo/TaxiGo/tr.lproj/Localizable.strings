@@ -1,0 +1,27 @@
+/* 
+  Localizable.strings
+  TaxiGo
+
+  Created by Engin Gülek on 1.02.2025.
+  
+*/
+
+"banner" = "Taksi Çağır, Hızla Var!";
+"subbanner" = "Uygulamamızla dakikalar içinde güvenli ve konforlu bir yolculuk yapın. Hemen taksinizi çağırın";
+"startButtonTitle" = "Başla";
+"enterPhoneNumber" = "Telefon Numaranı Gir";
+"countryTitle" = "Ülke";
+"phoneNumber" = "Telefon Numarası";
+"numberTooLong" = "Numara çok uzun";
+"controlNumber" = "Numarayı Kontrol Edin";
+"countiuneButtonTitle" = "Devam";
+"confirmTitle" =  "Aktivasyon kodunuzu girin";
+"entered" = "Girilen";
+"confirmButton" = "Doğrula";
+"codeError" = "Kod Yanlış";
+"street" = "Mahalle";
+"errorMessageOne" = "Bir şeyler ters gitti";
+"errorTitle" = "Hata";
+"sendTaxi" = "Taksi Gönder";
+"selectedLocationMessage"  = "Lütfen Gideceğiniz Yeri Seçiniz";
+"ok" = "Tamam";
